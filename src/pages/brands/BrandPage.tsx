@@ -52,7 +52,7 @@ function BrandPage() {
   }
 
   const handleCategoryChange = (
-    event: React.MouseEvent<HTMLElement>,
+    _event: React.MouseEvent<HTMLElement>,
     newCategory: ProductCategory | 'all',
   ) => {
     if (newCategory !== null) {

@@ -4,7 +4,6 @@ import {
   Box,
   Grid,
   Paper,
-  Stack,
 } from '@mui/material';
 import {
   Engineering as EngineeringIcon,

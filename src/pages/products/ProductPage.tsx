@@ -82,9 +82,9 @@ function ProductPage() {
                 Key Features
               </Typography>
               <Box display="flex" flexWrap="wrap" gap={1.5}>
-                {product.features.map((feature, index) => (
+                {product.features.slice(0, 2).map((feature, _index) => (
                   <Chip
-                    key={index}
+                    key={_index}
                     label={feature}
                     variant="outlined"
                     sx={{
@@ -95,6 +95,14 @@ function ProductPage() {
                     }}
                   />
                 ))}
+                {product.features.length > 2 && (
+                  <Chip
+                    label={`+${product.features.length - 2} more`}
+                    size="small"
+                    variant="outlined"
+                    sx={{ bgcolor: 'background.paper' }}
+                  />
+                )}
               </Box>
             </Box>
           </Grid>
@@ -107,20 +115,9 @@ function ProductPage() {
               <TableContainer>
                 <Table>
                   <TableBody>
-                    {Object.entries(product.specifications).map(([key, value], index) => (
-                      <TableRow
-                        key={key}
-                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                      >
-                        <TableCell
-                          component="th"
-                          scope="row"
-                          sx={{ 
-                            width: '30%',
-                            fontWeight: 'bold',
-                            color: 'text.primary',
-                          }}
-                        >
+                    {Object.entries(product.specifications).map(([key, value]) => (
+                      <TableRow key={key}>
+                        <TableCell component="th" scope="row" sx={{ fontWeight: 600 }}>
                           {key}
                         </TableCell>
                         <TableCell>{value}</TableCell>

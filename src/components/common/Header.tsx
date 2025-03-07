@@ -20,7 +20,6 @@ import {
 } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import {
-  Language as LanguageIcon,
   Menu as MenuIcon,
   Close as CloseIcon,
   KeyboardArrowDown as KeyboardArrowDownIcon,
@@ -94,7 +93,7 @@ function Header() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const navigate = useNavigate();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   
   const [languageAnchor, setLanguageAnchor] = useState<null | HTMLElement>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

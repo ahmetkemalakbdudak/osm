@@ -7,13 +7,11 @@ import {
   Divider,
   useTheme,
 } from '@mui/material';
-import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 function Footer() {
   const theme = useTheme();
   const navigate = useNavigate();
-  const { t } = useTranslation();
 
   const brands = [
     { name: 'Caldini', path: '/brands/caldini' },
