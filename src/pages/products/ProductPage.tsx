@@ -51,30 +51,53 @@ function ProductPage() {
 
   useEffect(() => {
     const loadImages = async () => {
-      if (product) {
+      if (product && brand) {
         try {
-          // Import all images from the product's folder
-          const imageModules = import.meta.glob('/src/assets/images/automec/**/*.{jpg,jpeg,png}', { eager: true });
+          console.log('Loading images for:', { brand: brand.name, product: product.name });
+          
+          // Import all images from the brand's folder
+          const imageModules = import.meta.glob('/src/assets/images/**/*.{jpg,jpeg,png}', { eager: true });
+          
+          // Debug: Log available paths
+          console.log('Available image paths:', Object.keys(imageModules));
+          
           const images = Object.entries(imageModules)
-            .filter(([path]) => path.includes(`/${product.name}/`))
-            .map(([_, module]: [string, any]) => module.default)
+            .filter(([path]) => {
+              const lowerPath = path.toLowerCase();
+              const lowerBrandName = brand.name.toLowerCase();
+              const lowerProductName = product.name.toLowerCase().replace(/[^a-z0-9]+/g, '');
+              
+              // Debug: Log path matching
+              console.log('Checking path:', {
+                path: lowerPath,
+                brandMatch: lowerPath.includes(lowerBrandName.toLowerCase()),
+                productMatch: lowerPath.includes(lowerProductName.toLowerCase())
+              });
+              
+              return lowerPath.includes(lowerBrandName.toLowerCase()) && 
+                     path.toLowerCase().includes(lowerProductName.toLowerCase());
+            })
+            .map(([path, module]: [string, any]) => {
+              console.log('Loading image from path:', path);
+              return module.default;
+            })
             .sort((a, b) => {
-              // Extract numbers from filenames for proper sorting
               const aNum = parseInt(a.match(/\d+/g)?.pop() || '0');
               const bNum = parseInt(b.match(/\d+/g)?.pop() || '0');
               return aNum - bNum;
             });
 
+          console.log('Found images:', images.length);
           setProductImages(images);
         } catch (error) {
           console.error('Error loading product images:', error);
-          setProductImages([]);
+          setProductImages(product.image ? [product.image] : []);
         }
       }
     };
 
     loadImages();
-  }, [product]);
+  }, [product, brand]);
 
   if (!product || !brand) {
     return (
