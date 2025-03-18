@@ -28,7 +28,7 @@ const createSlug = (name: string): string => {
 
 // Utility function to find product and its brand by slug
 const findProductAndBrand = (slug: string) => {
-  for (const [brandId, brand] of Object.entries(brands)) {
+  for (const [, brand] of Object.entries(brands)) {
     const product = brand.products.find(p => createSlug(p.name) === slug);
     if (product) {
       return { product, brand };
