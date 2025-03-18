@@ -216,49 +216,107 @@ export const brands: Record<string, Brand> = {
   pax: {
     id: 'pax',
     name: 'Pax',
-    description: 'Professional cleaning and maintenance equipment',
+    description: 'Professional high-pressure washing machines using Italian pump technology, designed for maximum performance with low water consumption.',
     logo: paxLogo,
     products: [
       {
         id: 1,
-        name: 'H-Series H150',
-        description: 'Hot/Cold Water High Pressure Washer',
+        name: 'C-Series C150',
+        description: 'Cold Water High Pressure Washer with Italian pump technology, designed for professional cleaning in car washes, industrial areas, and various commercial applications.',
         category: 'Pressure Washers',
         image: paxLogo,
         features: [
-          'Hot and cold water operation',
-          'Professional grade pump',
-          'Adjustable temperature control',
-          'Heavy-duty frame'
+          'Adjustable pressure control',
+          '3 Cylinder Ceramic Piston pump',
+          'Italian pump technology',
+          'Low water consumption',
+          'Professional grade performance',
+          'Versatile applications'
         ],
         specifications: {
-          'Pressure': '150 bar',
-          'Water Flow': '15 L/min',
-          'Max Temperature': '140°C',
-          'Power': '380V/3-phase'
+          'Pump Pressure': '150 bar',
+          'Operating Pressure': '30-150 bar (Adjustable)',
+          'Water Flow': '15 L/min (Adjustable)',
+          'Motor Power': '4 kW / 5.5 HP',
+          'Voltage': '220V - Single phase',
+          'Pump Type': '3 Cylinder Ceramic Piston',
+          'Hose Length': 'R2 / 12 meters'
         }
       },
       {
         id: 2,
         name: 'C-Series C200',
-        description: 'Cold Water High Pressure Washer',
+        description: 'Professional Cold Water High Pressure Washer with enhanced power, suitable for industrial cleaning, highways, airlines, and heavy-duty applications.',
         category: 'Pressure Washers',
         image: paxLogo,
         features: [
-          'Industrial grade pump',
-          'Robust construction',
-          'Easy maintenance',
-          'Professional performance'
+          'High pressure capability',
+          '3 Cylinder Ceramic Piston pump',
+          'Italian pump technology',
+          'Industrial grade performance',
+          'Adjustable settings',
+          'Robust construction'
         ],
         specifications: {
-          'Pressure': '200 bar',
-          'Water Flow': '18 L/min',
-          'Motor': '5.5 HP',
-          'Power': '220V/single phase'
+          'Pump Pressure': '200 bar',
+          'Operating Pressure': '30-200 bar (Adjustable)',
+          'Water Flow': '15 L/min (Adjustable)',
+          'Motor Power': '5.5 kW / 7.5 HP',
+          'Voltage': '380V - Three phase',
+          'Pump Type': '3 Cylinder Ceramic Piston',
+          'Hose Length': 'R2 / 12 meters'
         }
       },
       {
         id: 3,
+        name: 'E-Series E150',
+        description: 'Advanced Cold Water High Pressure Washer designed for professional cleaning with enhanced efficiency and user-friendly operation.',
+        category: 'Pressure Washers',
+        image: paxLogo,
+        features: [
+          'Adjustable pressure system',
+          '3 Cylinder Ceramic Piston pump',
+          'Italian pump technology',
+          'Energy efficient design',
+          'Professional performance',
+          'Versatile applications'
+        ],
+        specifications: {
+          'Pump Pressure': '150 bar',
+          'Operating Pressure': '30-150 bar (Adjustable)',
+          'Water Flow': '15 L/min (Adjustable)',
+          'Motor Power': '4 kW / 5.5 HP',
+          'Voltage': '220V - Single phase',
+          'Pump Type': '3 Cylinder Ceramic Piston',
+          'Hose Length': 'R2 / 12 meters'
+        }
+      },
+      {
+        id: 4,
+        name: 'B-200 Steam Washer',
+        description: 'Professional Pressure Steam Washer utilizing Italian pump technology, designed for cleaning hard-to-reach areas and surfaces where water usage is restricted.',
+        category: 'Cleaning Equipment',
+        image: paxLogo,
+        features: [
+          'High-temperature steam cleaning',
+          'Dual operator capability',
+          'Automatic and manual filling',
+          'Italian motor and pump',
+          'Safety valve system',
+          'Pressure stabilization'
+        ],
+        specifications: {
+          'Max Steam Pressure': '8 bar',
+          'Steam Temperature': '160-200°C',
+          'Tank Capacity': 'Water 35L / Steam 20L',
+          'Power Supply': '380V',
+          'Heating Time': '5-7 minutes',
+          'Gun Type': '2 Pieces (2 Operators)',
+          'Safety Features': 'Valve, Pressure Stabilizer, Pressure Valve'
+        }
+      },
+      {
+        id: 5,
         name: 'Steam Master Pro',
         description: 'Industrial Steam Washer',
         category: 'Cleaning Equipment',
@@ -277,7 +335,7 @@ export const brands: Record<string, Brand> = {
         }
       },
       {
-        id: 4,
+        id: 6,
         name: 'FoamPro 2000',
         description: 'Professional Foam/Liquid Sprayer',
         category: 'Spray Systems',
@@ -296,7 +354,7 @@ export const brands: Record<string, Brand> = {
         }
       },
       {
-        id: 5,
+        id: 7,
         name: 'CarSeat Pro',
         description: 'Car Seat and Carpet Cleaning Machine',
         category: 'Cleaning Equipment',
@@ -315,7 +373,7 @@ export const brands: Record<string, Brand> = {
         }
       },
       {
-        id: 6,
+        id: 8,
         name: 'Industrial Vacuum X3000',
         description: 'Heavy-Duty Industrial Vacuum Cleaner',
         category: 'Cleaning Equipment',
@@ -334,7 +392,7 @@ export const brands: Record<string, Brand> = {
         }
       },
       {
-        id: 7,
+        id: 9,
         name: 'HotAir 5000',
         description: 'Industrial Hot Air Generator',
         category: 'Industrial Equipment',
@@ -353,7 +411,7 @@ export const brands: Record<string, Brand> = {
         }
       },
       {
-        id: 8,
+        id: 10,
         name: 'Pro Squeezer',
         description: 'Industrial Water Extraction System',
         category: 'Cleaning Equipment',
@@ -382,191 +440,243 @@ export const brands: Record<string, Brand> = {
       {
         id: 1,
         name: 'FDT4000',
-        description: 'Professional Diagnostic Testing System',
-        category: 'Diagnostic Equipment',
+        description: 'The FDT 4000 On-Vehicle Brake Disc Lathe Machine is designed to remove scratches, wear, and warping from brake discs over time, ensuring a longer lifespan for the brake disc.',
+        category: 'Machine Tools',
         image: automecLogo,
         features: [
-          'Advanced diagnostics',
-          'Multi-vehicle compatibility',
-          'Real-time data',
-          'Wireless connectivity'
+          'On-vehicle disc turning without removal',
+          'Maintains brake disc balance',
+          'High-quality diamond tips',
+          'Precise adjustment (0.004mm)',
+          'Built-in completion alarm',
+          'Includes short and long stands'
         ],
         specifications: {
-          'Display': '10" HD Screen',
-          'Battery': 'Li-ion 5000mAh',
-          'Connectivity': 'Wi-Fi/Bluetooth',
-          'Memory': '256GB SSD'
+          'Max Disc Diameter': '330 mm',
+          'Max Disc Thickness': '42 mm',
+          'Motor': '220V, 50HZ, 4.5A, 0.55KW',
+          'Max Height': '100 cm',
+          'Weight': '55 kg',
+          'Certification': 'CE certified',
+          'Warranty': '2 years'
         }
       },
       {
         id: 2,
         name: 'FDT5000',
-        description: 'Enhanced Vehicle Diagnostic Platform',
-        category: 'Diagnostic Equipment',
+        description: 'FDT5000 On-Vehicle Brake Disc Lathe Machine is designed to remove scratches, wear, and warping from brake discs over time, ensuring a longer lifespan for the brake disc.',
+        category: 'Machine Tools',
         image: automecLogo,
         features: [
-          'Full system diagnosis',
-          'Coding capabilities',
-          'OE-level access',
-          'Cloud updates'
+          'On-vehicle disc turning without removal',
+          'Maintains brake disc balance',
+          'High-quality diamond tips',
+          'Precise adjustment (0.004mm)',
+          'Built-in completion alarm',
+          'Height adjustment mechanism with turner'
         ],
         specifications: {
-          'Processor': 'Quad-core 2.0GHz',
-          'Memory': '4GB RAM',
-          'Storage': '500GB',
-          'OS': 'AutoOS 5.0'
+          'Max Disc Diameter': '330 mm',
+          'Max Disc Thickness': '42 mm',
+          'Motor': '220V, 50HZ, 4.5A, 0.55KW',
+          'Max Height': '75 cm',
+          'Weight': '65 kg',
+          'Certification': 'CE certified',
+          'Warranty': '2 years'
         }
       },
       {
         id: 3,
         name: 'FDT6000',
-        description: 'Premium Diagnostic Testing Unit',
-        category: 'Diagnostic Equipment',
+        description: 'The FDT6000 Disc Lathe Machine is designed for lathing discs with diameters ranging from 150 to 380 mm. It is suitable for discs of passenger cars, light commercial vehicles, and minibuses.',
+        category: 'Machine Tools',
         image: automecLogo,
         features: [
-          'Advanced programming',
-          'Bi-directional control',
-          'Oscilloscope function',
-          'Remote diagnosis'
+          'Simultaneous dual-side disc lathing',
+          'Automatic and manual operation',
+          '35mm shaft thickness',
+          'Vibration reduction system',
+          'Complete mounting equipment included',
+          '7 disc mounting apparatus'
         ],
         specifications: {
-          'Screen': '12" Touch HD',
-          'Voltage': '12-24V',
-          'Coverage': 'All brands',
-          'Updates': 'Lifetime'
+          'Max Disc Diameter': '380 mm',
+          'Max Disc Thickness': '42 mm',
+          'Motor': '220V, 50Hz, 4.5A, 0.55KW',
+          'Power Type': 'Mono-phase',
+          'Weight': '80 kg',
+          'Dimensions': '120x80x40 cm',
+          'Certification': 'CE certified',
+          'Warranty': '2 years'
         }
       },
       {
         id: 4,
         name: 'FDT7000',
-        description: 'Professional Diagnostic Master System',
-        category: 'Diagnostic Equipment',
+        description: 'FDT7000 Disc Lathe Machine is a dual-function model capable of performing lathe operations both on-vehicle and off-vehicle, combining the features of a standard disc lathe with on-vehicle functionality.',
+        category: 'Machine Tools',
         image: automecLogo,
         features: [
-          'AI-powered diagnostics',
-          'Advanced coding',
-          'Wireless VCI',
-          'Technical database'
+          'On-vehicle and off-vehicle lathing capability',
+          'Simultaneous dual-side disc lathing',
+          'Complete on-board operation tools',
+          '7 disc mounting apparatus',
+          'All mounting equipment included',
+          'Practical dual-function design'
         ],
         specifications: {
-          'Processor': 'Octa-core',
-          'RAM': '8GB',
-          'Storage': '1TB SSD',
-          'Battery Life': '8 hours'
-        }
-      },
-      {
-        id: 5,
-        name: 'KT1000',
-        description: 'Key Programming System',
-        category: 'Diagnostic Equipment',
-        image: automecLogo,
-        features: [
-          'All key lost solution',
-          'Proximity key programming',
-          'Immobilizer codes',
-          'Token system'
-        ],
-        specifications: {
-          'Coverage': 'Multi-brand',
-          'Updates': 'Online',
-          'Interface': 'USB/Bluetooth',
-          'Security': 'Advanced encryption'
+          'Max Disc Diameter': '380 mm',
+          'Max Disc Thickness': '42 mm',
+          'Motor': '220V, 50HZ, 4.5A, 0.55KW',
+          'Power Type': 'Mono-phase',
+          'Weight': '95 kg',
+          'Dimensions': '120x90x40 cm',
+          'Certification': 'CE certified',
+          'Warranty': '2 years'
         }
       },
       {
         id: 6,
         name: 'ETM2000',
-        description: 'Engine Testing Module',
-        category: 'Testing Equipment',
+        description: 'ETM2000 Fuel System Cleaning Machine is designed as a long-lasting, reliable, versatile and effective machine for testing and cleaning both diesel and gasoline engines, including TDI, HDI and COMMON RAIL engines.',
+        category: 'Machine Tools',
         image: automecLogo,
         features: [
-          'Compression testing',
-          'Fuel system analysis',
-          'Sensor simulation',
-          'Live data graphing'
+          'Dual independent tanks for diesel and gasoline',
+          'Compatible with all fuel types',
+          'Electronic circuit control',
+          'Digital operation panel',
+          'Sound-light alarm system',
+          'Independent pressure settings'
         ],
         specifications: {
-          'Measurement Range': '0-300 PSI',
-          'Accuracy': '±1%',
-          'Sampling Rate': '1MS/s',
-          'Channels': '4'
+          'Voltage': '12V DC - 16A',
+          'Pressure (Gasoline)': '10 bar',
+          'Pressure (Diesel)': '6 bar',
+          'Dimensions': '1003x530x400 mm',
+          'Weight': '40 kg',
+          'Sound Level': '60 dBA',
+          'Filters': '2 independent'
         }
       },
       {
         id: 7,
         name: 'ETM1500',
-        description: 'Electronic Testing Module',
-        category: 'Testing Equipment',
+        description: 'ETM1500 is a versatile fuel system cleaning machine designed for either diesel or gasoline engines, including TDI, HDI and COMMON RAIL systems, with a single tank configuration for focused operation.',
+        category: 'Machine Tools',
         image: automecLogo,
         features: [
-          'Circuit testing',
-          'Component analysis',
-          'Voltage testing',
-          'Resistance measurement'
+          'Single tank design for focused operation',
+          'Compatible with all fuel types',
+          'Electronic control panel',
+          'Digital operation display',
+          'Sound-light alarm system',
+          'Pressure regulation system'
         ],
         specifications: {
-          'Voltage Range': '0-500V',
-          'Resistance': '0-40MΩ',
-          'Current': '0-10A',
-          'Display': 'Digital LCD'
+          'Voltage': '12V DC - 16A',
+          'Pressure': '10 bar (0.8 for diesel)',
+          'Motor Speed': '3300 rpm',
+          'Dimensions': '1100x440x300 mm',
+          'Weight': '25 kg',
+          'Sound Level': '40 dBA',
+          'Tank': 'Single configuration'
         }
       },
       {
         id: 8,
-        name: 'AD3030SX',
-        description: 'Advanced Diagnostic Scanner',
-        category: 'Diagnostic Equipment',
+        name: 'AD3030',
+        description: 'The Automec AD3030 S DPF Cleaning Machine with Measuring Function enables particulate filter cleaning without removing the filter from the vehicle, featuring built-in measurement capabilities for visible cleaning results.',
+        category: 'Machine Tools',
         image: automecLogo,
         features: [
-          'Full system scan',
-          'Live data streaming',
-          'ECU programming',
-          'Wireless diagnosis'
+          'On-vehicle DPF cleaning',
+          'Built-in measuring function',
+          'Fully automatic operation',
+          'Lambda sensor connection',
+          '20-minute cleaning cycle',
+          'Three-liquid system (A1, A2, A3)'
         ],
         specifications: {
-          'Protocol': 'All OBD2',
-          'Screen': '7" Touch',
-          'Memory': '32GB',
-          'Battery': '4000mAh'
+          'Power Supply': '220V',
+          'Pump Pressure': '1.5 bar x3',
+          'Liquid Capacity': '3x5 liters',
+          'Weight': '40 kg',
+          'Dimensions': '90x50x50 cm',
+          'Certification': 'CE certified',
+          'Warranty': '2 years'
         }
       },
       {
         id: 9,
         name: 'RDT3000',
-        description: 'Remote Diagnostic Terminal',
-        category: 'Diagnostic Equipment',
+        description: 'Radiator and Heater/Cooling System Cleaning Machine designed for quick and effective cleaning of heater and radiator systems within 45 minutes, without requiring front panel or cover removal.',
+        category: 'Machine Tools',
         image: automecLogo,
         features: [
-          'Remote diagnosis',
-          'Cloud connectivity',
-          'Multi-user support',
-          'Real-time collaboration'
+          'Digital temperature control',
+          'Programmable operation',
+          'Removable metal filter',
+          'Multiple vehicle compatibility',
+          'Automatic program termination',
+          'Water level sensing'
         ],
         specifications: {
-          'Connection': '4G/Wi-Fi',
-          'Range': 'Unlimited',
-          'Security': 'AES-256',
-          'Cloud Storage': '100GB'
+          'Power': '220V ±10% / 50Hz',
+          'Pump': '0.37 kW, 35 L/min',
+          'Tank Capacity': '9 liters',
+          'Heating Element': '3500W',
+          'Operation Time': '45 minutes',
+          'Body Type': 'Metal construction',
+          'Warranty': '2 years'
         }
       },
       {
         id: 10,
         name: 'FHD1000',
-        description: 'Fleet Health Diagnostic System',
-        category: 'Diagnostic Equipment',
+        description: 'A versatile brake fluid bleeding and hydraulic system maintenance device designed for single-operator use, compatible with all vehicles and featuring a comprehensive cover set.',
+        category: 'Machine Tools',
         image: automecLogo,
         features: [
-          'Fleet management',
-          'Health monitoring',
-          'Predictive maintenance',
-          'Asset tracking'
+          'Dual power operation (12W/220W)',
+          'Adjustable pressure system',
+          'Universal vehicle compatibility',
+          'Portable design',
+          'Complete apparatus set',
+          'Easy single-person operation'
         ],
         specifications: {
-          'Fleet Size': 'Unlimited',
-          'Data Storage': 'Cloud-based',
-          'Reports': 'Customizable',
-          'Integration': 'API available'
+          'Power Options': '12W and 220W',
+          'Pressure Range': '1-5 bar',
+          'Tank Capacity': '2.2 liters',
+          'Certification': 'CE certified',
+          'Warranty': '2 years',
+          'Compatibility': 'All vehicles',
+          'Fluid Type': 'Hydraulic/Pentosil'
+        }
+      },
+      {
+        id: 11,
+        name: 'KTM1000',
+        description: 'The Automec KTM1000 Brake Drum and Brake Disc Lathe Machine is designed for lathing discs with diameters ranging from 150 to 380 mm, as well as drums of passenger cars, light commercial vehicles, and minibuses.',
+        category: 'Machine Tools',
+        image: automecLogo,
+        features: [
+          'Combined disc and drum lathe capability',
+          'Single shaft (25mm) design',
+          'Easy tool mounting/dismounting',
+          'Automatic and manual operation',
+          'Vibration reduction system',
+          'Complete mounting equipment included'
+        ],
+        specifications: {
+          'Max Disc Diameter': '380 mm',
+          'Max Disc Thickness': '42 mm',
+          'Motor': '230/400V, 50HZ, 4.95/2.85A, 1.1KW, 3-phase',
+          'Dimensions': '90x85x120 cm',
+          'Weight': '170 kg',
+          'Shaft Thickness': '25 mm',
+          'Warranty': '2 years'
         }
       }
     ]

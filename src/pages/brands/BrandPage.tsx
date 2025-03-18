@@ -16,7 +16,12 @@ import {
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 import { brands, ProductCategory } from '../../data/brands';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+
+// Utility function to create URL-friendly slug
+const createSlug = (name: string): string => {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+};
 
 function BrandPage() {
   const { brandName } = useParams<{ brandName: string }>();
@@ -25,6 +30,7 @@ function BrandPage() {
   
   const brand = brandName ? brands[brandName] : null;
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | 'all'>('all');
+  const [productImages, setProductImages] = useState<Record<string, string>>({});
 
   const categories = useMemo(() => {
     if (!brand) return [];
@@ -37,6 +43,40 @@ function BrandPage() {
     if (selectedCategory === 'all') return brand.products;
     return brand.products.filter(p => p.category === selectedCategory);
   }, [brand, selectedCategory]);
+
+  useEffect(() => {
+    const loadImages = async () => {
+      if (brand) {
+        try {
+          // Import all images from the automec folder
+          const imageModules = import.meta.glob('/src/assets/images/automec/**/*.{jpg,jpeg,png}', { eager: true });
+          const images: Record<string, string> = {};
+
+          // Group images by product name
+          Object.entries(imageModules).forEach(([path, module]: [string, any]) => {
+            brand.products.forEach(product => {
+              if (path.includes(`/${product.name}/`)) {
+                // Get the number from the filename
+                const match = path.match(/\d+(?=\.[^.]+$)/);
+                const num = match ? parseInt(match[0]) : Infinity;
+                
+                // Only keep the first image (01) for each product
+                if (num === 1) {
+                  images[product.name] = module.default;
+                }
+              }
+            });
+          });
+
+          setProductImages(images);
+        } catch (error) {
+          console.error('Error loading product images:', error);
+        }
+      }
+    };
+
+    loadImages();
+  }, [brand]);
 
   if (!brand) {
     return (
@@ -151,12 +191,12 @@ function BrandPage() {
                     boxShadow: theme.shadows[8],
                   }
                 }}
-                onClick={() => navigate(`/products/${product.id}`)}
+                onClick={() => navigate(`/products/${createSlug(product.name)}`)}
               >
                 <Box sx={{ position: 'relative', pt: '56.25%' /* 16:9 aspect ratio */ }}>
                   <CardMedia
                     component="img"
-                    image={product.image}
+                    image={productImages[product.name] || product.image}
                     alt={product.name}
                     sx={{
                       position: 'absolute',
