@@ -27,7 +27,6 @@ import {
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ProductCategory } from '../../data/brands';
 
 interface Language {
   code: string;
