@@ -48,26 +48,34 @@ function BrandPage() {
     const loadImages = async () => {
       if (brand) {
         try {
-          // Import all images from the automec folder
-          const imageModules = import.meta.glob('/src/assets/images/automec/**/*.{jpg,jpeg,png}', { eager: true });
+          // Import all images from the brand's folder
+          const imageModules = import.meta.glob('/src/assets/images/**/*.{jpg,jpeg,png}', { eager: true });
           const images: Record<string, string> = {};
 
           // Group images by product name
           Object.entries(imageModules).forEach(([path, module]: [string, any]) => {
-            brand.products.forEach(product => {
-              if (path.includes(`/${product.name}/`)) {
-                // Get the number from the filename
-                const match = path.match(/\d+(?=\.[^.]+$)/);
-                const num = match ? parseInt(match[0]) : Infinity;
-                
-                // Only keep the first image (01) for each product
-                if (num === 1) {
-                  images[product.name] = module.default;
+            const lowerPath = path.toLowerCase();
+            const lowerBrandName = brand.name.toLowerCase();
+            
+            // Only process images from this brand's folder
+            if (lowerPath.includes(`/${lowerBrandName}/`)) {
+              brand.products.forEach(product => {
+                const lowerProductName = product.name.toLowerCase().replace(/[^a-z0-9]+/g, '');
+                if (lowerPath.includes(lowerProductName)) {
+                  // Get the number from the filename
+                  const match = path.match(/\d+(?=\.[^.]+$)/);
+                  const num = match ? parseInt(match[0]) : Infinity;
+                  
+                  // Only keep the first image (01) for each product
+                  if (num === 1) {
+                    images[product.name] = module.default;
+                  }
                 }
-              }
-            });
+              });
+            }
           });
 
+          console.log('Loaded product images:', images);
           setProductImages(images);
         } catch (error) {
           console.error('Error loading product images:', error);
