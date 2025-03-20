@@ -226,6 +226,34 @@ function ProductPage() {
                   </TableBody>
                 </Table>
               </TableContainer>
+
+              {product.modelTable && (
+                <Box mt={4}>
+                  <Typography variant="h6" gutterBottom>
+                    Model Specifications
+                  </Typography>
+                  <TableContainer>
+                    <Table>
+                      <TableBody>
+                        <TableRow>
+                          {product.modelTable.headers.map((header, index) => (
+                            <TableCell key={index} component="th" scope="row" sx={{ fontWeight: 600 }}>
+                              {header}
+                            </TableCell>
+                          ))}
+                        </TableRow>
+                        {product.modelTable.rows.map((row, rowIndex) => (
+                          <TableRow key={rowIndex}>
+                            {row.map((cell, cellIndex) => (
+                              <TableCell key={cellIndex}>{cell}</TableCell>
+                            ))}
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </Box>
+              )}
             </Paper>
           </Grid>
         </Grid>

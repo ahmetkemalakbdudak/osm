@@ -17,11 +17,11 @@ import {
 
 function Contact() {
   const contactInfo = {
-    whatsapp: '+90 555 123 4567',
-    email: 'info@techbrands.com',
-    phone: '+90 212 123 4567',
-    address: 'Merkez Mah. Teknoloji Cad. No:1, Istanbul, Turkey',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.443827567115!2d28.97206661573761!3d41.02557897929954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9e7a7777c43%3A0x4c76cf3dcc8b330b!2sIstanbul%2C%20Turkey!5e0!3m2!1sen!2sus!4v1620147382897!5m2!1sen!2sus',
+    whatsapp: '+36 30 124 0003',
+    email: 'osmautomec@gmail.com',
+    phone: '+36 30 124 0003',
+    address: 'AUTOMEC Ipari Berendezések Kft., 1103 Budapest, Gyömrői út 115. Start Center Business Park/101',
+    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11069.595180122315!2d19.143364121306266!3d47.46730663883507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c37bd223f27d%3A0xd06be78c858fd328!2sAutomec%20Ipari%20Berendezesek%20Kft.!5e1!3m2!1sen!2str!4v1742481809970!5m2!1sen!2str',
   };
 
   const handleWhatsAppClick = () => {

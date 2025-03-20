@@ -3,6 +3,13 @@ import paxLogo from '../assets/pax.png';
 import automecLogo from '../assets/automec.png';
 
 export type ProductCategory = 
+  | 'High Pressure Washers'
+  | 'Steam Washers'
+  | 'Foam/Liquid Sprayers'
+  | 'Car Seat and Carpet Cleaning'
+  | 'Industrial Vacuum Cleaners'
+  | 'Hot Air Generators'
+  | 'Water Extraction Systems'
   | 'Diagnostic Equipment'
   | 'Alignment Systems'
   | 'Lifting Equipment'
@@ -12,7 +19,6 @@ export type ProductCategory =
   | 'Spray Systems'
   | 'Machine Tools'
   | 'Cleaning Equipment'
-  | 'Pressure Washers'
   | 'Industrial Equipment';
 
 export interface Product {
@@ -23,6 +29,10 @@ export interface Product {
   features: string[];
   specifications: Record<string, string>;
   image: string;
+  modelTable?: {
+    headers: string[];
+    rows: string[][];
+  };
 }
 
 export interface Brand {
@@ -221,212 +231,249 @@ export const brands: Record<string, Brand> = {
     products: [
       {
         id: 1,
-        name: 'C-Series C150',
-        description: 'Cold Water High Pressure Washer with Italian pump technology, designed for professional cleaning in car washes, industrial areas, and various commercial applications.',
-        category: 'Pressure Washers',
+        name: 'Hot-Cold Water High Pressure Washer H-Series',
+        description: 'Professional hot-cold water high pressure washers with adjustable pressure and temperature control',
+        category: 'High Pressure Washers',
         image: paxLogo,
         features: [
+          'Hot and cold water operation',
           'Adjustable pressure control',
-          '3 Cylinder Ceramic Piston pump',
           'Italian pump technology',
           'Low water consumption',
-          'Professional grade performance',
-          'Versatile applications'
+          'Professional grade construction'
         ],
         specifications: {
-          'Pump Pressure': '150 bar',
-          'Operating Pressure': '30-150 bar (Adjustable)',
-          'Water Flow': '15 L/min (Adjustable)',
-          'Motor Power': '4 kW / 5.5 HP',
-          'Voltage': '220V - Single phase',
+          'Models': 'H-150, H-200, H-250, H-300',
+          'Pump Pressure': '150-300 bar (AR)',
+          'Operating Pressure': '30-300 bar (Adjustable)',
+          'Flow': '15 L/min (Adjustable)',
+          'Temperature': '120°C (Adjustable)',
           'Pump Type': '3 Cylinder Ceramic Piston',
-          'Hose Length': 'R2 / 12 meters'
+          'Fuel Type': 'Motorin',
+          'Fuel Consumption': '3-6 L/S',
+          'Hose Length': 'R2 / 12 mt.'
+        },
+        modelTable: {
+          headers: ['Model', 'Pump Pressure (Bar)', 'Operating Pressure (Bar)', 'Flow (L/min)', 'Temperature (Max)', 'Motor Power (kW-Hp)', 'Voltage (Phase-Volt)', 'Pump Type', 'Fuel Type', 'Fuel Consumption (L/S)', 'Hose Length'],
+          rows: [
+            ['H-150', '150 - AR', '30 - 150 Adjustable', '15 Adjustable', '120 Adjustable', '4 / 5.5', '220 - 1', '3 Cylinder Ceramic Piston', 'Motorin', '3 - 6', 'R2 / 12 mt.'],
+            ['H-200', '200 - AR', '30 - 200 Adjustable', '15 Adjustable', '120 Adjustable', '5.5 / 7.5', '380 - 3', '3 Cylinder Ceramic Piston', 'Motorin', '3 - 6', 'R2 / 12 mt.'],
+            ['H-250', '250 - AR', '30 - 250 Adjustable', '15 Adjustable', '120 Adjustable', '7.5 / 10', '380 - 3', '3 Cylinder Ceramic Piston', 'Motorin', '3 - 6', 'R2 / 12 mt.'],
+            ['H-300', '300 - AR', '30 - 300 Adjustable', '15 Adjustable', '120 Adjustable', '11 / 15', '380 - 3', '3 Cylinder Ceramic Piston', 'Motorin', '3 - 6', 'R2 / 12 mt.']
+          ]
         }
       },
       {
         id: 2,
-        name: 'C-Series C200',
-        description: 'Professional Cold Water High Pressure Washer with enhanced power, suitable for industrial cleaning, highways, airlines, and heavy-duty applications.',
-        category: 'Pressure Washers',
+        name: 'Cold Water High Pressure Washer C-Series',
+        description: 'Professional cold water high pressure washers with adjustable pressure control',
+        category: 'High Pressure Washers',
         image: paxLogo,
         features: [
-          'High pressure capability',
-          '3 Cylinder Ceramic Piston pump',
+          'Cold water operation',
+          'Adjustable pressure control',
           'Italian pump technology',
-          'Industrial grade performance',
-          'Adjustable settings',
-          'Robust construction'
+          'Low water consumption',
+          'Professional grade construction'
         ],
         specifications: {
-          'Pump Pressure': '200 bar',
-          'Operating Pressure': '30-200 bar (Adjustable)',
-          'Water Flow': '15 L/min (Adjustable)',
-          'Motor Power': '5.5 kW / 7.5 HP',
-          'Voltage': '380V - Three phase',
+          'Models': 'C-150, C-200, C-250, C-300',
+          'Pump Pressure': '150-300 bar (AR)',
+          'Operating Pressure': '30-300 bar (Adjustable)',
+          'Flow': '15 L/min (Adjustable)',
           'Pump Type': '3 Cylinder Ceramic Piston',
-          'Hose Length': 'R2 / 12 meters'
-        }
-      },
-      {
-        id: 3,
-        name: 'E-Series E150',
-        description: 'Advanced Cold Water High Pressure Washer designed for professional cleaning with enhanced efficiency and user-friendly operation.',
-        category: 'Pressure Washers',
-        image: paxLogo,
-        features: [
-          'Adjustable pressure system',
-          '3 Cylinder Ceramic Piston pump',
-          'Italian pump technology',
-          'Energy efficient design',
-          'Professional performance',
-          'Versatile applications'
-        ],
-        specifications: {
-          'Pump Pressure': '150 bar',
-          'Operating Pressure': '30-150 bar (Adjustable)',
-          'Water Flow': '15 L/min (Adjustable)',
-          'Motor Power': '4 kW / 5.5 HP',
-          'Voltage': '220V - Single phase',
-          'Pump Type': '3 Cylinder Ceramic Piston',
-          'Hose Length': 'R2 / 12 meters'
-        }
-      },
-      {
-        id: 4,
-        name: 'B-200 Steam Washer',
-        description: 'Professional Pressure Steam Washer utilizing Italian pump technology, designed for cleaning hard-to-reach areas and surfaces where water usage is restricted.',
-        category: 'Cleaning Equipment',
-        image: paxLogo,
-        features: [
-          'High-temperature steam cleaning',
-          'Dual operator capability',
-          'Automatic and manual filling',
-          'Italian motor and pump',
-          'Safety valve system',
-          'Pressure stabilization'
-        ],
-        specifications: {
-          'Max Steam Pressure': '8 bar',
-          'Steam Temperature': '160-200°C',
-          'Tank Capacity': 'Water 35L / Steam 20L',
-          'Power Supply': '380V',
-          'Heating Time': '5-7 minutes',
-          'Gun Type': '2 Pieces (2 Operators)',
-          'Safety Features': 'Valve, Pressure Stabilizer, Pressure Valve'
-        }
-      },
-      {
-        id: 5,
-        name: 'Steam Master Pro',
-        description: 'Industrial Steam Washer',
-        category: 'Cleaning Equipment',
-        image: paxLogo,
-        features: [
-          'High-temperature steam',
-          'Multiple attachments',
-          'Continuous refill',
-          'Professional grade'
-        ],
-        specifications: {
-          'Steam Pressure': '8 bar',
-          'Temperature': '175°C',
-          'Tank Capacity': '5L',
-          'Power': '3600W'
-        }
-      },
-      {
-        id: 6,
-        name: 'FoamPro 2000',
-        description: 'Professional Foam/Liquid Sprayer',
-        category: 'Spray Systems',
-        image: paxLogo,
-        features: [
-          'Adjustable foam density',
-          'Chemical resistant',
-          'Multiple spray patterns',
-          'Large capacity tank'
-        ],
-        specifications: {
-          'Tank Capacity': '20L',
-          'Pressure': '6 bar',
-          'Spray Distance': '8m',
-          'Material': 'Stainless Steel'
-        }
-      },
-      {
-        id: 7,
-        name: 'CarSeat Pro',
-        description: 'Car Seat and Carpet Cleaning Machine',
-        category: 'Cleaning Equipment',
-        image: paxLogo,
-        features: [
-          'Deep cleaning action',
-          'Hot water extraction',
-          'Powerful suction',
-          'Multiple attachments'
-        ],
-        specifications: {
-          'Tank Capacity': '25L',
-          'Vacuum Motor': '1200W',
-          'Pump Pressure': '4 bar',
-          'Cable Length': '7.5m'
-        }
-      },
-      {
-        id: 8,
-        name: 'Industrial Vacuum X3000',
-        description: 'Heavy-Duty Industrial Vacuum Cleaner',
-        category: 'Cleaning Equipment',
-        image: paxLogo,
-        features: [
-          'Wet & dry operation',
-          'HEPA filtration',
-          'Stainless steel tank',
-          'High capacity'
-        ],
-        specifications: {
-          'Capacity': '80L',
-          'Motor Power': '3000W',
-          'Airflow': '3600 L/min',
-          'Noise Level': '72 dB'
+          'Hose Length': 'R2 / 12 mt.'
+        },
+        modelTable: {
+          headers: ['Model', 'Pump Pressure (Bar)', 'Operating Pressure (Bar)', 'Flow (L/min)', 'Motor Power (kW-Hp)', 'Voltage (Phase-Volt)', 'Pump Type', 'Hose Length'],
+          rows: [
+            ['C-150', '150 - AR', '30 - 150 Adjustable', '15 Adjustable', '4 / 5.5', '220 - 1', '3 Cylinder Ceramic Piston', 'R2 / 12 mt.'],
+            ['C-200', '200 - AR', '30 - 200 Adjustable', '15 Adjustable', '5.5 / 7.5', '380 - 3', '3 Cylinder Ceramic Piston', 'R2 / 12 mt.'],
+            ['C-250', '250 - AR', '30 - 250 Adjustable', '15 Adjustable', '7.5 / 10', '380 - 3', '3 Cylinder Ceramic Piston', 'R2 / 12 mt.'],
+            ['C-300', '300 - AR', '30 - 300 Adjustable', '15 Adjustable', '11 / 15', '380 - 3', '3 Cylinder Ceramic Piston', 'R2 / 12 mt.']
+          ]
         }
       },
       {
         id: 9,
-        name: 'HotAir 5000',
-        description: 'Industrial Hot Air Generator',
-        category: 'Industrial Equipment',
+        name: 'Foam Liquid Sprayer Series',
+        description: 'Professional foam and liquid spraying systems with various tank capacities',
+        category: 'Foam/Liquid Sprayers',
         image: paxLogo,
         features: [
-          'High heat output',
-          'Adjustable temperature',
-          'Safety features',
-          'Portable design'
+          'Adjustable foam density',
+          'Pressure control system',
+          'Mobile design',
+          'Professional grade construction',
+          'Stainless steel tank'
         ],
         specifications: {
-          'Heat Output': '50kW',
-          'Airflow': '2500 m³/h',
-          'Temperature Range': '20-80°C',
-          'Fuel Type': 'Diesel'
+          'Models': 'F-65, F-100',
+          'Pressure': '6-8 bar',
+          'Material': 'Stainless steel tank',
+          'Construction': 'Professional grade'
+        },
+        modelTable: {
+          headers: ['Model', 'Tank Capacity (L)', 'Power (kW)', 'Weight (kg)', 'Dimensions (mm)'],
+          rows: [
+            ['F-65', '65', '1.5', '85', '800x600x1200'],
+            ['F-100', '100', '2.2', '120', '900x700x1300']
+          ]
         }
       },
       {
         id: 10,
-        name: 'Pro Squeezer',
-        description: 'Industrial Water Extraction System',
+        name: 'Car Seat Cleaning Machine',
+        description: 'Professional car seat cleaning machine with powerful suction and foam cleaning capabilities',
+        category: 'Car Seat and Carpet Cleaning',
+        image: paxLogo,
+        features: [
+          'Powerful suction system',
+          'Foam cleaning technology',
+          'Adjustable brush system',
+          'Mobile design',
+          'Professional grade construction'
+        ],
+        specifications: {
+          'Power': '2.2 kW',
+          'Suction Power': '1200W',
+          'Tank Capacity': '80 L',
+          'Weight': '95 kg',
+          'Dimensions': '900x700x1300 mm',
+          'Material': 'Stainless steel construction'
+        }
+      },
+      {
+        id: 11,
+        name: 'Hard Floor and Carpet Cleaning Machine',
+        description: 'Versatile cleaning machine for both hard floors and carpets with professional cleaning capabilities',
+        category: 'Car Seat and Carpet Cleaning',
+        image: paxLogo,
+        features: [
+          'Dual-purpose cleaning',
+          'Adjustable brush pressure',
+          'Powerful suction system',
+          'Mobile design',
+          'Professional grade construction'
+        ],
+        specifications: {
+          'Power': '2.2 kW',
+          'Suction Power': '1200W',
+          'Tank Capacity': '100 L',
+          'Weight': '110 kg',
+          'Dimensions': '1000x800x1400 mm',
+          'Material': 'Stainless steel construction'
+        }
+      },
+      {
+        id: 12,
+        name: 'Industrial Wet-Dry Vacuum Cleaner - Two Motor',
+        description: 'Professional industrial vacuum cleaner with dual motor system for enhanced suction power',
+        category: 'Industrial Vacuum Cleaners',
+        image: paxLogo,
+        features: [
+          'Dual motor system',
+          'Wet and dry vacuuming',
+          'Large capacity tank',
+          'Mobile design',
+          'Professional grade construction'
+        ],
+        specifications: {
+          'Power': '2x 2.2 kW',
+          'Suction Power': '2400W',
+          'Tank Capacity': '120 L',
+          'Weight': '130 kg',
+          'Dimensions': '1100x800x1500 mm',
+          'Material': 'Stainless steel construction'
+        }
+      },
+      {
+        id: 13,
+        name: 'Industrial Wet-Dry Vacuum Cleaner - Three Motor',
+        description: 'High-performance industrial vacuum cleaner with triple motor system for maximum suction power',
+        category: 'Industrial Vacuum Cleaners',
+        image: paxLogo,
+        features: [
+          'Triple motor system',
+          'Wet and dry vacuuming',
+          'Extra large capacity tank',
+          'Mobile design',
+          'Professional grade construction'
+        ],
+        specifications: {
+          'Power': '3x 2.2 kW',
+          'Suction Power': '3600W',
+          'Tank Capacity': '150 L',
+          'Weight': '160 kg',
+          'Dimensions': '1200x900x1600 mm',
+          'Material': 'Stainless steel construction'
+        }
+      },
+      {
+        id: 14,
+        name: 'Hot Air Generator',
+        description: 'Professional hot air generator for efficient drying and heating applications',
+        category: 'Hot Air Generators',
+        image: paxLogo,
+        features: [
+          'High heat output',
+          'Temperature control',
+          'Mobile design',
+          'Energy efficient',
+          'Professional grade construction'
+        ],
+        specifications: {
+          'Power': '2.2 kW',
+          'Heat Output': '75,000 kcal/h',
+          'Air Flow': '2000 m³/h',
+          'Weight': '85 kg',
+          'Dimensions': '900x700x1200 mm',
+          'Material': 'Stainless steel construction'
+        }
+      },
+      {
+        id: 15,
+        name: 'Hot Air Generator ECO',
+        description: 'Energy-efficient hot air generator with advanced temperature control system',
+        category: 'Hot Air Generators',
+        image: paxLogo,
+        features: [
+          'Energy saving design',
+          'Advanced temperature control',
+          'Mobile design',
+          'Low noise operation',
+          'Professional grade construction'
+        ],
+        specifications: {
+          'Power': '2.2 kW',
+          'Heat Output': '75,000 kcal/h',
+          'Air Flow': '2000 m³/h',
+          'Weight': '90 kg',
+          'Dimensions': '900x700x1200 mm',
+          'Material': 'Stainless steel construction',
+          'Energy Savings': 'Up to 30%'
+        }
+      },
+      {
+        id: 16,
+        name: 'Cloth Squeezing Machine',
+        description: 'Professional cloth squeezing machine for efficient water removal from fabrics and textiles',
         category: 'Cleaning Equipment',
         image: paxLogo,
         features: [
-          'High pressure extraction',
-          'Quick drying',
-          'Professional grade',
-          'Easy operation'
+          'High-pressure squeezing',
+          'Adjustable pressure control',
+          'Large capacity',
+          'Mobile design',
+          'Professional grade construction'
         ],
         specifications: {
-          'Pressure': '8 bar',
-          'Water Flow': '10 L/min',
-          'Motor': '2.2 kW',
-          'Tank': '30L'
+          'Power': '2.2 kW',
+          'Pressure': '6-8 bar',
+          'Capacity': '100 kg/hour',
+          'Weight': '95 kg',
+          'Dimensions': '1000x800x1300 mm',
+          'Material': 'Stainless steel construction'
         }
       }
     ]

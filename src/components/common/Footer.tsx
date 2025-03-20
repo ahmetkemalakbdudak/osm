@@ -8,6 +8,12 @@ import {
   useTheme,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import {
+  WhatsApp as WhatsAppIcon,
+  Email as EmailIcon,
+  Phone as PhoneIcon,
+  LocationOn as LocationOnIcon,
+} from '@mui/icons-material';
 
 function Footer() {
   const theme = useTheme();
@@ -18,6 +24,13 @@ function Footer() {
     { name: 'Pax', path: '/brands/pax' },
     { name: 'Automec', path: '/brands/automec' },
   ];
+
+  const contactInfo = {
+    whatsapp: '+36 30 124 0003',
+    email: 'osmautomec@gmail.com',
+    phone: '+36 30 124 0003',
+    address: 'AUTOMEC Ipari Berendezések Kft., 1103 Budapest, Gyömrői út 115. Start Center Business Park/101',
+  };
 
   return (
     <Box
@@ -47,7 +60,7 @@ function Footer() {
                 <Link
                   key={brand.path}
                   component="button"
-                  variant="body2"
+                  variant="button"
                   onClick={() => navigate(brand.path)}
                   sx={{
                     display: 'block',
@@ -68,15 +81,45 @@ function Footer() {
             <Typography variant="h6" color="text.primary" gutterBottom>
               Contact
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Email: contact@techbrands.com
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Phone: +1 234 567 890
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Address: 123 Tech Street, Innovation City
-            </Typography>
+            <Box display="flex" flexDirection="column" gap={1}>
+              <Box display="flex" alignItems="center" gap={1}>
+                <PhoneIcon fontSize="small" color="primary" />
+                <Link
+                  href={`tel:${contactInfo.phone.replace(/\D/g, '')}`}
+                  color="text.secondary"
+                  underline="hover"
+                >
+                  {contactInfo.phone}
+                </Link>
+              </Box>
+              <Box display="flex" alignItems="center" gap={1}>
+                <WhatsAppIcon fontSize="small" color="primary" />
+                <Link
+                  href={`https://wa.me/${contactInfo.whatsapp.replace(/\D/g, '')}`}
+                  color="text.secondary"
+                  underline="hover"
+                  target="_blank"
+                >
+                  {contactInfo.whatsapp}
+                </Link>
+              </Box>
+              <Box display="flex" alignItems="center" gap={1}>
+                <EmailIcon fontSize="small" color="primary" />
+                <Link
+                  href={`mailto:${contactInfo.email}`}
+                  color="text.secondary"
+                  underline="hover"
+                >
+                  {contactInfo.email}
+                </Link>
+              </Box>
+              <Box display="flex" gap={1}>
+                <LocationOnIcon fontSize="small" color="primary" sx={{ mt: 0.5 }} />
+                <Typography variant="body2" color="text.secondary">
+                  {contactInfo.address}
+                </Typography>
+              </Box>
+            </Box>
           </Grid>
         </Grid>
         <Divider sx={{ my: 4 }} />

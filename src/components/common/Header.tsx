@@ -27,6 +27,7 @@ import {
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { ProductCategory } from '../../data/brands';
 
 interface Language {
   code: string;
@@ -79,8 +80,17 @@ const menuItems: MenuItems = {
     { label: 'Automec', path: '/brands/automec' },
   ],
   products: [
-    { label: 'Features', path: '/features' },
-    { label: 'Solutions', path: '/solutions' },
+    { label: 'Diagnostic Equipment', path: '/products?category=Diagnostic%20Equipment' },
+    { label: 'Alignment Systems', path: '/products?category=Alignment%20Systems' },
+    { label: 'Lifting Equipment', path: '/products?category=Lifting%20Equipment' },
+    { label: 'Tire Equipment', path: '/products?category=Tire%20Equipment' },
+    { label: 'Testing Equipment', path: '/products?category=Testing%20Equipment' },
+    { label: 'Fluid Management', path: '/products?category=Fluid%20Management' },
+    { label: 'Spray Systems', path: '/products?category=Spray%20Systems' },
+    { label: 'Machine Tools', path: '/products?category=Machine%20Tools' },
+    { label: 'Cleaning Equipment', path: '/products?category=Cleaning%20Equipment' },
+    { label: 'Pressure Washers', path: '/products?category=Pressure%20Washers' },
+    { label: 'Industrial Equipment', path: '/products?category=Industrial%20Equipment' },
   ],
   documents: [
     { label: 'User Manual', path: '/src/assets/docs/manual.pdf', icon: DescriptionIcon },
