@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the automec images directory
-cd "$(dirname "$0")/../assets/images/automec" || exit
+cd "$(dirname "$0")/../assets/images/Pax" || exit
 
 # Process each product folder
 for folder in */; do
