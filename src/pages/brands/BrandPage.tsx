@@ -60,15 +60,20 @@ function BrandPage() {
             // Only process images from this brand's folder
             if (lowerPath.includes(`/${lowerBrandName}/`)) {
               brand.products.forEach(product => {
-                const lowerProductName = product.name.toLowerCase().replace(/[^a-z0-9]+/g, '');
-                if (lowerPath.includes(lowerProductName)) {
+                // Get the product name without the series/type suffix for more flexible matching
+                const baseProductName = product.name.split(' ')[0];
+                const lowerBaseProductName = baseProductName.toLowerCase();
+                
+                // Check if the path includes the base product name
+                if (lowerPath.includes(lowerBaseProductName)) {
                   // Get the number from the filename
                   const match = path.match(/\d+(?=\.[^.]+$)/);
                   const num = match ? parseInt(match[0]) : Infinity;
                   
                   // Only keep the first image (01) for each product
-                  if (num === 1) {
+                  if (num === 1 || !images[product.name]) {
                     images[product.name] = module.default;
+                    console.log(`Found image for ${product.name}:`, path);
                   }
                 }
               });
