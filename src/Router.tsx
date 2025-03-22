@@ -8,6 +8,7 @@ const Home = lazy(() => import('./pages/home/Home'));
 const BrandPage = lazy(() => import('./pages/brands/BrandPage'));
 const ProductPage = lazy(() => import('./pages/products/ProductPage'));
 const Contact = lazy(() => import('./pages/contact/Contact'));
+const About = lazy(() => import('./pages/about/About'));
 
 // Loading component
 const LoadingFallback = () => (
@@ -25,6 +26,7 @@ function Router() {
           <Route path="/brands/:brandName" element={<BrandPage />} />
           <Route path="/products/:productName" element={<ProductPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Suspense>
     </MainLayout>

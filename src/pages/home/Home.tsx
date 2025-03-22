@@ -31,7 +31,7 @@ const brands = [
     id: 'automec',
     name: 'Automec',
     logo: automecLogo,
-    description: 'Cutting-edge automotive testing and maintenance solutions',
+    description: 'Cutting-edge automotive service equipment for professional workshops',
   },
 ];
 
@@ -60,7 +60,7 @@ function Home() {
                 color="text.secondary"
                 sx={{ mb: 4, lineHeight: 1.5 }}
               >
-                Providing premium automotive equipment solutions since 2010. Your success is our priority.
+                EU branch of AUTOMEC Automotive Service Equipment, established in 2023. General distributors of PAX Industrial Cleaning Equipment and Caldini Aerosol products.
               </Typography>
               <Button
                 variant="contained"

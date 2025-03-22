@@ -56,7 +56,7 @@ function About() {
           color="text.secondary"
           sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}
         >
-          Leading provider of premium automotive equipment solutions since 2010
+          Leading provider of premium automotive equipment solutions since 2023
         </Typography>
 
         <Grid container spacing={6}>
@@ -65,13 +65,16 @@ function About() {
               Our Story
             </Typography>
             <Typography paragraph>
-              TechBrands was founded with a vision to revolutionize the automotive equipment industry by providing high-quality, innovative solutions to automotive professionals worldwide.
+              Our company was established in 2023 as the EU branch of AUTOMEC Automotive Service Equipment in Budapest, Hungary. In addition, we are the general distributors of PAX Industrial Cleaning Equipment and Caldini Aerosol products.
             </Typography>
             <Typography paragraph>
-              Over the years, we've built strong partnerships with leading manufacturers and developed our own cutting-edge products, establishing ourselves as a trusted name in the industry.
+              Our vision is to establish our brands globally in a lasting way in the long term. Our mission is to deliver our products with highest quality and the best reliable service to our customers, and to maintain sustainable and qualified partnerships that will keep our brand in a strong and competitive position across all European countries.
             </Typography>
             <Typography>
-              Today, we serve thousands of customers across multiple countries, helping them improve their efficiency and deliver better service to their clients through our advanced automotive solutions.
+              We are proud to serve our customers with our stock availability at our headquarters in Hungary, offering both retail and wholesale sales.
+            </Typography>
+            <Typography variant="subtitle1" sx={{ mt: 2, fontStyle: 'italic' }}>
+              Sincerely, 
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -136,7 +139,7 @@ function About() {
               color="text.secondary"
               sx={{ maxWidth: 800, mx: 'auto' }}
             >
-              To empower automotive businesses with innovative equipment solutions that enhance their productivity, reliability, and customer satisfaction.
+              To deliver our products with highest quality and the best reliable service to our customers, and to maintain sustainable and qualified partnerships that will keep our brand in a strong and competitive position across all European countries.
             </Typography>
           </Container>
         </Box>
