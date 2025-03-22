@@ -160,8 +160,8 @@ function Header() {
               mr: 4,
             }}
           >
-            <Box component="span" color="primary.main">Tech</Box>
-            Brands
+            <Box component="span" color="primary.main">Auto</Box>
+            mec
           </Typography>
 
           {!isMobile && (

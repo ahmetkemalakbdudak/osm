@@ -45,7 +45,7 @@ function Footer() {
         <Grid container spacing={4}>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
-              TechBrands
+              Automec
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Leading provider of innovative technology solutions for businesses worldwide.
@@ -124,7 +124,7 @@ function Footer() {
         </Grid>
         <Divider sx={{ my: 4 }} />
         <Typography variant="body2" color="text.secondary" align="center">
-          © {new Date().getFullYear()} TechBrands. All rights reserved.
+          © {new Date().getFullYear()} Automec. All rights reserved.
         </Typography>
       </Container>
     </Box>

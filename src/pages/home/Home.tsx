@@ -53,7 +53,7 @@ function Home() {
                   mb: 2,
                 }}
               >
-                <Box component="span" color="primary.main">Tech</Box>Brands
+                <Box component="span" color="primary.main">Auto</Box>mec
               </Typography>
               <Typography
                 variant="h5"
