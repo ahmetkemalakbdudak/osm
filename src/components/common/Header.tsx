@@ -92,9 +92,9 @@ const menuItems: MenuItems = {
     { label: 'Industrial Equipment', path: '/products?category=Industrial%20Equipment' },
   ],
   documents: [
-    { label: 'User Manual', path: '/src/assets/docs/manual.pdf', icon: DescriptionIcon },
-    { label: 'Technical Specs', path: '/src/assets/docs/specs.pdf', icon: DescriptionIcon },
-    { label: 'Installation Guide', path: '/src/assets/docs/installation.pdf', icon: DescriptionIcon },
+    { label: 'AD3030 DPF Cleaning Machine Specs', path: '/assets/docs/AD3030 DPF Cleaning Machine Technical Specifications2 (1).pdf', icon: DescriptionIcon },
+    { label: 'FDT4000 User Guide', path: '/assets/docs/FDT4000 USER GUIDE.pdf', icon: DescriptionIcon },
+    { label: 'FDT4000 Manual (Romanian)', path: '/assets/docs/ROMANIAN De Utilizare Al Fdt4000.pdf', icon: DescriptionIcon },
   ],
 };
 
@@ -134,7 +134,7 @@ function Header() {
   };
 
   const handleNavigate = (path: string) => {
-    if (path.startsWith('/src/assets/docs/')) {
+    if (path.startsWith('/assets/docs/')) {
       window.open(path, '_blank');
     } else {
       navigate(path);
