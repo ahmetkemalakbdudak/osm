@@ -132,25 +132,10 @@ function Header() {
 
   const handleNavigate = (path: string) => {
     if (path.startsWith('/assets/docs/')) {
-      // Open PDF in the same window using an embedded iframe
-      const pdfUrl = path;
-      const pdfWindow = window.open('', '_blank');
-      if (pdfWindow) {
-        pdfWindow.document.write(`
-          <html>
-            <head>
-              <title>PDF Viewer</title>
-              <style>
-                body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-                iframe { width: 100%; height: 100%; border: none; }
-              </style>
-            </head>
-            <body>
-              <iframe src="${pdfUrl}" type="application/pdf" width="100%" height="100%"></iframe>
-            </body>
-          </html>
-        `);
-      }
+      // Use Google Drive viewer
+      const pdfUrl = window.location.origin + path;
+      const googleViewerUrl = `https://drive.google.com/viewerng/viewer?embedded=true&url=${encodeURIComponent(pdfUrl)}`;
+      window.open(googleViewerUrl, '_blank');
     } else {
       navigate(path);
     }
