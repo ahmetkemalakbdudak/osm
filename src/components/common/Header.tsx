@@ -89,9 +89,9 @@ const menuItems: MenuItems = {
     { label: 'Aerosol Products', path: '/brands/caldini' },
   ],
   documents: [
-    { label: 'AD3030 DPF Cleaning Machine Specs', path: '/assets/docs/AD3030 DPF Cleaning Machine Technical Specifications2 (1).pdf', icon: DescriptionIcon },
-    { label: 'FDT4000 User Guide', path: '/assets/docs/FDT4000 USER GUIDE.pdf', icon: DescriptionIcon },
-    { label: 'FDT4000 Manual (Romanian)', path: '/assets/docs/ROMANIAN De Utilizare Al Fdt4000.pdf', icon: DescriptionIcon },
+    { label: 'AD3030 DPF Cleaning Machine Specs', path: '/docs/AD3030 DPF Cleaning Machine Technical Specifications2 (1).pdf', icon: DescriptionIcon },
+    { label: 'FDT4000 User Guide', path: '/docs/FDT4000 USER GUIDE.pdf', icon: DescriptionIcon },
+    { label: 'FDT4000 Manual (Romanian)', path: '/docs/ROMANIAN De Utilizare Al Fdt4000.pdf', icon: DescriptionIcon },
   ],
 };
 
@@ -131,11 +131,9 @@ function Header() {
   };
 
   const handleNavigate = (path: string) => {
-    if (path.startsWith('/assets/docs/')) {
-      // Use Google Drive viewer
-      const pdfUrl = window.location.origin + path;
-      const googleViewerUrl = `https://drive.google.com/viewerng/viewer?embedded=true&url=${encodeURIComponent(pdfUrl)}`;
-      window.open(googleViewerUrl, '_blank');
+    if (path.startsWith('/docs/')) {
+      // Open PDF directly in a new tab using browser's built-in PDF viewer
+      window.open(path, '_blank');
     } else {
       navigate(path);
     }
