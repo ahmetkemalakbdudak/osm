@@ -1,8 +1,9 @@
 import caldiniLogo from '../assets/caldini.png';
 import paxLogo from '../assets/pax.png';
-import automecLogo from '../assets/automec.png';
+import automecLogo from '../assets/automec-logo-transparent.png';
 
 export type ProductCategory = 
+  // Car Wash and Industrial Cleaning Equipment (PAX)
   | 'High Pressure Washers'
   | 'Steam Washers'
   | 'Foam/Liquid Sprayers'
@@ -10,16 +11,20 @@ export type ProductCategory =
   | 'Industrial Vacuum Cleaners'
   | 'Hot Air Generators'
   | 'Water Extraction Systems'
+  
+  // Car Service & Garage Equipment (AUTOMEC)
   | 'Diagnostic Equipment'
   | 'Alignment Systems'
   | 'Lifting Equipment'
   | 'Tire Equipment'
   | 'Testing Equipment'
   | 'Fluid Management'
-  | 'Spray Systems'
   | 'Machine Tools'
   | 'Cleaning Equipment'
-  | 'Industrial Equipment';
+  | 'Industrial Equipment'
+  
+  // Aerosol Products (CALDINI)
+  | 'Spray Systems';
 
 export interface Product {
   id: number;
@@ -47,7 +52,7 @@ export const brands: Record<string, Brand> = {
   caldini: {
     id: 'caldini',
     name: 'Caldini',
-    description: 'Premium automotive maintenance and cleaning solutions',
+    description: 'Professional Aerosol Products',
     logo: caldiniLogo,
     products: [
       {
@@ -226,7 +231,7 @@ export const brands: Record<string, Brand> = {
   pax: {
     id: 'pax',
     name: 'Pax',
-    description: 'Professional high-pressure washing machines using Italian pump technology, designed for maximum performance with low water consumption.',
+    description: 'Car Wash and Industrial Cleaning Equipment',
     logo: paxLogo,
     products: [
       {
@@ -481,7 +486,7 @@ export const brands: Record<string, Brand> = {
   automec: {
     id: 'automec',
     name: 'Automec',
-    description: 'Advanced diagnostic and testing equipment',
+    description: 'Professional Car Service & Garage Equipment',
     logo: automecLogo,
     products: [
       {

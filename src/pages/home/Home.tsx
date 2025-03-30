@@ -19,19 +19,19 @@ const brands = [
     id: 'automec',
     name: 'Automec',
     logo: automecLogo,
-    description: 'Cutting-edge automotive service equipment for professional workshops',
+    description: 'Professional Car Service & Garage Equipment',
   },
   {
     id: 'pax',
     name: 'Pax',
     logo: paxLogo,
-    description: 'Innovative lifting and maintenance equipment',
+    description: 'Car Wash and Industrial Cleaning Equipment',
   },
   {
     id: 'caldini',
     name: 'Caldini',
     logo: caldiniLogo,
-    description: 'Premium automotive diagnostic and repair equipment',
+    description: 'Professional Aerosol Products',
   },
 ];
 
