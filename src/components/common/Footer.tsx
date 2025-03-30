@@ -6,6 +6,7 @@ import {
   Link,
   Divider,
   useTheme,
+  Stack,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -13,6 +14,9 @@ import {
   Email as EmailIcon,
   Phone as PhoneIcon,
   LocationOn as LocationOnIcon,
+  Facebook as FacebookIcon,
+  Instagram as InstagramIcon,
+  YouTube as YouTubeIcon,
 } from '@mui/icons-material';
 
 function Footer() {
@@ -32,6 +36,12 @@ function Footer() {
     address: 'AUTOMEC Ipari Berendezések Kft., 1103 Budapest, Gyömrői út 115. Start Center Business Park/101',
   };
 
+  const socialMedia = [
+    { name: 'Facebook', icon: FacebookIcon, url: 'https://www.facebook.com/automeceu' },
+    { name: 'YouTube', icon: YouTubeIcon, url: 'https://www.youtube.com/automecosmotomotiv' },
+    { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/automeceu' },
+  ];
+
   return (
     <Box
       component="footer"
@@ -50,6 +60,29 @@ function Footer() {
             <Typography variant="body2" color="text.secondary">
               Leading provider of innovative technology solutions for businesses worldwide.
             </Typography>
+            <Box mt={2}>
+              <Typography variant="subtitle2" color="text.primary" gutterBottom>
+                Follow Us
+              </Typography>
+              <Stack direction="row" spacing={1}>
+                {socialMedia.map((social) => (
+                  <Link 
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: 'text.secondary',
+                      '&:hover': {
+                        color: 'primary.main',
+                      },
+                    }}
+                  >
+                    <social.icon />
+                  </Link>
+                ))}
+              </Stack>
+            </Box>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>

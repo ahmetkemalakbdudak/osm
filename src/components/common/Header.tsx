@@ -17,6 +17,7 @@ import {
   ListItemText,
   Stack,
   SvgIconTypeMap,
+  Link,
 } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import {
@@ -24,6 +25,9 @@ import {
   Close as CloseIcon,
   KeyboardArrowDown as KeyboardArrowDownIcon,
   Description as DescriptionIcon,
+  Facebook as FacebookIcon,
+  Instagram as InstagramIcon,
+  YouTube as YouTubeIcon,
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -146,6 +150,12 @@ function Header() {
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
+  const socialMedia = [
+    { name: 'Facebook', icon: FacebookIcon, url: 'https://www.facebook.com/automeceu' },
+    { name: 'YouTube', icon: YouTubeIcon, url: 'https://www.youtube.com/automecosmotomotiv' },
+    { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/automeceu' },
+  ];
+
   return (
     <AppBar position="sticky" color="default" elevation={0} sx={{ borderBottom: 1, borderColor: 'divider' }}>
       <Container maxWidth="lg">
@@ -227,6 +237,24 @@ function Header() {
             <>
               <Box sx={{ flexGrow: 1 }} />
               <Stack direction="row" spacing={1} alignItems="center">
+                <Stack direction="row" spacing={1} sx={{ mr: 2 }}>
+                  {socialMedia.map((social) => (
+                    <Link
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        color: 'text.secondary',
+                        '&:hover': {
+                          color: 'primary.main',
+                        },
+                      }}
+                    >
+                      <social.icon fontSize="small" />
+                    </Link>
+                  ))}
+                </Stack>
                 <Button
                   size="small"
                   onClick={handleLanguageClick}
@@ -251,21 +279,41 @@ function Header() {
               </Stack>
             </>
           ) : (
-            <Button
-              size="small"
-              onClick={handleLanguageClick}
-              sx={{
-                minWidth: 'auto',
-                px: 1,
-                color: 'text.primary',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 0.5,
-              }}
-            >
-              <Typography sx={{ fontSize: '1.25rem' }}>{currentLanguage.flag}</Typography>
-              {currentLanguage.shortLabel}
-            </Button>
+            <>
+              <Stack direction="row" spacing={1} sx={{ mr: 2 }}>
+                {socialMedia.map((social) => (
+                  <Link
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: 'text.secondary',
+                      '&:hover': {
+                        color: 'primary.main',
+                      },
+                    }}
+                  >
+                    <social.icon fontSize="small" />
+                  </Link>
+                ))}
+              </Stack>
+              <Button
+                size="small"
+                onClick={handleLanguageClick}
+                sx={{
+                  minWidth: 'auto',
+                  px: 1,
+                  color: 'text.primary',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 0.5,
+                }}
+              >
+                <Typography sx={{ fontSize: '1.25rem' }}>{currentLanguage.flag}</Typography>
+                {currentLanguage.shortLabel}
+              </Button>
+            </>
           )}
 
           <Menu
@@ -327,14 +375,22 @@ function Header() {
                       <ListItemButton
                         key={item.path}
                         onClick={() => handleNavigate(item.path)}
+                        sx={{ pl: 4 }}
                       >
-                        {item.icon && <item.icon fontSize="small" sx={{ mr: 2 }} />}
+                        {item.icon && <item.icon fontSize="small" sx={{ mr: 1 }} />}
                         <ListItemText primary={item.label} />
                       </ListItemButton>
                     ))}
                   </Box>
                 ))}
-                <Box>
+                <ListItemButton onClick={() => handleNavigate('/about')}>
+                  <ListItemText primary="About Us" />
+                </ListItemButton>
+                <ListItemButton onClick={() => handleNavigate('/contact')}>
+                  <ListItemText primary="Contact" />
+                </ListItemButton>
+
+                <Box mt={2}>
                   <Typography
                     variant="overline"
                     sx={{
@@ -344,15 +400,28 @@ function Header() {
                       color: 'text.secondary',
                     }}
                   >
-                    Company
+                    Follow Us
                   </Typography>
-                  <ListItemButton onClick={() => handleNavigate('/about')}>
-                    <ListItemText primary="About Us" />
-                  </ListItemButton>
-                  <ListItemButton onClick={() => handleNavigate('/contact')}>
-                    <ListItemText primary="Contact" />
-                  </ListItemButton>
+                  <Stack direction="row" spacing={2} sx={{ px: 2, py: 1 }}>
+                    {socialMedia.map((social) => (
+                      <Link
+                        key={social.name}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{
+                          color: 'text.secondary',
+                          '&:hover': {
+                            color: 'primary.main',
+                          },
+                        }}
+                      >
+                        <social.icon />
+                      </Link>
+                    ))}
+                  </Stack>
                 </Box>
+                
               </List>
             </Box>
           </Drawer>
