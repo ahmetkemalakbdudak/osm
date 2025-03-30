@@ -5,7 +5,7 @@ import { ArrowForward as ArrowForwardIcon, CheckCircle as CheckCircleIcon } from
 // Import brand logos
 import caldiniLogo from '../../assets/caldini.png';
 import paxLogo from '../../assets/pax.png';
-import automecLogo from '../../assets/automec.png';
+import automecLogo from '../../assets/automec-logo-transparent.png';
 
 const features = [
   'Rigorous quality control',
@@ -16,10 +16,10 @@ const features = [
 
 const brands = [
   {
-    id: 'caldini',
-    name: 'Caldini',
-    logo: caldiniLogo,
-    description: 'Premium automotive diagnostic and repair equipment',
+    id: 'automec',
+    name: 'Automec',
+    logo: automecLogo,
+    description: 'Cutting-edge automotive service equipment for professional workshops',
   },
   {
     id: 'pax',
@@ -28,10 +28,10 @@ const brands = [
     description: 'Innovative lifting and maintenance equipment',
   },
   {
-    id: 'automec',
-    name: 'Automec',
-    logo: automecLogo,
-    description: 'Cutting-edge automotive service equipment for professional workshops',
+    id: 'caldini',
+    name: 'Caldini',
+    logo: caldiniLogo,
+    description: 'Premium automotive diagnostic and repair equipment',
   },
 ];
 
@@ -45,16 +45,17 @@ function Home() {
         <Box py={8}>
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
-              <Typography
-                variant="h1"
+              <Box
+                component="img"
+                src={automecLogo}
+                alt="Automec"
                 sx={{
-                  fontSize: { xs: '2.5rem', md: '3.5rem' },
-                  fontWeight: 700,
+                  height: 80,
                   mb: 2,
+                  objectFit: 'contain',
+                  display: 'block'
                 }}
-              >
-                <Box component="span" color="primary.main">Auto</Box>mec
-              </Typography>
+              />
               <Typography
                 variant="h5"
                 color="text.secondary"
