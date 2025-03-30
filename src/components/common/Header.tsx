@@ -84,17 +84,9 @@ const menuItems: MenuItems = {
     { label: 'Caldini', path: '/brands/caldini' },
   ],
   products: [
-    { label: 'Diagnostic Equipment', path: '/products?category=Diagnostic%20Equipment' },
-    { label: 'Alignment Systems', path: '/products?category=Alignment%20Systems' },
-    { label: 'Lifting Equipment', path: '/products?category=Lifting%20Equipment' },
-    { label: 'Tire Equipment', path: '/products?category=Tire%20Equipment' },
-    { label: 'Testing Equipment', path: '/products?category=Testing%20Equipment' },
-    { label: 'Fluid Management', path: '/products?category=Fluid%20Management' },
-    { label: 'Spray Systems', path: '/products?category=Spray%20Systems' },
-    { label: 'Machine Tools', path: '/products?category=Machine%20Tools' },
-    { label: 'Cleaning Equipment', path: '/products?category=Cleaning%20Equipment' },
-    { label: 'Pressure Washers', path: '/products?category=Pressure%20Washers' },
-    { label: 'Industrial Equipment', path: '/products?category=Industrial%20Equipment' },
+    { label: 'CAR SERVICE & GARAGE EQUIPMENT', path: '/brands/automec' },
+    { label: 'CAR WASH AND INDUSTRIAL CLEANING EQUIPMENT', path: '/brands/pax' },
+    { label: 'AEROSOL PRODUCTS', path: '/brands/caldini' },
   ],
   documents: [
     { label: 'AD3030 DPF Cleaning Machine Specs', path: '/assets/docs/AD3030 DPF Cleaning Machine Technical Specifications2 (1).pdf', icon: DescriptionIcon },
@@ -199,7 +191,7 @@ function Header() {
                         key={item.path}
                         onClick={() => handleNavigate(item.path)}
                         sx={{ 
-                          minWidth: 180,
+                          minWidth: menu === 'products' ? 360 : 180,
                           gap: 1,
                         }}
                       >
