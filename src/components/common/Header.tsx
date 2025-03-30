@@ -75,9 +75,9 @@ const languages: Language[] = [
 
 const menuItems: MenuItems = {
   brands: [
-    { label: 'Caldini', path: '/brands/caldini' },
-    { label: 'Pax', path: '/brands/pax' },
     { label: 'Automec', path: '/brands/automec' },
+    { label: 'Pax', path: '/brands/pax' },
+    { label: 'Caldini', path: '/brands/caldini' },
   ],
   products: [
     { label: 'Diagnostic Equipment', path: '/products?category=Diagnostic%20Equipment' },
