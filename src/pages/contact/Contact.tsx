@@ -36,17 +36,6 @@ function Contact() {
     <Container maxWidth="lg">
       <Box py={8}>
         <Typography
-          variant="h1"
-          align="center"
-          sx={{
-            fontSize: { xs: '2.5rem', md: '3.5rem' },
-            fontWeight: 700,
-            mb: 2,
-          }}
-        >
-          Contact Us
-        </Typography>
-        <Typography
           variant="h5"
           align="center"
           color="text.secondary"
