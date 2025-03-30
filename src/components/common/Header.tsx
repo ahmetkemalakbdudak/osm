@@ -132,8 +132,19 @@ function Header() {
 
   const handleNavigate = (path: string) => {
     if (path.startsWith('/docs/')) {
-      // Open PDF directly in a new tab using browser's built-in PDF viewer
-      window.open(path, '_blank');
+      // For PDFs, use the 'download' attribute to force inline display
+      const pdfLink = document.createElement('a');
+      pdfLink.href = path;
+      pdfLink.target = '_blank';
+      pdfLink.rel = 'noopener noreferrer';
+      
+      // Add an attribute to encourage inline viewing
+      pdfLink.setAttribute('type', 'application/pdf');
+      
+      // Trigger click
+      document.body.appendChild(pdfLink);
+      pdfLink.click();
+      document.body.removeChild(pdfLink);
     } else {
       navigate(path);
     }
