@@ -84,9 +84,9 @@ const menuItems: MenuItems = {
     { label: 'Caldini', path: '/brands/caldini' },
   ],
   products: [
-    { label: 'CAR SERVICE & GARAGE EQUIPMENT', path: '/brands/automec' },
-    { label: 'CAR WASH AND INDUSTRIAL CLEANING EQUIPMENT', path: '/brands/pax' },
-    { label: 'AEROSOL PRODUCTS', path: '/brands/caldini' },
+    { label: 'Car Service & Garage Equipment', path: '/brands/automec' },
+    { label: 'Car Wash and Industrial Cleaning Equipment', path: '/brands/pax' },
+    { label: 'Aerosol Products', path: '/brands/caldini' },
   ],
   documents: [
     { label: 'AD3030 DPF Cleaning Machine Specs', path: '/assets/docs/AD3030 DPF Cleaning Machine Technical Specifications2 (1).pdf', icon: DescriptionIcon },
@@ -132,7 +132,25 @@ function Header() {
 
   const handleNavigate = (path: string) => {
     if (path.startsWith('/assets/docs/')) {
-      window.open(path, '_blank');
+      // Open PDF in the same window using an embedded iframe
+      const pdfUrl = path;
+      const pdfWindow = window.open('', '_blank');
+      if (pdfWindow) {
+        pdfWindow.document.write(`
+          <html>
+            <head>
+              <title>PDF Viewer</title>
+              <style>
+                body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+                iframe { width: 100%; height: 100%; border: none; }
+              </style>
+            </head>
+            <body>
+              <iframe src="${pdfUrl}" type="application/pdf" width="100%" height="100%"></iframe>
+            </body>
+          </html>
+        `);
+      }
     } else {
       navigate(path);
     }
