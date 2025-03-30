@@ -27,6 +27,7 @@ import {
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import automecLogo from '../../assets/automec-logo-transparent.png';
 
 interface Language {
   code: string;
@@ -149,20 +150,18 @@ function Header() {
     <AppBar position="sticky" color="default" elevation={0} sx={{ borderBottom: 1, borderColor: 'divider' }}>
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ height: 80 }}>
-          <Typography
-            variant="h4"
-            component="div"
+          <Box
+            component="img"
+            src={automecLogo}
+            alt="Automec"
             onClick={() => handleNavigate('/')}
             sx={{ 
               cursor: 'pointer',
-              fontWeight: 700,
-              '&:hover': { opacity: 0.8 },
+              height: 50,
               mr: 4,
+              '&:hover': { opacity: 0.8 }
             }}
-          >
-            <Box component="span" color="primary.main">Auto</Box>
-            mec
-          </Typography>
+          />
 
           {!isMobile && (
             <Stack direction="row" spacing={1} alignItems="center" sx={{ flexGrow: 1 }}>
