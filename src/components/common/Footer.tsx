@@ -33,7 +33,7 @@ function Footer() {
     whatsapp: '+36 30 124 0003',
     email: 'osmautomec@gmail.com',
     phone: '+36 30 124 0003',
-    address: 'AUTOMEC Ipari Berendezések Kft., 1103 Budapest, Gyömrői út 115. Start Center Business Park/101',
+    address: 'AUTOMEC Ipari Berendezések Kft. Gyömrői út 115. Start Center Business Park/101 1103 Budapest,Hungary',
   };
 
   const socialMedia = [
