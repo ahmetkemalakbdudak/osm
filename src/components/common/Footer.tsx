@@ -24,9 +24,9 @@ function Footer() {
   const navigate = useNavigate();
 
   const brands = [
-    { name: 'Caldini', path: '/brands/caldini' },
-    { name: 'Pax', path: '/brands/pax' },
     { name: 'Automec', path: '/brands/automec' },
+    { name: 'Pax', path: '/brands/pax' },
+    { name: 'Caldini', path: '/brands/caldini' },
   ];
 
   const contactInfo = {
@@ -58,7 +58,7 @@ function Footer() {
               Automec
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Professional Garage&Service Equipments
+              Professional Garage & Service Equipments
             </Typography>
             <Box mt={2}>
               <Typography variant="subtitle2" color="text.primary" gutterBottom>
