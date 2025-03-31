@@ -38,8 +38,8 @@ function Footer() {
 
   const socialMedia = [
     { name: 'Facebook', icon: FacebookIcon, url: 'https://www.facebook.com/automeceu' },
-    { name: 'YouTube', icon: YouTubeIcon, url: 'https://www.youtube.com/automecosmotomotiv' },
-    { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/automeceu' },
+    { name: 'YouTube', icon: YouTubeIcon, url: 'https://www.youtube.com/@automecosmotomotiv3257' },
+    { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/automec_eu' },
   ];
 
   return (
@@ -58,7 +58,7 @@ function Footer() {
               Automec
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Leading provider of innovative technology solutions for businesses worldwide.
+              Professional Garage&Service Equipments
             </Typography>
             <Box mt={2}>
               <Typography variant="subtitle2" color="text.primary" gutterBottom>

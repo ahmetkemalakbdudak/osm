@@ -61,7 +61,7 @@ function Home() {
                 color="text.secondary"
                 sx={{ mb: 4, lineHeight: 1.5 }}
               >
-                EU branch of AUTOMEC Automotive Service Equipment, established in 2023. General distributors of PAX Industrial Cleaning Equipment and Caldini Aerosol products.
+                Main distributor of Automec Professional Service&Garage Equipment in EU region as well as distributor of PAX Industrial Cleaning Machines and Caldini Aeresol.
               </Typography>
               <Button
                 variant="contained"
