@@ -1,6 +1,7 @@
 import { Container, Typography, Box, Button, Grid, Stack } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { CheckCircle as CheckCircleIcon } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 
 // Import brand logos
 import caldiniLogo from '../../assets/caldini.png';
@@ -9,10 +10,10 @@ import automecLogo from '../../assets/automec-logo-transparent.png';
 import heroBackground from '../../assets/hero-background-optimized.jpg';
 
 const features = [
-  'Rigorous quality control',
-  'Competitive pricing',
-  'Exceptional customer service',
-  'Comprehensive solutions',
+  'qualityControl',
+  'pricing',
+  'customerService',
+  'solutions',
 ];
 
 const brands = [
@@ -38,6 +39,7 @@ const brands = [
 
 function Home() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <Box>
@@ -61,7 +63,7 @@ function Home() {
                 variant="h5"
                 sx={{ mb: 4, lineHeight: 1.5, color: 'rgba(255, 255, 255, 0.9)' }}
               >
-                Main distributor of Automec Professional Service & Garage Equipment in EU region as well as distributor of PAX Industrial Cleaning Machines and Caldini Aeresol.
+                {t('home.hero.title')}
               </Typography>
               <Button
                 variant="outlined"
@@ -76,7 +78,7 @@ function Home() {
                   }
                 }}
               >
-                Contact Us
+                {t('home.hero.contactUs')}
               </Button>
             </Grid>
             <Grid item xs={12} md={4}>
@@ -105,7 +107,7 @@ function Home() {
             align="center"
             sx={{ mb: 2, fontSize: { xs: '2rem', md: '3rem' } }}
           >
-            Our Brands
+            {t('home.brands.title')}
           </Typography>
           <Typography
             variant="h5"
@@ -113,7 +115,7 @@ function Home() {
             color="text.secondary"
             sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}
           >
-            Discover our premium selection of automotive equipment brands
+            {t('home.brands.subtitle')}
           </Typography>
           <Grid container spacing={4}>
             {brands.map((brand) => (
@@ -144,10 +146,10 @@ function Home() {
                     }}
                   />
                   <Typography variant="h4" gutterBottom sx={{ textTransform: 'capitalize' }}>
-                    {brand.name}
+                    {t(`brands.${brand.id}.name`)}
                   </Typography>
                   <Typography color="text.secondary">
-                    {brand.description}
+                    {t(`brands.${brand.id}.description`)}
                   </Typography>
                 </Box>
               </Grid>
@@ -164,7 +166,7 @@ function Home() {
             align="center"
             sx={{ mb: 2, fontSize: { xs: '2rem', md: '3rem' } }}
           >
-            Why Choose Our Partners?
+            {t('home.whyChooseUs.title')}
           </Typography>
           <Typography
             variant="h5"
@@ -172,7 +174,7 @@ function Home() {
             color="text.secondary"
             sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}
           >
-            Our carefully selected partners provide the highest quality products and services to meet your business needs.
+            {t('home.whyChooseUs.subtitle')}
           </Typography>
           <Grid container spacing={4} justifyContent="center">
             {features.map((feature) => (
@@ -189,7 +191,7 @@ function Home() {
                   }}
                 >
                   <CheckCircleIcon color="primary" sx={{ fontSize: 24 }} />
-                  <Typography variant="h6">{feature}</Typography>
+                  <Typography variant="h6">{t(`home.whyChooseUs.features.${feature}`)}</Typography>
                 </Stack>
               </Grid>
             ))}

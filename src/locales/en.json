@@ -121,5 +121,25 @@
     "contactDetails": "Contact Details",
     "address": "AUTOMEC Ipari Berendezések Kft. Gyömrői út 115. Start Center Business Park/101 1103 Budapest, Hungary",
     "officeLocation": "Office Location"
+  },
+  "home": {
+    "hero": {
+      "title": "Main distributor of Automec Professional Service & Garage Equipment in EU region as well as distributor of PAX Industrial Cleaning Machines and Caldini Aeresol.",
+      "contactUs": "Contact Us"
+    },
+    "brands": {
+      "title": "Our Brands",
+      "subtitle": "Discover our premium selection of automotive equipment brands"
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Our Partners?",
+      "subtitle": "Our carefully selected partners provide the highest quality products and services to meet your business needs.",
+      "features": {
+        "qualityControl": "Rigorous quality control",
+        "pricing": "Competitive pricing",
+        "customerService": "Exceptional customer service",
+        "solutions": "Comprehensive solutions"
+      }
+    }
   }
 } 

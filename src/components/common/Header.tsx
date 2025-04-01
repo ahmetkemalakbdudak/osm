@@ -156,8 +156,8 @@ function Header() {
 
   const socialMedia = [
     { name: 'Facebook', icon: FacebookIcon, url: 'https://www.facebook.com/automeceu' },
-    { name: 'YouTube', icon: YouTubeIcon, url: 'https://www.youtube.com/automecosmotomotiv' },
-    { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/automeceu' },
+    { name: 'YouTube', icon: YouTubeIcon, url: 'https://www.youtube.com/@automecosmotomotiv3257' },
+    { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/automec_eu/' },
   ];
 
   return (

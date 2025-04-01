@@ -121,5 +121,25 @@
     "contactDetails": "İletişim Detayları",
     "address": "AUTOMEC Ipari Berendezések Kft. Gyömrői út 115. Start Center Business Park/101 1103 Budapest, Macaristan",
     "officeLocation": "Ofis Konumu"
+  },
+  "home": {
+    "hero": {
+      "title": "AB bölgesinde Automec Profesyonel Servis ve Garaj Ekipmanları'nın ana distribütörü ve PAX Endüstriyel Temizleme Makineleri ve Caldini Aerosol distribütörü.",
+      "contactUs": "Bize Ulaşın"
+    },
+    "brands": {
+      "title": "Markalarımız",
+      "subtitle": "Otomotiv ekipman markalarımızın premium seçimini keşfedin"
+    },
+    "whyChooseUs": {
+      "title": "Neden Partnerlerimizi Seçmelisiniz?",
+      "subtitle": "Özenle seçilmiş partnerlerimiz, işletmenizin ihtiyaçlarını karşılamak için en yüksek kalitede ürün ve hizmetler sunmaktadır.",
+      "features": {
+        "qualityControl": "Sıkı kalite kontrolü",
+        "pricing": "Rekabetçi fiyatlandırma",
+        "customerService": "Üstün müşteri hizmeti",
+        "solutions": "Kapsamlı çözümler"
+      }
+    }
   }
 } 
