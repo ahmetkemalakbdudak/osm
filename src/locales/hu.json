@@ -116,10 +116,30 @@
   "contact": {
     "title": "Lépjen kapcsolatba csapatunkkal szakértői tanácsért és támogatásért",
     "directContact": "Közvetlen Kapcsolat",
-    "chatWhatsapp": "Chateljen WhatsApp-on",
+    "chatWhatsapp": "WhatsApp Chat",
     "sendEmail": "E-mail Küldése",
-    "contactDetails": "Kapcsolat Részletei",
+    "contactDetails": "Kapcsolatfelvételi Adatok",
     "address": "AUTOMEC Ipari Berendezések Kft. Gyömrői út 115. Start Center Business Park/101 1103 Budapest, Magyarország",
     "officeLocation": "Iroda Helye"
+  },
+  "home": {
+    "hero": {
+      "title": "Az Automec Professzionális Szerviz és Garázs Berendezések fő forgalmazója az EU régióban, valamint a PAX Ipari Tisztító Gépek és Caldini Aeroszol forgalmazója.",
+      "contactUs": "Lépjen Kapcsolatba Velünk"
+    },
+    "brands": {
+      "title": "Márkáink",
+      "subtitle": "Fedezze fel autószerelő berendezéseink prémium választékát"
+    },
+    "whyChooseUs": {
+      "title": "Miért Válassza Partnerünket?",
+      "subtitle": "Gondosan kiválasztott partnereink a legmagasabb minőségű termékeket és szolgáltatásokat nyújtják az üzleti igényeinek kielégítéséhez.",
+      "features": {
+        "qualityControl": "Szigorú minőségellenőrzés",
+        "pricing": "Versenyképes árazás",
+        "customerService": "Kivételes ügyfélszolgálat",
+        "solutions": "Átfogó megoldások"
+      }
+    }
   }
 } 
