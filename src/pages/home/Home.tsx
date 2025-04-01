@@ -6,7 +6,7 @@ import { CheckCircle as CheckCircleIcon } from '@mui/icons-material';
 import caldiniLogo from '../../assets/caldini.png';
 import paxLogo from '../../assets/pax.png';
 import automecLogo from '../../assets/automec-logo-transparent.png';
-import heroBackground from '../../assets/hero-background.jpg';
+import heroBackground from '../../assets/hero-background-optimized.jpg';
 
 const features = [
   'Rigorous quality control',
