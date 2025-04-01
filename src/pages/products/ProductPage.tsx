@@ -15,9 +15,12 @@ import {
   ImageList,
   ImageListItem,
   useMediaQuery,
+  IconButton,
+  Tabs,
+  Tab,
 } from '@mui/material';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
+import { ArrowBack as ArrowBackIcon, NavigateNext as NavigateNextIcon, NavigateBefore as NavigateBeforeIcon } from '@mui/icons-material';
 import { brands } from '../../data/brands';
 import { useEffect, useState } from 'react';
 
@@ -42,12 +45,22 @@ function ProductPage() {
   const navigate = useNavigate();
   const theme = useTheme();
   const [productImages, setProductImages] = useState<string[]>([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
   const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
   const columns = isMdUp ? 3 : isSmUp ? 2 : 1;
 
   const { product, brand } = productName ? findProductAndBrand(productName) : { product: null, brand: null };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % productImages.length);
+  };
+
+  const handlePreviousImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + productImages.length) % productImages.length);
+  };
 
   useEffect(() => {
     const loadImages = async () => {
@@ -65,17 +78,24 @@ function ProductPage() {
             .filter(([path]) => {
               const lowerPath = path.toLowerCase();
               const lowerBrandName = brand.name.toLowerCase();
-              const lowerProductName = product.name.toLowerCase().replace(/[^a-z0-9]+/g, '');
+              const lowerProductName = product.name.toLowerCase();
+              
+              // For Pax products, we need to handle the series/type suffix
+              const productNameParts = product.name.split(' ');
+              const baseProductName = productNameParts[0].toLowerCase();
+              const seriesType = productNameParts.slice(1).join(' ').toLowerCase();
               
               // Debug: Log path matching
               console.log('Checking path:', {
                 path: lowerPath,
                 brandMatch: lowerPath.includes(lowerBrandName.toLowerCase()),
-                productMatch: lowerPath.includes(lowerProductName.toLowerCase())
+                productMatch: lowerPath.includes(lowerProductName.toLowerCase()) || 
+                             (lowerPath.includes(baseProductName) && lowerPath.includes(seriesType))
               });
               
               return lowerPath.includes(lowerBrandName.toLowerCase()) && 
-                     path.toLowerCase().includes(lowerProductName.toLowerCase());
+                     (lowerPath.includes(lowerProductName.toLowerCase()) || 
+                      (lowerPath.includes(baseProductName) && lowerPath.includes(seriesType)));
             })
             .map(([path, module]: [string, any]) => {
               console.log('Loading image from path:', path);
@@ -126,76 +146,80 @@ function ProductPage() {
 
         <Grid container spacing={6}>
           <Grid item xs={12} md={6}>
-            <Box
-              component="img"
-              src={productImages[0] || product.image}
-              alt={product.name}
-              sx={{
-                width: '100%',
-                borderRadius: 2,
-                boxShadow: theme.shadows[4],
-                objectFit: 'contain',
-                bgcolor: 'background.paper',
-                aspectRatio: '16/9',
-              }}
-            />
-          </Grid>
-          
-          <Grid item xs={12} md={6}>
-            <Typography variant="h1" gutterBottom>
-              {product.name}
-            </Typography>
-            <Typography variant="h5" color="text.secondary" paragraph>
-              {product.description}
-            </Typography>
-
-            <Box mt={4}>
-              <Typography variant="h6" gutterBottom>
-                Key Features
-              </Typography>
-              <Box display="flex" flexWrap="wrap" gap={1.5}>
-                {product.features.slice(0, 2).map((feature, _index) => (
-                  <Chip
-                    key={_index}
-                    label={feature}
-                    variant="outlined"
+            <Box sx={{ position: 'relative' }}>
+              <Box
+                component="img"
+                src={productImages[currentImageIndex] || product.image}
+                alt={product.name}
+                sx={{
+                  width: '100%',
+                  borderRadius: 2,
+                  boxShadow: theme.shadows[4],
+                  objectFit: 'contain',
+                  bgcolor: 'background.paper',
+                  aspectRatio: '16/9',
+                }}
+              />
+              {productImages.length > 1 && (
+                <>
+                  <IconButton
+                    onClick={handlePreviousImage}
                     sx={{
-                      bgcolor: 'background.paper',
-                      fontSize: '1rem',
-                      py: 2.5,
-                      height: 'auto',
+                      position: 'absolute',
+                      left: 8,
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      bgcolor: 'rgba(255, 255, 255, 0.8)',
+                      '&:hover': {
+                        bgcolor: 'rgba(255, 255, 255, 0.9)',
+                      },
                     }}
-                  />
-                ))}
-                {product.features.length > 2 && (
-                  <Chip
-                    label={`+${product.features.length - 2} more`}
-                    size="small"
-                    variant="outlined"
-                    sx={{ bgcolor: 'background.paper' }}
-                  />
-                )}
-              </Box>
+                  >
+                    <NavigateBeforeIcon />
+                  </IconButton>
+                  <IconButton
+                    onClick={handleNextImage}
+                    sx={{
+                      position: 'absolute',
+                      right: 8,
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      bgcolor: 'rgba(255, 255, 255, 0.8)',
+                      '&:hover': {
+                        bgcolor: 'rgba(255, 255, 255, 0.9)',
+                      },
+                    }}
+                  >
+                    <NavigateNextIcon />
+                  </IconButton>
+                </>
+              )}
             </Box>
-          </Grid>
-
-          {productImages.length > 1 && (
-            <Grid item xs={12}>
-              <Paper sx={{ p: 4, mt: 4 }}>
-                <Typography variant="h6" gutterBottom>
-                  Product Gallery
-                </Typography>
-                <ImageList variant="masonry" cols={columns} gap={16}>
-                  {productImages.slice(1).map((image, index) => (
-                    <ImageListItem key={index}>
+            
+            {productImages.length > 1 && (
+              <Box sx={{ mt: 2 }}>
+                <ImageList cols={4} rowHeight={100} gap={8}>
+                  {productImages.map((image, index) => (
+                    <ImageListItem 
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      sx={{
+                        cursor: 'pointer',
+                        opacity: currentImageIndex === index ? 1 : 0.6,
+                        transition: 'opacity 0.2s',
+                        '&:hover': {
+                          opacity: 0.8,
+                        },
+                      }}
+                    >
                       <img
                         src={image}
-                        alt={`${product.name} - Image ${index + 2}`}
+                        alt={`${product.name} - Image ${index + 1}`}
                         loading="lazy"
                         style={{
-                          borderRadius: 8,
+                          borderRadius: 4,
                           width: '100%',
-                          aspectRatio: '4/3',
+                          height: '100%',
                           objectFit: 'contain',
                           backgroundColor: 'white',
                         }}
@@ -203,12 +227,67 @@ function ProductPage() {
                     </ImageListItem>
                   ))}
                 </ImageList>
-              </Paper>
-            </Grid>
-          )}
+              </Box>
+            )}
 
-          <Grid item xs={12}>
-            <Paper sx={{ p: 4, mt: 4 }}>
+            {product.videoLinks && product.videoLinks.length > 0 && (
+              <Box sx={{ mt: 4 }}>
+                <Typography variant="h6" gutterBottom>
+                  Product Videos
+                </Typography>
+                {product.videoLinks.length > 1 && (
+                  <Tabs
+                    value={currentVideoIndex}
+                    onChange={(_, newValue) => setCurrentVideoIndex(newValue)}
+                    sx={{ mb: 2 }}
+                  >
+                    {product.videoLinks.map((_, index) => (
+                      <Tab
+                        key={index}
+                        label={`Video ${index + 1}`}
+                        value={index}
+                      />
+                    ))}
+                  </Tabs>
+                )}
+                <Box
+                  sx={{
+                    position: 'relative',
+                    width: '100%',
+                    paddingTop: '56.25%', // 16:9 aspect ratio
+                    borderRadius: 2,
+                    overflow: 'hidden',
+                    boxShadow: theme.shadows[4],
+                  }}
+                >
+                  <iframe
+                    src={product.videoLinks[currentVideoIndex]}
+                    title={`${product.name} - Product Video ${currentVideoIndex + 1}`}
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 'none',
+                    }}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </Box>
+              </Box>
+            )}
+          </Grid>
+          
+          <Grid item xs={12} md={6}>
+            <Typography variant="h1" gutterBottom>
+              {product.name}
+            </Typography>
+            <Typography variant="body1" color="text.secondary" paragraph sx={{ mb: 4 }}>
+              {product.description}
+            </Typography>
+            
+            <Paper sx={{ p: 4 }}>
               <Typography variant="h6" gutterBottom>
                 Technical Specifications
               </Typography>

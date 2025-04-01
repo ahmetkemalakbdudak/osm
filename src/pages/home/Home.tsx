@@ -61,7 +61,7 @@ function Home() {
                 color="text.secondary"
                 sx={{ mb: 4, lineHeight: 1.5 }}
               >
-                Main distributor of Automec Professional Service&Garage Equipment in EU region as well as distributor of PAX Industrial Cleaning Machines and Caldini Aeresol.
+                Main distributor of Automec Professional Service & Garage Equipment in EU region as well as distributor of PAX Industrial Cleaning Machines and Caldini Aeresol.
               </Typography>
               <Button
                 variant="contained"

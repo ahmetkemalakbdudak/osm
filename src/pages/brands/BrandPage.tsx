@@ -10,13 +10,11 @@ import {
   Chip,
   useTheme,
   Paper,
-  ToggleButton,
-  ToggleButtonGroup,
 } from '@mui/material';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
-import { brands, ProductCategory } from '../../data/brands';
-import { useState, useMemo, useEffect } from 'react';
+import { brands } from '../../data/brands';
+import { useState, useEffect } from 'react';
 
 // Utility function to create URL-friendly slug
 const createSlug = (name: string): string => {
@@ -29,20 +27,7 @@ function BrandPage() {
   const theme = useTheme();
   
   const brand = brandName ? brands[brandName] : null;
-  const [selectedCategory, setSelectedCategory] = useState<ProductCategory | 'all'>('all');
   const [productImages, setProductImages] = useState<Record<string, string>>({});
-
-  const categories = useMemo(() => {
-    if (!brand) return [];
-    const uniqueCategories = Array.from(new Set(brand.products.map(p => p.category)));
-    return ['all' as const, ...uniqueCategories];
-  }, [brand]);
-
-  const filteredProducts = useMemo(() => {
-    if (!brand) return [];
-    if (selectedCategory === 'all') return brand.products;
-    return brand.products.filter(p => p.category === selectedCategory);
-  }, [brand, selectedCategory]);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -60,12 +45,13 @@ function BrandPage() {
             // Only process images from this brand's folder
             if (lowerPath.includes(`/${lowerBrandName}/`)) {
               brand.products.forEach(product => {
-                // Get the product name without the series/type suffix for more flexible matching
-                const baseProductName = product.name.split(' ')[0];
-                const lowerBaseProductName = baseProductName.toLowerCase();
+                // Split product name into parts
+                const productNameParts = product.name.split(' ');
+                const baseProductName = productNameParts[0].toLowerCase();
+                const seriesType = productNameParts.slice(1).join(' ').toLowerCase();
                 
-                // Check if the path includes the base product name
-                if (lowerPath.includes(lowerBaseProductName)) {
+                // Check if the path includes both the base product name and series/type
+                if (lowerPath.includes(baseProductName) && lowerPath.includes(seriesType)) {
                   // Get the number from the filename
                   const match = path.match(/\d+(?=\.[^.]+$)/);
                   const num = match ? parseInt(match[0]) : Infinity;
@@ -103,15 +89,6 @@ function BrandPage() {
       </Container>
     );
   }
-
-  const handleCategoryChange = (
-    _event: React.MouseEvent<HTMLElement>,
-    newCategory: ProductCategory | 'all',
-  ) => {
-    if (newCategory !== null) {
-      setSelectedCategory(newCategory);
-    }
-  };
 
   return (
     <Container maxWidth="lg">
@@ -155,42 +132,10 @@ function BrandPage() {
           <Typography variant="h2" gutterBottom>
             Our Products
           </Typography>
-          <Paper sx={{ p: 2, mb: 4 }}>
-            <Typography variant="h6" gutterBottom>
-              Filter by Category
-            </Typography>
-            <ToggleButtonGroup
-              value={selectedCategory}
-              exclusive
-              onChange={handleCategoryChange}
-              aria-label="product category"
-              sx={{
-                flexWrap: 'wrap',
-                '& .MuiToggleButton-root': {
-                  textTransform: 'none',
-                  m: 0.5,
-                },
-              }}
-            >
-              {categories.map((category) => (
-                <ToggleButton
-                  key={category}
-                  value={category}
-                  sx={{
-                    px: 2,
-                    py: 1,
-                    borderRadius: '16px !important',
-                  }}
-                >
-                  {category === 'all' ? 'All Categories' : category}
-                </ToggleButton>
-              ))}
-            </ToggleButtonGroup>
-          </Paper>
         </Box>
         
         <Grid container spacing={4}>
-          {filteredProducts.map((product) => (
+          {brand.products.map((product) => (
             <Grid item xs={12} md={6} key={product.id}>
               <Card 
                 sx={{ 
@@ -223,40 +168,15 @@ function BrandPage() {
                     }}
                   />
                 </Box>
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Box display="flex" justifyContent="space-between" alignItems="flex-start" mb={2}>
-                    <Typography variant="h5" gutterBottom component="div">
-                      {product.name}
-                    </Typography>
-                    <Chip
-                      label={product.category}
-                      size="small"
-                      color="primary"
-                      variant="outlined"
-                    />
-                  </Box>
-                  <Typography variant="body1" color="text.secondary" paragraph>
-                    {product.description}
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    {product.name}
                   </Typography>
-                  <Box display="flex" flexWrap="wrap" gap={1}>
-                    {product.features.slice(0, 2).map((feature, index) => (
-                      <Chip
-                        key={index}
-                        label={feature}
-                        size="small"
-                        variant="outlined"
-                        sx={{ bgcolor: 'background.paper' }}
-                      />
-                    ))}
-                    {product.features.length > 2 && (
-                      <Chip
-                        label={`+${product.features.length - 2} more`}
-                        size="small"
-                        variant="outlined"
-                        sx={{ bgcolor: 'background.paper' }}
-                      />
-                    )}
-                  </Box>
+                  {product.subtitle && (
+                    <Typography variant="body2" color="text.secondary" gutterBottom>
+                      {product.subtitle}
+                    </Typography>
+                  )}
                 </CardContent>
               </Card>
             </Grid>
