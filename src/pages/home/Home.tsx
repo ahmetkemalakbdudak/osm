@@ -6,6 +6,7 @@ import { ArrowForward as ArrowForwardIcon, CheckCircle as CheckCircleIcon } from
 import caldiniLogo from '../../assets/caldini.png';
 import paxLogo from '../../assets/pax.png';
 import automecLogo from '../../assets/automec-logo-transparent.png';
+import heroBackground from '../../assets/hero-background.jpg';
 
 const features = [
   'Rigorous quality control',
@@ -41,25 +42,24 @@ function Home() {
   return (
     <Box>
       {/* Hero Section */}
-      <Container maxWidth="lg">
-        <Box py={8}>
+      <Box
+        sx={{
+          position: 'relative',
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          minHeight: '80vh',
+          display: 'flex',
+          alignItems: 'center',
+          color: 'white',
+        }}
+      >
+        <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Box
-                component="img"
-                src={automecLogo}
-                alt="Automec"
-                sx={{
-                  height: 80,
-                  mb: 2,
-                  objectFit: 'contain',
-                  display: 'block'
-                }}
-              />
+            <Grid item xs={12} md={8}>
               <Typography
                 variant="h5"
-                color="text.secondary"
-                sx={{ mb: 4, lineHeight: 1.5 }}
+                sx={{ mb: 4, lineHeight: 1.5, color: 'rgba(255, 255, 255, 0.9)' }}
               >
                 Main distributor of Automec Professional Service & Garage Equipment in EU region as well as distributor of PAX Industrial Cleaning Machines and Caldini Aeresol.
               </Typography>
@@ -75,25 +75,35 @@ function Home() {
                 variant="outlined"
                 size="large"
                 onClick={() => navigate('/contact')}
+                sx={{ 
+                  borderColor: 'white',
+                  color: 'white',
+                  '&:hover': {
+                    borderColor: 'white',
+                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  }
+                }}
               >
                 Contact Us
               </Button>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={4}>
               <Box
                 component="img"
-                src="/images/hero-image.jpg"
-                alt="Automotive Equipment"
+                src={automecLogo}
+                alt="Automec"
                 sx={{
                   width: '100%',
-                  borderRadius: 2,
-                  boxShadow: 3,
+                  maxHeight: 120,
+                  objectFit: 'contain',
+                  display: 'block',
+                  filter: 'brightness(0) invert(1)', // Make logo white
                 }}
               />
             </Grid>
           </Grid>
-        </Box>
-      </Container>
+        </Container>
+      </Box>
 
       {/* Brands Preview Section */}
       <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
