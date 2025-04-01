@@ -11,28 +11,31 @@ import {
   Verified as VerifiedIcon,
   Timeline as TimelineIcon,
 } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 
 function About() {
+  const { t } = useTranslation();
+
   const values = [
     {
       icon: EngineeringIcon,
-      title: 'Technical Excellence',
-      description: 'We provide cutting-edge automotive equipment and solutions backed by years of engineering expertise.',
+      title: t('about.values.technicalExcellence.title'),
+      description: t('about.values.technicalExcellence.description'),
     },
     {
       icon: HandshakeIcon,
-      title: 'Customer Partnership',
-      description: 'We build long-term relationships with our customers, providing ongoing support and consultation.',
+      title: t('about.values.customerPartnership.title'),
+      description: t('about.values.customerPartnership.description'),
     },
     {
       icon: VerifiedIcon,
-      title: 'Quality Assurance',
-      description: 'All our products undergo rigorous testing and certification to meet international standards.',
+      title: t('about.values.qualityAssurance.title'),
+      description: t('about.values.qualityAssurance.description'),
     },
     {
       icon: TimelineIcon,
-      title: 'Innovation Focus',
-      description: 'We continuously invest in R&D to bring the latest technological advancements to our customers.',
+      title: t('about.values.innovationFocus.title'),
+      description: t('about.values.innovationFocus.description'),
     },
   ];
 
@@ -45,45 +48,32 @@ function About() {
           color="text.secondary"
           sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}
         >
-          Leading provider of premium automotive equipment solutions since 2023
+          {t('about.title')}
         </Typography>
 
         <Grid container spacing={6}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12}>
             <Typography variant="h3" gutterBottom>
-              Our Story
+              {t('about.ourStory')}
             </Typography>
             <Typography paragraph>
-              Our company was established in 2023 as the EU branch of AUTOMEC Automotive Service Equipment in Budapest, Hungary. In addition, we are the general distributors of PAX Industrial Cleaning Equipment and Caldini Aerosol products.
+              {t('about.story.part1')}
             </Typography>
             <Typography paragraph>
-              Our vision is to establish our brands globally in a lasting way in the long term. Our mission is to deliver our products with highest quality and the best reliable service to our customers, and to maintain sustainable and qualified partnerships that will keep our brand in a strong and competitive position across all European countries.
+              {t('about.story.part2')}
             </Typography>
             <Typography>
-              We are proud to serve our customers with our stock availability at our headquarters in Hungary, offering both retail and wholesale sales.
+              {t('about.story.part3')}
             </Typography>
             <Typography variant="subtitle1" sx={{ mt: 2, fontStyle: 'italic' }}>
-              Sincerely, 
+              {t('about.story.sincerely')}
             </Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Box
-              component="img"
-              src="/images/about-image.jpg"
-              alt="About Us"
-              sx={{
-                width: '100%',
-                height: 'auto',
-                borderRadius: 2,
-                boxShadow: 3,
-              }}
-            />
           </Grid>
         </Grid>
 
         <Box sx={{ mt: 8 }}>
           <Typography variant="h3" align="center" gutterBottom>
-            Our Values
+            {t('about.values.title')}
           </Typography>
           <Grid container spacing={4} sx={{ mt: 2 }}>
             {values.map((value, index) => (
@@ -120,7 +110,7 @@ function About() {
         <Box sx={{ mt: 8, bgcolor: 'background.paper', py: 6, borderRadius: 2 }}>
           <Container maxWidth="md">
             <Typography variant="h3" align="center" gutterBottom>
-              Our Mission
+              {t('about.mission.title')}
             </Typography>
             <Typography
               variant="h5"
@@ -128,7 +118,7 @@ function About() {
               color="text.secondary"
               sx={{ maxWidth: 800, mx: 'auto' }}
             >
-              To deliver our products with highest quality and the best reliable service to our customers, and to maintain sustainable and qualified partnerships that will keep our brand in a strong and competitive position across all European countries.
+              {t('about.mission.description')}
             </Typography>
           </Container>
         </Box>

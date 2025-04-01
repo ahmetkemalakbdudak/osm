@@ -21,6 +21,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowBack as ArrowBackIcon, NavigateNext as NavigateNextIcon, NavigateBefore as NavigateBeforeIcon } from '@mui/icons-material';
 import { brands } from '../../data/brands';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // Utility function to create URL-friendly slug
 const createSlug = (name: string): string => {
@@ -42,6 +43,7 @@ function ProductPage() {
   const { productName } = useParams<{ productName: string }>();
   const navigate = useNavigate();
   const theme = useTheme();
+  const { t } = useTranslation();
   const [productImages, setProductImages] = useState<string[]>([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -60,48 +62,36 @@ function ProductPage() {
     const loadImages = async () => {
       if (product && brand) {
         try {
-          console.log('Loading images for:', { brand: brand.name, product: product.name });
-          
           // Import all images from the brand's folder
           const imageModules = import.meta.glob('/src/assets/images/**/*.{jpg,jpeg,png}', { eager: true });
-          
-          // Debug: Log available paths
-          console.log('Available image paths:', Object.keys(imageModules));
-          
-          const images = Object.entries(imageModules)
-            .filter(([path]) => {
-              const lowerPath = path.toLowerCase();
-              const lowerBrandName = brand.name.toLowerCase();
-              const lowerProductName = product.name.toLowerCase();
-              
-              // For Pax products, we need to handle the series/type suffix
-              const productNameParts = product.name.split(' ');
-              const baseProductName = productNameParts[0].toLowerCase();
-              const seriesType = productNameParts.slice(1).join(' ').toLowerCase();
-              
-              // Debug: Log path matching
-              console.log('Checking path:', {
-                path: lowerPath,
-                brandMatch: lowerPath.includes(lowerBrandName.toLowerCase()),
-                productMatch: lowerPath.includes(lowerProductName.toLowerCase()) || 
-                             (lowerPath.includes(baseProductName) && lowerPath.includes(seriesType))
-              });
-              
-              return lowerPath.includes(lowerBrandName.toLowerCase()) && 
-                     (lowerPath.includes(lowerProductName.toLowerCase()) || 
-                      (lowerPath.includes(baseProductName) && lowerPath.includes(seriesType)));
-            })
-            .map(([path, module]: [string, any]) => {
-              console.log('Loading image from path:', path);
-              return module.default;
-            })
-            .sort((a, b) => {
-              const aNum = parseInt(a.match(/\d+/g)?.pop() || '0');
-              const bNum = parseInt(b.match(/\d+/g)?.pop() || '0');
-              return aNum - bNum;
-            });
+          const images: string[] = [];
 
-          console.log('Found images:', images.length);
+          // Process each image path
+          Object.entries(imageModules).forEach(([path, module]: [string, any]) => {
+            const lowerPath = path.toLowerCase();
+            const lowerBrandName = brand.name.toLowerCase();
+            const lowerProductName = product.name.toLowerCase();
+            
+            // For products with series/type suffix
+            const productNameParts = product.name.split(' ');
+            const baseProductName = productNameParts[0].toLowerCase();
+            const seriesType = productNameParts.slice(1).join(' ').toLowerCase();
+            
+            // Check if the image belongs to this product
+            if (lowerPath.includes(`/${lowerBrandName}/`) && 
+                (lowerPath.includes(lowerProductName) || 
+                 (lowerPath.includes(baseProductName) && lowerPath.includes(seriesType)))) {
+              images.push(module.default);
+            }
+          });
+
+          // Sort images by their numeric suffix
+          images.sort((a, b) => {
+            const aNum = parseInt(a.match(/\d+(?=\.[^.]+$)/)?.[0] || '0');
+            const bNum = parseInt(b.match(/\d+(?=\.[^.]+$)/)?.[0] || '0');
+            return aNum - bNum;
+          });
+
           setProductImages(images);
         } catch (error) {
           console.error('Error loading product images:', error);
@@ -117,9 +107,9 @@ function ProductPage() {
     return (
       <Container>
         <Box py={8} textAlign="center">
-          <Typography variant="h2">Product not found</Typography>
+          <Typography variant="h2">{t('products.notFound')}</Typography>
           <Button variant="contained" onClick={() => navigate('/')} sx={{ mt: 2 }}>
-            Return to Home
+            {t('products.returnHome')}
           </Button>
         </Box>
       </Container>
@@ -135,7 +125,7 @@ function ProductPage() {
           variant="text"
           sx={{ mb: 4 }}
         >
-          Back to {brand.name}
+          {t('products.backToBrand', { brand: brand.name })}
         </Button>
 
         <Grid container spacing={6}>
@@ -227,7 +217,7 @@ function ProductPage() {
             {product.videoLinks && product.videoLinks.length > 0 && (
               <Box sx={{ mt: 4 }}>
                 <Typography variant="h6" gutterBottom>
-                  Product Videos
+                  {t('products.productVideos')}
                 </Typography>
                 {product.videoLinks.length > 1 && (
                   <Tabs
@@ -238,7 +228,7 @@ function ProductPage() {
                     {product.videoLinks.map((_, index) => (
                       <Tab
                         key={index}
-                        label={`Video ${index + 1}`}
+                        label={`${t('products.video')} ${index + 1}`}
                         value={index}
                       />
                     ))}
@@ -256,7 +246,7 @@ function ProductPage() {
                 >
                   <iframe
                     src={product.videoLinks[currentVideoIndex]}
-                    title={`${product.name} - Product Video ${currentVideoIndex + 1}`}
+                    title={`${product.name} - ${t('products.video')} ${currentVideoIndex + 1}`}
                     style={{
                       position: 'absolute',
                       top: 0,
@@ -278,12 +268,14 @@ function ProductPage() {
               {product.name}
             </Typography>
             <Typography variant="body1" color="text.secondary" paragraph sx={{ mb: 4 }}>
-              {product.description}
+              {t(`products.descriptions.${brand.id}.${product.name.toLowerCase().replace(/\s+/g, '')}`, {
+                defaultValue: product.description
+              })}
             </Typography>
             
             <Paper sx={{ p: 4 }}>
               <Typography variant="h6" gutterBottom>
-                Technical Specifications
+                {t('products.specifications')}
               </Typography>
               <TableContainer>
                 <Table>
@@ -303,7 +295,7 @@ function ProductPage() {
               {product.modelTable && (
                 <Box mt={4}>
                   <Typography variant="h6" gutterBottom>
-                    Model Specifications
+                    {t('products.modelSpecifications')}
                   </Typography>
                   <TableContainer>
                     <Table>

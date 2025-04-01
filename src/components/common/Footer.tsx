@@ -9,6 +9,7 @@ import {
   Stack,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   WhatsApp as WhatsAppIcon,
   Email as EmailIcon,
@@ -22,18 +23,19 @@ import {
 function Footer() {
   const theme = useTheme();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const brands = [
-    { name: 'Automec', path: '/brands/automec' },
-    { name: 'Pax', path: '/brands/pax' },
-    { name: 'Caldini', path: '/brands/caldini' },
+    { name: t('brands.automec.name'), path: '/brands/automec' },
+    { name: t('brands.pax.name'), path: '/brands/pax' },
+    { name: t('brands.caldini.name'), path: '/brands/caldini' },
   ];
 
   const contactInfo = {
     whatsapp: '+36 30 124 0003',
     email: 'osmautomec@gmail.com',
     phone: '+36 30 124 0003',
-    address: 'AUTOMEC Ipari Berendezések Kft. Gyömrői út 115. Start Center Business Park/101 1103 Budapest,Hungary',
+    address: t('contact.address'),
   };
 
   const socialMedia = [
@@ -55,14 +57,14 @@ function Footer() {
         <Grid container spacing={4}>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
-              Automec
+              {t('brands.automec.name')}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Professional Garage & Service Equipments
+              {t('brands.automec.description')}
             </Typography>
             <Box mt={2}>
               <Typography variant="subtitle2" color="text.primary" gutterBottom>
-                Follow Us
+                {t('common.followUs')}
               </Typography>
               <Stack direction="row" spacing={1}>
                 {socialMedia.map((social) => (
@@ -86,7 +88,7 @@ function Footer() {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
-              Our Brands
+              {t('common.ourBrands')}
             </Typography>
             <Box>
               {brands.map((brand) => (
@@ -112,7 +114,7 @@ function Footer() {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
-              Contact
+              {t('common.contactUs')}
             </Typography>
             <Box display="flex" flexDirection="column" gap={1}>
               <Box display="flex" alignItems="center" gap={1}>
@@ -157,7 +159,7 @@ function Footer() {
         </Grid>
         <Divider sx={{ my: 4 }} />
         <Typography variant="body2" color="text.secondary" align="center">
-          © {new Date().getFullYear()} Automec. All rights reserved.
+          © {new Date().getFullYear()} {t('brands.automec.name')}. {t('common.allRightsReserved')}
         </Typography>
       </Container>
     </Box>

@@ -14,13 +14,15 @@ import {
   Phone as PhoneIcon,
   LocationOn as LocationOnIcon,
 } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
+  const { t } = useTranslation();
   const contactInfo = {
     whatsapp: '+36 30 124 0003',
     email: 'osmautomec@gmail.com',
     phone: '+36 30 124 0003',
-    address: 'AUTOMEC Ipari Berendezések Kft. Gyömrői út 115. Start Center Business Park/101 1103 Budapest,Hungary',
+    address: t('contact.address'),
     mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11069.595180122315!2d19.143364121306266!3d47.46730663883507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c37bd223f27d%3A0xd06be78c858fd328!2sAutomec%20Ipari%20Berendezesek%20Kft.!5e1!3m2!1sen!2str!4v1742481809970!5m2!1sen!2str',
   };
 
@@ -41,7 +43,7 @@ function Contact() {
           color="text.secondary"
           sx={{ mb: 6, maxWidth: 800, mx: 'auto' }}
         >
-          Get in touch with our team for expert advice and support
+          {t('contact.title')}
         </Typography>
 
         <Grid container spacing={6}>
@@ -50,7 +52,7 @@ function Contact() {
               <Stack spacing={4}>
                 <Box>
                   <Typography variant="h6" gutterBottom>
-                    Direct Contact
+                    {t('contact.directContact')}
                   </Typography>
                   <Stack spacing={2}>
                     <Button
@@ -62,7 +64,7 @@ function Contact() {
                         '&:hover': { bgcolor: '#128C7E' },
                       }}
                     >
-                      Chat on WhatsApp
+                      {t('contact.chatWhatsapp')}
                     </Button>
                     <Button
                       variant="contained"
@@ -70,14 +72,14 @@ function Contact() {
                       onClick={handleEmailClick}
                       sx={{ bgcolor: '#EA4335', '&:hover': { bgcolor: '#B31412' } }}
                     >
-                      Send Email
+                      {t('contact.sendEmail')}
                     </Button>
                   </Stack>
                 </Box>
 
                 <Box>
                   <Typography variant="h6" gutterBottom>
-                    Contact Details
+                    {t('contact.contactDetails')}
                   </Typography>
                   <Stack spacing={2}>
                     <Box display="flex" alignItems="center" gap={1}>
@@ -127,7 +129,7 @@ function Contact() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Office Location"
+                title={t('contact.officeLocation')}
               />
             </Paper>
           </Grid>

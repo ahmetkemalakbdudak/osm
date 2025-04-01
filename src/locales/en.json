@@ -1,0 +1,125 @@
+{
+  "common": {
+    "backToHome": "Back to Home",
+    "contactUs": "Contact Us",
+    "aboutUs": "About Us",
+    "ourBrands": "Our Brands",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved",
+    "readMore": "Read More"
+  },
+  "menu": {
+    "brands": "Brands",
+    "products": "Products",
+    "documents": "Documents"
+  },
+  "products": {
+    "ourProducts": "Our Products",
+    "backToBrand": "Back to %{brand}",
+    "productVideos": "Product Videos",
+    "specifications": "Technical Specifications",
+    "features": "Features",
+    "description": "Description",
+    "notFound": "Product not found",
+    "returnHome": "Return to Home",
+    "video": "Video",
+    "modelSpecifications": "Model Specifications",
+    "descriptions": {
+      "caldini": {
+        "brakeCleaner": "Highly special cleaning agent with intensive cleaning effect for oily and greasy machine parts, disc brakes and brake parts, such as brake choke, plates and clutch linings. Ideal as a cleaning agent for industry and trade, for repairs and assembly.\n\n- Optimum cleaning effect within a short space of time\n- Works without leaving any residues\n- Removes even hardened lubricants\n- Not corrosive and does not attack rubber or plastic parts",
+        "chainSpray": "The use of chain sprey allows a long-term internal external lubrication of bearings, gear mechanisms, roller and ball bearings, O-rings seals and all sorts of joints clutches, chains and wire cables.\n\n- Resistant to temperatures ranging from -40˚C to +150˚C\n- Excellent corrosion protection, water-repellent and economics\n- Displaces moisture, does not drip or smear\n- Produces a smooth and quite running",
+        "penetratingOil": "Well-established lubricant and rust remover. Penetrating oil solves effortlessly and fast, many problems with servicing, repairs, maintenance and production.\n\n- Unfastening rust screwed joints, nuts and bolts\n- Offering lasting production from corrosion\n- Greasing sliding surfaces\n- Removing squeaking and creaking noises\n- Cleaning brake linkages, Bowden cables and chains of all sorts",
+        "cockpitSpray": "Cleans, polishes and preserves dashboards, rubber, plastic, wood, leather and synthetic parts in interior of cars (e.g. cockpits, rubber, mats and vinyl roofs)\n\n- Cockpit spray is dust-repellent and silicon free\n- Makes synthetic material last longer\n- Protects from dirt, frictional electricity and moisture\n- Makes parts that have been treated appear as new\n- Gives protection from ultra-violet radiation and spreads a pleasant smell in the car.",
+        "motorCleanerSpray": "Provide cleaning of engine, engine block and machine parts from burnt oil and dirt. Prevents corrosion and oxidation of the engine block. Does not harm the environment.\n\n- After thoroughly shake the box compress from a distance of 20 cm to the dirty surface and wait for penetrate\n- Then wash with water\n- For extremely dirty surfaces repeat the operation several times",
+        "siliconeSpray": "It gives striking shine to plastic parts (spoiler, bumper guard, bumper, radiator grille, PVC outer roof lining, door trim, etc.) and prevents cracking. It takes care of rubber parts (door and hood tires, rubber protectors, engine belts, radiator pipes, car tires) and prevents loosening, sticking and freezing. It is used for lubricating seat rails, hinges of opening roofs and automatic seat belts. It provides waterproofing of convertible cloth ceilings and cover canvases. It eliminates squeaks and friction sounds, has anti-static properties. It acts as a lubricant during assembly, for example when connecting rubber pipes.\n\nIt is colorless and does not stain. It is not poisonous.",
+        "carburetorSpray": "A special blend of cleaning agents formulated to give effective cleaning of both the interior and exterior of carburetor. Can also be used clean Butterfly Throttle Valves and Idle Speed Actuators. Because carburetor cleaner is formulated with added lubricant that will also lubricate any moving parts which have been cleaned.\n\n- Ideal as a cleaning agent for industry and trade\n- For repairs, assembly and routine maintenance\n- Removes all oil, grease and fuel residues",
+        "mssMultiSuperSpray": "It can be used for chains, open gears, bearings, cogwheels, vehicle door, hinges, locks, rails, joints and nuts, steering gear joints etc.\n\nIt is used in many applications in the areas of service, repair, maintenance and production.\n\nIt has a sliding feature and prevents squeaks.\n\n- Endure the high pressure\n- Well penetrating characteristics\n- Long lasting\n- Effective lubricant\n- Anti-corrosion",
+        "airConditioningSpray": "Air Conditioning Cleaning Foam is a high quality product based on water and additives. The product cleans all kind of air-conditioning systems (car,houses,offices etc.) Due to the special ingredients the foam forming and cleaning properties are excellent. After the foam has disappeared, a clean surface remains.\n\n- Air conditioning cleaner is only use to clean air-conditioning\n- Cleaning properties by detergents against all pollutions\n- Deodorizes and prevents the formation of unpleasant odours"
+      },
+      "pax": {
+        "hotColdWaterHighPressureWasher": "Pax High Pressure Washing Machines are machines designed to achieve maximum performance with low water consumption and ease of use, using Italian pump technology.\n\nOur machines, which are produced in different models and pressures as cold and hot water according to the usage area, are suitable for use not only in car washes and car detailing, but also in many different areas such as industrial areas, highways, airlines, shipping, restaurants, hospitals, livestock farms and agriculture.",
+        "coldWaterHighPressureWasher": "Professional cold water high pressure washers with adjustable pressure control",
+        "steamWashers": "Using Italian pump technology, Pax Pressure Steam Washer is manufactured in order to clean easily and quickly the places where it is difficult to reach and where water cannot be used.\n\nIt produces 200 °C hot steam, making it very easy to reach and clean successfully in places that are difficult to clean. It will allow you to achieve effective results in a short time. It is extremely useful in places where there are electrical and electronic parts are placed in a vehicle.",
+        "foamLiquidSprayerSeries": "Professional foam and liquid spraying systems with various tank capacities",
+        "carSeatCleaningMachine": "Professional car seat cleaning machine with powerful suction and foam cleaning capabilities",
+        "hardFloorAndCarpetCleaningMachine": "Versatile cleaning machine for both hard floors and carpets with professional cleaning capabilities",
+        "industrialWetDryVacuumCleaner": "Pax Wet - Dry Industrial Type Vacuum Cleaners are produced for use in such a way that they can easily absorb solid and watery dirt that occurs on both wet and dry floors, with its specially designed stainless-steel body.\n\nThese highly professional vacuum cleaners are produced in different capacities as 2 motors and 3 motors. Only one motor power is 1200 Watts. It provides effective cleaning on all kinds of surfaces like carpet - armchair - curtain - rubber - marble - parquet - ceramic - glass etc.",
+        "hotAirGenerator": "Professional hot air generator for efficient drying and heating applications",
+        "hotAirGeneratorEco": "Energy-efficient hot air generator with advanced temperature control system",
+        "clothSqueezingMachine": "Professional cloth squeezing machine for efficient water removal from fabrics and textiles"
+      },
+      "automec": {
+        "fdt4000": "The FDT 4000 On-Vehicle Brake Disc Lathe Machine is designed to remove scratches, wear, and warping from brake discs over time, ensuring a longer lifespan for the brake disc. By grinding your old brake disc instead of replacing it, you gain economic benefits and, contrary to popular belief, a safer driving experience. This is because old brake discs become harder under high pressure and heat during use. When the brake discs meet the manufacturer's standards, turning them for reuse is both a safe and economical choice for you and your vehicle.\n\nThe FDT 4000 On-Vehicle Brake Disc Lathe Machine is designed to allow the user to easily place the lathe on the vehicle and perform the most efficient turning operation in the shortest time. The advantage of turning on the vehicle without removing the disc is that the brake disc's balance adjustment remains intact during the turning process. Additionally, you can quickly perform the turning operation as needed without wasting time. With high-quality diamond tips and precise adjustment capabilities, you can achieve a turning thickness of 0.004 mm. Furthermore, the built-in alarm allows you to attend to other tasks during the turning process, as the machine will automatically stop and alert you with both audible and visual signals when the process is complete. The machine comes with two stands, short and long, allowing application on a lift, jack, or workbench.\n\nDisc lathe is a method used to correct deformations that occur over time, solve vibration problems in the braking system, or address issues with contamination or vibration in newly replaced discs and pads. This method helps achieve a smooth surface similar to that of a new disc. It reduces costs for the vehicle owner and enhances customer satisfaction by providing high-quality and safe service. Users should ensure that the discs do not fall below the minimum thickness specified by the manufacturer's standards.\n\nLathe can be performed manually or automatically.\n\nDetailed information regarding the use of the machine is available in the user manual.",
+        "etm1500": "ETM1500 is designed as a longevous, reliable, versatile and effective machine and is designed mechanically and electronically for testing and cleaning simultaneously both diesel engines and gasoline engines including TDI, HDI and COMMON RAIL engines. It has one tank for either benzin or diesel motors. It is preferred by those customers of ours who would use it for only one type of motor.\n\nAutomec products are the most advanced products of the market. Produced with the lastest tecnology and adapted as modern fuel diversity whıch ıs using at market compatible all the fuel types, not leave any waste at engine, without damaging the engine and catalyst effectively cleaning all the carbon waste, pitch and the other wastes in the combustion chamber and increase the performance of engıne. The effect of moistening provide resolved the dirt and throw as small particles with the way of exhaust. Sediments which can not be thrown through the exhaust, accumulating in the machine's filter.\n\nCleans all of the diesel and gasoline engines without damaging any parts:\n\n- Mechanic injection\n- Single-point electronic injection\n- Multi-point electronic injection\n- TDI, HDI, CDI, JTD, CRDI, DTI and COMMON RAIL electronic systems\n- Direct gasoline injection systems\n- Automatic pump vehicles\n- Carbureted vehicles\n- Cleans electrical or spare pump engines.\n\nWhen you use the Automec digital fuel system machine provides the following benefits:\n\n- Reduction in fuel consumption\n- Increasing in capacity of vehicle\n- Renewal in gas emissions\n- Reduction in exhaust emission\n- Increasing performance of engine\n- Recovery of corrupted idling speed and misfire\n- Excellent work of your car.",
+        "fdt6000": "The FDT6000 Disc Lathe Machine, backed by Osm Automotive Ltd. Co., is designed for lathing discs with diameters ranging from 150 to 380 mm. It is suitable for discs of passenger cars, light commercial vehicles, and minibuses.\n\nDisc lathe is a method used to correct deformations that occur over time, resolve vibration problems in the braking system, or address contamination or vibration issues in newly replaced discs and pads. This process allows you to achieve a smooth surface similar to that of a new disc. It helps reduce the vehicle owner's costs and enhances customer satisfaction by providing high-quality and safe service. Users should ensure that the discs do not fall below the minimum thickness specified by the manufacturer's standards.\n\nOur machine can remove deformations on the disc surface through turning, achieving a surface comparable to that of a new disc. Lathe operations can be performed both automatically and manually. The brake disc grinding process grinds both surfaces simultaneously. The shaft thickness is 35 mm. All necessary attachments for the lathe process are included with the machine.\n\nOnce a disc is mounted right onto the shaft with the correct attachments, there will be no shaking or vibrations. Still, to minimize potential friction and vibration, vibration and noise-reducing plastic O-rings for the outer circumference of the discs and a support bracket for under the lathe tool are provided.\n\nOur machine, which is designed for efficient and easy use, comes with a 2-year warranty. A detailed user manual is included with the machine.",
+        "fdt7000": "FDT7000 Disc Lathe Machine is a two-function model. It has the feature of lathe both on the vehicle and outside with additional apparatuses to the existing disc lathe machine. It is produced for our customers who want to benefit from these two features. Its technical features and dimensions are the same as the FDT6000. All necessary apparatus for lathing are sent with the machine.",
+        "etm2000": "ETM2000 Fuel System Cleaning Machine is designed as a long-lasting, reliable, versatile and effective machine. It is mechanically and electronically designed to test and clean both diesel and gasoline engines, including TDI, HDI and COMMON RAIL engines. It has two separate tanks for diesel and benzin.\n\nETM2000 is produced with the latest technology and adapted to the modern fuel differences used in the market and compatible with all fuel types, it effectively cleans all carbon wastes, pitch and other residues in the combustion chamber without leaving any waste in the engine, without damaging the catalyst or the engine, and increases the performance of the engine. The humidifying effect ensures that the dirt is dissolved and expelled in the form of small particles through the exhaust. The residues that cannot be discharged through the exhaust accumulate in the filter of the machine.\n\nCleans all of the diesel and gasoline engines without damaging any parts:\n\n- Mechanic injection\n- Single-point electronic injection\n- Multi-point electronic injection\n- TDI, HDI, CDI, JTD, CRDI, DTI and COMMON RAIL electronic systems\n- Direct gasoline injection systems\n- Automatic pump vehicles\n- Carbureted vehicles\n- Cleans electrical or spare pump engines.\n\nWhen you use the Automec fuel system cleaning machine provides the following advantages:\n\n- Reduction in fuel consumption\n- Increasing in capacity of vehicle\n- Renewal in gas emissions\n- Reduction in exhaust emission\n- Increasing performance of engine\n- Recovery of corrupted idling speed and misfire\n- Excellent work of your car.",
+        "ad3030": "The Automec AD3030 SX DPF Cleaning Machine with Measuring Function enables particulate filter cleaning without the need to remove the filter from the vehicle. Its built-in measuring function allows for visible observation of the cleaning results.\n\nThe Automec AD3030 SX DPF Cleaning Machine represents the latest advancement in onboard DPF cleaning technology. Its fully automatic and user-friendly design ensures a practical solution for both professional users and vehicle owners. This machine not only saves time but also offers profitability through its efficient cleaning process, making it a valuable investment for maintaining optimal vehicle performance. Connection to the vehicle is made via the lambda sensor for both cleaning and measurement. Once connected and the cleaning process is started, the machine automatically completes the entire operation, which takes 20 minutes. For detailed instructions, please refer to the user manual.\n\nThe vehicle's engine remains running in neutral (N) throughout the entire operation. The discharge will exit through the exhaust. For visual examples, please refer to our videos.\n\nThe blue hose on the machine is used for measurement. Connect it through the lambda sensor, and the results will be displayed on the bar on the front panel of the machine. Before starting the cleaning operation, attach the blue measurement hose to the lambda sensor and ensure the car is running in neutral (N). On the front panel, use the first bar (before the test) to observe the blockage level by adjusting its pin. After the cleaning operation, use the second bar (after the test) to compare the results.\n\nThe cleaning is performed using the specialized liquids provided with the machine. No other liquids or chemicals should be used. The machine includes three 5-liter cans of liquid (A1, A2, A3) located at the back. These can be ordered from us or our partners at any time. For further details, please refer to the user manual.\n\nAll necessary tools are included with the machine.",
+        "rdt3000": "This machine allows you to save time by performing quick and effective cleaning of heater and radiator systems within 45 minutes without the need to remove the front panel or cover. It enhances customer satisfaction and trust. It is easy to use and comfortable, with the added advantage of being easily portable.\n\nKey Features:\n\n- Metal Filter: Easily removable and cleanable; durable.\n- Connection: Simple connection via hoses to the vehicle's heater inlet and outlet.\n- Control Panel: The screen on the front panel allows you to adjust water temperature, working time, and program settings. It has 4 working programs. Detailed usage information can be found in the user manual.\n- Heating and Cleaning: When the water in the tank reaches the set temperature, the machine signals that cleaning can begin.\n\nApplications:\n\n- Cleaning heater cores of all types of land vehicles.\n- Cleaning of passenger cars, light commercial vehicles, trucks, buses, trailers, and agricultural machinery.\n- Cleaning of cooling radiators in light commercial vehicles.\n- Cleaning of block interiors in light commercial vehicles.\n- Cleaning oil cooler recuperators in vehicles.\n- Cleaning LPG and CNG regulators in vehicles.\n\nUsage Instructions:\n\n1. Pour 250 ml of Automec Radiator Cleaning Solution into the machine's water tank and fill the tank with water.\n2. Plug in the machine and turn on the switch. The machine will automatically heat the water in the tank to 80°C.\n3. Connect the radiator to the machine's inlet and outlet. Once the screen shows 80°C, turn the black switch on the far right to start cleaning.\n4. The timer is set to 45 minutes and will alert you with sound and light when the time is up. (If water level drops during cleaning, stop the machine and add more water.)\n5. All debris causing blockages in the radiator will collect in the filter. Remove and clean the filter after each use.\n\nWarnings and Notes:\n\n1. If the machine does not switch to heating mode:\n   - Check the water level.\n   - Clean the water level sensor on the tank.\n\n2. If the heating light is on but heating is not occurring:\n   - The heating element may be faulty. Remove the rear bottom cover of the machine and connect the blue and brown wires from the heating element to the spare terminals, regardless of polarity.\n\n3. If the machine is running but the pump is not working:\n   - Use a flat screwdriver to turn the pump located at the back right.\n\n4. If the pump works but water is not being pumped:\n   - Remove the left side panel of the machine and bleed air from the yellow air release screw on the pump.\n\n5. If there is an issue with the machine's electronic board or buttons:\n   - Use the manual control switches behind the front screen to activate heating or the pump.\n\n6. To operate the machine in manual mode:\n   - Hold down the \"pump off\" button on the lower right to start the machine in manual mode. Use the \"pump on\" button to turn it on and the \"pump off\" button to turn it off.\n   - Use the right button to turn on the heating element and the left button to turn it off. Ensure the tank is filled with water.\n\n7. IMPORTANT NOTE:\n   - Do not use acid-based liquids during radiator cleaning as they can damage the pump and connection components. Damaged parts due to such use are not covered under warranty.",
+        "fhd1000": "A versatile brake fluid bleeding and hydraulic system maintenance device designed for single-operator use, compatible with all vehicles and featuring a comprehensive cover set.",
+        "ktm1000": "The Automec KTM1000 Brake Drum and Brake Disc Lathe Machine is designed for lathing discs with diameters ranging from 150 to 380 mm, as well as drums of passenger cars, light commercial vehicles, and minibuses."
+      }
+    }
+  },
+  "documents": {
+    "ad3030": "AD3030SX DPF Cleaning Machine Specs",
+    "fdt4000": "FDT4000 User Guide",
+    "fdt4000_ro": "FDT4000 User Guide (Romanian)"
+  },
+  "about": {
+    "title": "Leading provider of premium automotive equipment solutions since 2023",
+    "ourStory": "Our Story",
+    "story": {
+      "part1": "Our company was established in 2023 as the EU branch of AUTOMEC Automotive Service Equipment in Budapest, Hungary. In addition, we are the general distributors of PAX Industrial Cleaning Equipment and Caldini Aerosol products.",
+      "part2": "Our vision is to establish our brands globally in a lasting way in the long term. Our mission is to deliver our products with highest quality and the best reliable service to our customers, and to maintain sustainable and qualified partnerships that will keep our brand in a strong and competitive position across all European countries.",
+      "part3": "We are proud to serve our customers with our stock availability at our headquarters in Hungary, offering both retail and wholesale sales.",
+      "sincerely": "Sincerely"
+    },
+    "values": {
+      "title": "Our Values",
+      "technicalExcellence": {
+        "title": "Technical Excellence",
+        "description": "We provide cutting-edge automotive equipment and solutions backed by years of engineering expertise."
+      },
+      "customerPartnership": {
+        "title": "Customer Partnership",
+        "description": "We build long-term relationships with our customers, providing ongoing support and consultation."
+      },
+      "qualityAssurance": {
+        "title": "Quality Assurance",
+        "description": "All our products undergo rigorous testing and certification to meet international standards."
+      },
+      "innovationFocus": {
+        "title": "Innovation Focus",
+        "description": "We continuously invest in R&D to bring the latest technological advancements to our customers."
+      }
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To deliver our products with highest quality and the best reliable service to our customers, and to maintain sustainable and qualified partnerships that will keep our brand in a strong and competitive position across all European countries."
+    }
+  },
+  "brands": {
+    "automec": {
+      "name": "Automec",
+      "description": "Professional Garage & Service Equipment"
+    },
+    "pax": {
+      "name": "Pax",
+      "description": "Car Washing and Industrial Cleaning Equipment"
+    },
+    "caldini": {
+      "name": "Caldini",
+      "description": "Professional Aerosol Products"
+    }
+  },
+  "contact": {
+    "title": "Contact our team for expert advice and support",
+    "directContact": "Direct Contact",
+    "chatWhatsapp": "Chat on WhatsApp",
+    "sendEmail": "Send Email",
+    "contactDetails": "Contact Details",
+    "address": "AUTOMEC Ipari Berendezések Kft. Gyömrői út 115. Start Center Business Park/101 1103 Budapest, Hungary",
+    "officeLocation": "Office Location"
+  }
+} 

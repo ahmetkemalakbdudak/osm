@@ -1,0 +1,125 @@
+{
+  "common": {
+    "backToHome": "Ana Sayfaya Dön",
+    "contactUs": "İletişim",
+    "aboutUs": "Hakkımızda",
+    "ourBrands": "Markalarımız",
+    "followUs": "Bizi Takip Edin",
+    "allRightsReserved": "Tüm hakları saklıdır",
+    "readMore": "Devamını Oku"
+  },
+  "menu": {
+    "brands": "Markalar",
+    "products": "Ürünler",
+    "documents": "Dökümanlar"
+  },
+  "products": {
+    "ourProducts": "Ürünlerimiz",
+    "backToBrand": "%{brand}'e geri dön",
+    "productVideos": "Ürün Videoları",
+    "specifications": "Teknik Özellikler",
+    "features": "Özellikler",
+    "description": "Açıklama",
+    "notFound": "Ürün bulunamadı",
+    "returnHome": "Ana Sayfaya Dön",
+    "video": "Video",
+    "modelSpecifications": "Model Özellikleri",
+    "descriptions": {
+      "caldini": {
+        "brakeCleaner": "Yağlı ve yağlı makine parçaları, disk frenler ve fren parçaları, fren kelepçesi, plakalar ve debriyaj balataları için yoğun temizleme etkisi olan yüksek özel temizleyici. Endüstri ve ticaret için, onarım ve montaj için ideal temizleyici.\n\n- Kısa sürede optimum temizleme etkisi\n- Kalıntı bırakmadan çalışır\n- Sertleşmiş yağlayıcıları bile kaldırır\n- Aşındırıcı değildir ve kauçuk veya plastik parçalara zarar vermez",
+        "chainSpray": "Zincir sprey kullanımı, rulmanlar, dişli mekanizmaları, rulman ve bilyalı yataklar, O-ring contalar ve her türlü eklem, debriyaj, zincir ve tel kabloların uzun süreli iç ve dış yağlamasını sağlar.\n\n- -40˚C ile +150˚C arası sıcaklıklara dayanıklı\n- Mükemmel korozyon koruması, su geçirmez ve ekonomik\n- Nemi uzaklaştırır, damlamaz veya sızmaz\n- Pürüzsüz ve sessiz çalışma sağlar",
+        "penetratingOil": "İyi kurulmuş yağlayıcı ve pas çözücü. Penetre yağı, servis, onarım, bakım ve üretimdeki birçok sorunu zahmetsizce ve hızlıca çözer.\n\n- Paslı cıvatalı bağlantıları, somunları ve cıvataları gevşetir\n- Korozyona karşı kalıcı koruma sağlar\n- Kayar yüzeyleri yağlar\n- Gıcırdama ve çatırdama seslerini giderir\n- Fren bağlantılarını, Bowden kablolarını ve her türlü zinciri temizler",
+        "cockpitSpray": "Arabaların iç kısmındaki gösterge paneli, kauçuk, plastik, ahşap, deri ve sentetik parçaları (örn. kokpitler, kauçuk, paspaslar ve vinil tavanlar) temizler, parlatır ve korur\n\n- Gösterge paneli spreyi toz geçirmez ve silikonsuzdur\n- Sentetik malzemelerin daha uzun ömürlü olmasını sağlar\n- Kir, sürtünme elektriği ve neme karşı korur\n- İşlenmiş parçaların yeni görünmesini sağlar\n- Ultraviyole radyasyona karşı koruma sağlar ve arabada hoş bir koku yayar",
+        "motorCleanerSpray": "Motor, motor bloğu ve makine parçalarını yanmış yağ ve kirden temizler. Motor bloğunun korozyonunu ve oksidasyonunu önler. Çevreye zarar vermez.\n\n- Kutuyu iyice çalkaladıktan sonra kirli yüzeye 20 cm mesafeden sıkın ve nüfuz etmesini bekleyin\n- Sonra suyla yıkayın\n- Aşırı kirli yüzeyler için işlemi birkaç kez tekrarlayın",
+        "siliconeSpray": "Plastik parçalara (spoiler, tampon koruyucu, tampon, radyatör ızgarası, PVC dış tavan kaplaması, kapı kaplaması vb.) çarpıcı parlaklık verir ve çatlamayı önler. Kauçuk parçaları (kapı ve kaput lastikleri, kauçuk koruyucular, motor kayışları, radyatör boruları, araba lastikleri) korur ve gevşemeyi, yapışmayı ve donmayı önler. Koltuk raylarını, açılır tavanların menteşelerini ve otomatik emniyet kemerlerini yağlamak için kullanılır. Cabrio kumaş tavanları ve örtü brandaları için su geçirmezlik sağlar. Gıcırdama ve sürtünme seslerini giderir, antistatik özelliklere sahiptir. Montaj sırasında, örneğin kauçuk boruları bağlarken yağlayıcı olarak işlev görür.\n\nRenksizdir ve leke bırakmaz. Zehirli değildir.",
+        "carburetorSpray": "Karbüratörün hem içini hem de dışını etkili bir şekilde temizlemek için formüle edilmiş özel bir temizleyici karışımı. Kelebek Gaz Kelebeği ve Rölanti Hız Aktüatörlerini temizlemek için de kullanılabilir. Karbüratör temizleyici, temizlenen hareketli parçaları da yağlayacak şekilde ek yağlayıcı ile formüle edildiği için.\n\n- Endüstri ve ticaret için ideal temizleyici\n- Onarım, montaj ve rutin bakım için\n- Tüm yağ, gres ve yakıt kalıntılarını kaldırır",
+        "mssMultiSuperSpray": "Zincirler, açık dişliler, yataklar, dişliler, araç kapıları, menteşeler, kilitler, raylar, eklemler ve somunlar, direksiyon dişli eklemleri vb. için kullanılabilir.\n\nServis, onarım, bakım ve üretim alanlarında birçok uygulamada kullanılır.\n\nKayma özelliğine sahiptir ve gıcırdamayı önler.\n\n- Yüksek basınca dayanır\n- İyi nüfuz etme özellikleri\n- Uzun ömürlü\n- Etkili yağlayıcı\n- Korozyon önleyici",
+        "airConditioningSpray": "Klima Temizleme Köpüğü, su ve katkı maddeleri bazlı yüksek kaliteli bir üründür. Ürün her türlü klima sistemini (araba, ev, ofis vb.) temizler. Özel bileşenleri sayesinde köpük oluşturma ve temizleme özellikleri mükemmeldir. Köpük kaybolduktan sonra temiz bir yüzey kalır.\n\n- Klima temizleyici sadece klima temizliği için kullanılır\n- Tüm kirliliklere karşı deterjanlarla temizleme özellikleri\n- Deodorize eder ve hoş olmayan kokuların oluşumunu önler"
+      },
+      "pax": {
+        "hotColdWaterHighPressureWasher": "Pax Yüksek Basınçlı Yıkama Makineleri, İtalyan pompa teknolojisini kullanarak düşük su tüketimi ve kolay kullanım ile maksimum performans elde etmek için tasarlanmış makinelerdir.\n\nKullanım alanına göre farklı modeller ve basınçlarda soğuk ve sıcak su olarak üretilen makinelerimiz, sadece araç yıkama ve araç detaylandırma için değil, aynı zamanda endüstriyel alanlar, otoyollar, havayolları, denizcilik, restoranlar, hastaneler, hayvancılık çiftlikleri ve tarım gibi birçok farklı alan için uygundur.",
+        "coldWaterHighPressureWasher": "Ayarlanabilir basınç kontrolüne sahip profesyonel soğuk su yüksek basınçlı yıkayıcılar",
+        "steamWashers": "İtalyan pompa teknolojisi kullanılarak üretilen Pax Basınçlı Buhar Yıkayıcı, su kullanılamayan ve ulaşılması zor yerlerin kolay ve hızlı temizlenmesi için geliştirilmiştir.\n\n200 °C sıcak buhar üretir, böylece temizlenmesi zor yerleri çok kolay ulaşılabilir ve başarıyla temizlenebilir hale getirir. Kısa sürede etkili sonuçlar elde etmenizi sağlar. Bir araçta elektrik ve elektronik parçaların bulunduğu yerlerde son derece faydalıdır.",
+        "foamLiquidSprayerSeries": "Çeşitli tank kapasitelerine sahip profesyonel köpük ve sıvı püskürtme sistemleri",
+        "carSeatCleaningMachine": "Güçlü emme ve köpük temizleme özelliklerine sahip profesyonel araç koltuk temizleme makinesi",
+        "hardFloorAndCarpetCleaningMachine": "Sert zeminler ve halılar için profesyonel temizleme özelliklerine sahip çok yönlü temizleme makinesi",
+        "industrialWetDryVacuumCleaner": "Pax Islak-Kuru Endüstriyel Tip Elektrikli Süpürgeler, özel tasarlanmış paslanmaz çelik gövdesiyle ıslak ve kuru zeminlerde oluşan katı ve sulu kirleri kolayca emebilecek şekilde üretilmiştir.\n\nBu çok profesyonel elektrikli süpürgeler 2 motorlu ve 3 motorlu olarak farklı kapasitelerde üretilmektedir. Sadece bir motor gücü 1200 Watt'tır. Halı - koltuk - perde - kauçuk - mermer - parke - seramik - cam gibi her türlü yüzeyde etkili temizlik sağlar.",
+        "hotAirGenerator": "Verimli kurutma ve ısıtma uygulamaları için profesyonel sıcak hava üreteci",
+        "hotAirGeneratorEco": "Gelişmiş sıcaklık kontrol sistemi ile enerji verimli sıcak hava üreteci",
+        "clothSqueezingMachine": "Kumaş ve tekstillerden verimli su çıkarma için profesyonel bez sıkma makinesi"
+      },
+      "automec": {
+        "fdt4000": "FDT 4000 Araç Üzeri Fren Disk Torna Makinesi, zamanla oluşan çizikleri, aşınmayı ve eğilmeyi gidermek ve fren diskinin daha uzun ömürlü olmasını sağlamak için tasarlanmıştır. Eski fren diskinizi değiştirmek yerine taşlayarak ekonomik faydalar elde edersiniz ve yaygın inanışın aksine daha güvenli bir sürüş deneyimi yaşarsınız. Bunun nedeni, eski fren disklerinin kullanım sırasında yüksek basınç ve ısı altında sertleşmesidir. Fren diskleri üretici standartlarına uygun olduğunda, yeniden kullanım için torna yapılması hem sizin hem de aracınız için güvenli ve ekonomik bir seçimdir.\n\nFDT 4000 Araç Üzeri Fren Disk Torna Makinesi, kullanıcının tornayı araca kolayca yerleştirmesine ve en kısa sürede en verimli torna işlemini gerçekleştirmesine olanak tanıyacak şekilde tasarlanmıştır. Diski çıkarmadan araç üzerinde torna yapmanın avantajı, fren diskinin denge ayarının torna işlemi sırasında bozulmamasıdır. Ayrıca, gerektiğinde zaman kaybetmeden hızlıca torna işlemini gerçekleştirebilirsiniz. Yüksek kaliteli elmas uçlar ve hassas ayar yetenekleriyle 0,004 mm tornada kalınlığı elde edebilirsiniz. Ayrıca, yerleşik alarm, torna işlemi sırasında başka görevlerle ilgilenmenize olanak tanır, çünkü makine işlem tamamlandığında otomatik olarak durur ve sizi hem sesli hem de görsel olarak uyarır. Makine, kısa ve uzun olmak üzere iki sehpa ile gelir, böylece kaldırma, kriko veya tezgah üzerinde uygulama yapılabilir.\n\nDisk torna, zamanla oluşan deformasyonları düzeltmek, fren sistemindeki titreşim sorunlarını çözmek veya yeni değiştirilen diskler ve balatalardaki kirlilik veya titreşim sorunlarını gidermek için kullanılan bir yöntemdir. Bu yöntem, yeni bir diske benzer pürüzsüz bir yüzey elde etmenize yardımcı olur. Araç sahibinin maliyetlerini düşürür ve yüksek kaliteli ve güvenli hizmet sunarak müşteri memnuniyetini artırır. Kullanıcılar, disklerin üretici standartları tarafından belirlenen minimum kalınlığın altına düşmemesini sağlamalıdır.\n\nTorna manuel veya otomatik olarak yapılabilir.\n\nMakinenin kullanımı hakkında detaylı bilgi kullanım kılavuzunda bulunmaktadır.",
+        "etm1500": "ETM1500, uzun ömürlü, güvenilir, çok yönlü ve etkili bir makine olarak tasarlanmıştır ve TDI, HDI ve COMMON RAIL motorları dahil olmak üzere hem dizel hem de benzinli motorları aynı anda test etmek ve temizlemek için mekanik ve elektronik olarak tasarlanmıştır. Benzin veya dizel motorlar için bir tankı vardır. Sadece bir tür motor için kullanmak isteyen müşterilerimiz tarafından tercih edilmektedir.\n\nAutomec ürünleri piyasanın en gelişmiş ürünleridir. En son teknoloji ile üretilmiş ve piyasada kullanılan modern yakıt çeşitliliğine uyarlanmış, tüm yakıt türleriyle uyumlu, motorda hiçbir atık bırakmayan, motoru ve katalizörü hasar vermeyen, yanma odasındaki tüm karbon atıklarını, katranı ve diğer atıkları etkili bir şekilde temizleyen ve motor performansını artıran. Nemlendirme etkisi, kirin çözünmesini ve egzoz yoluyla küçük parçacıklar halinde atılmasını sağlar. Egzoz yoluyla atılamayan tortular makinenin filtresinde birikir.\n\nTüm dizel ve benzinli motorları parça hasarı olmadan temizler:\n\n- Mekanik enjeksiyon\n- Tek noktalı elektronik enjeksiyon\n- Çok noktalı elektronik enjeksiyon\n- TDI, HDI, CDI, JTD, CRDI, DTI ve COMMON RAIL elektronik sistemleri\n- Direkt benzin enjeksiyon sistemleri\n- Otomatik pompalı araçlar\n- Karbüratörlü araçlar\n- Elektrikli veya yedek pompa motorlarını temizler.\n\nAutomec dijital yakıt sistemi makinesini kullandığınızda şu avantajları sağlar:\n\n- Yakıt tüketiminde azalma\n- Araç kapasitesinde artış\n- Gaz emisyonlarında yenilenme\n- Egzoz emisyonunda azalma\n- Motor performansında artış\n- Bozuk rölanti hızı ve ateşleme hatasının düzeltilmesi\n- Aracınızın mükemmel çalışması.",
+        "fdt6000": "FDT6000 Disk Torna Makinesi, Osm Automotive Ltd. Co. desteğiyle, 150-380 mm çapındaki diskleri tornalamak için tasarlanmıştır. Binek araçlar, hafif ticari araçlar ve minibüslerin diskleri için uygundur.\n\nDisk torna, zamanla oluşan deformasyonları düzeltmek, fren sistemindeki titreşim sorunlarını çözmek veya yeni değiştirilen diskler ve balatalardaki kirlilik veya titreşim sorunlarını gidermek için kullanılan bir yöntemdir. Bu işlem, yeni bir diske benzer pürüzsüz bir yüzey elde etmenizi sağlar. Araç sahibinin maliyetlerini düşürmesine ve yüksek kaliteli ve güvenli hizmet sunarak müşteri memnuniyetini artırmasına yardımcı olur. Kullanıcılar, disklerin üretici standartları tarafından belirlenen minimum kalınlığın altına düşmemesini sağlamalıdır.\n\nMakinemiz, disk yüzeyindeki deformasyonları torna yaparak kaldırabilir ve yeni bir diske benzer bir yüzey elde edebilir. Torna işlemleri hem otomatik hem de manuel olarak yapılabilir. Fren disk taşlama işlemi her iki yüzeyi aynı anda taşlar. Mil kalınlığı 35 mm'dir. Makine ile birlikte torna işlemi için gerekli tüm aparatlar gelir.\n\nBir disk doğru aparatlarla mile düzgün bir şekilde monte edildiğinde, sallanma veya titreşim olmayacaktır. Yine de, olası sürtünme ve titreşimi en aza indirmek için disklerin dış çevresi için titreşim ve gürültü azaltıcı plastik O-ringler ve torna aleti altına destek braketi ile gelir.\n\nVerimli ve kolay kullanım için tasarlanmış makinemiz 2 yıl garanti ile gelir. Makine ile birlikte detaylı bir kullanım kılavuzu gelir.",
+        "fdt7000": "FDT7000 Disk Torna Makinesi iki fonksiyonlu bir modeldir. Mevcut disk torna makinesine ek aparatlarla hem araç üzerinde hem de araç dışında torna yapma özelliğine sahiptir. Bu iki özellikten faydalanmak isteyen müşterilerimiz için üretilmiştir. Teknik özellikleri ve boyutları FDT6000 ile aynıdır. Makine ile birlikte torna için gerekli tüm aparatlar gelir.",
+        "etm2000": "ETM2000 Yakıt Sistemi Temizleme Makinesi, uzun ömürlü, güvenilir, çok yönlü ve etkili bir makine olarak tasarlanmıştır. TDI, HDI ve COMMON RAIL motorları dahil olmak üzere hem dizel hem de benzinli motorları test etmek ve temizlemek için mekanik ve elektronik olarak tasarlanmıştır. Dizel ve benzin için iki ayrı tankı vardır.\n\nETM2000 en son teknoloji ile üretilmiş ve piyasada kullanılan modern yakıt farklılıklarına uyarlanmış ve tüm yakıt türleriyle uyumludur, yanma odasındaki tüm karbon atıklarını, katranı ve diğer tortuları motorda hiçbir atık bırakmadan, katalizör veya motoru hasar vermeden etkili bir şekilde temizler ve motor performansını artırır. Nemlendirme etkisi, kirin çözünmesini ve egzoz yoluyla küçük parçacıklar halinde atılmasını sağlar. Egzoz yoluyla atılamayan tortular makinenin filtresinde birikir.\n\nTüm dizel ve benzinli motorları parça hasarı olmadan temizler:\n\n- Mekanik enjeksiyon\n- Tek noktalı elektronik enjeksiyon\n- Çok noktalı elektronik enjeksiyon\n- TDI, HDI, CDI, JTD, CRDI, DTI ve COMMON RAIL elektronik sistemleri\n- Direkt benzin enjeksiyon sistemleri\n- Otomatik pompalı araçlar\n- Karbüratörlü araçlar\n- Elektrikli veya yedek pompa motorlarını temizler.\n\nAutomec yakıt sistemi temizleme makinesini kullandığınızda şu avantajları sağlar:\n\n- Yakıt tüketiminde azalma\n- Araç kapasitesinde artış\n- Gaz emisyonlarında yenilenme\n- Egzoz emisyonunda azalma\n- Motor performansında artış\n- Bozuk rölanti hızı ve ateşleme hatasının düzeltilmesi\n- Aracınızın mükemmel çalışması.",
+        "ad3030": "Automec AD3030 SX DPF Temizleme Makinesi Ölçüm Fonksiyonu ile, filtrenin araçtan çıkarılmasına gerek kalmadan partikül filtresinin temizlenmesini sağlar. Yerleşik ölçüm fonksiyonu, temizleme sonuçlarının görsel olarak gözlemlenmesini sağlar.\n\nAutomec AD3030 SX DPF Temizleme Makinesi, araç üzeri DPF temizleme teknolojisindeki en son gelişmeyi temsil eder. Tam otomatik ve kullanıcı dostu tasarımı, hem profesyonel kullanıcılar hem de araç sahipleri için pratik bir çözüm sağlar. Bu makine sadece zaman kazandırmakla kalmaz, aynı zamanda verimli temizleme süreci yoluyla karlılık sunar, bu da onu optimal araç performansının sürdürülmesi için değerli bir yatırım haline getirir. Araca bağlantı, hem temizleme hem de ölçüm için lambda sensörü üzerinden yapılır. Bağlantı yapıldıktan ve temizleme işlemi başlatıldıktan sonra, makine 20 dakika süren tüm işlemi otomatik olarak tamamlar. Detaylı talimatlar için lütfen kullanım kılavuzuna bakın.\n\nAracın motoru tüm işlem boyunca boşta (N) çalışır. Deşarj egzozdan çıkacaktır. Görsel örnekler için videolarımıza bakın.\n\nMakinedeki mavi hortum ölçüm için kullanılır. Lambda sensörü üzerinden bağlayın ve sonuçlar makinenin ön panelindeki çubukta görüntülenecektir. Temizleme işlemine başlamadan önce, mavi ölçüm hortumunu lambda sensörüne takın ve aracın boşta (N) çalıştığından emin olun. Ön panelde, ilk çubuğu (test öncesi) kullanarak pimini ayarlayarak tıkanıklık seviyesini gözlemleyin. Temizleme işleminden sonra, sonuçları karşılaştırmak için ikinci çubuğu (test sonrası) kullanın.\n\nTemizleme, makine ile birlikte gelen özel sıvılar kullanılarak yapılır. Başka sıvı veya kimyasal kullanılmamalıdır. Makine arka tarafta üç adet 5 litrelik sıvı kutusu (A1, A2, A3) içerir. Bunlar her zaman bizden veya iş ortaklarımızdan sipariş edilebilir. Daha fazla detay için lütfen kullanım kılavuzuna bakın.\n\nMakine ile birlikte gerekli tüm araçlar gelir.",
+        "rdt3000": "Bu makine, ön panel veya kapağın çıkarılmasına gerek kalmadan ısıtma ve radyatör sistemlerinin 45 dakika içinde hızlı ve etkili temizliğini yaparak zaman kazanmanızı sağlar. Müşteri memnuniyetini ve güvenini artırır. Kullanımı kolay ve rahattır, ek avantajı kolay taşınabilir olmasıdır.\n\nAna Özellikler:\n\n- Metal Filtre: Kolay çıkarılabilir ve temizlenebilir; dayanıklı.\n- Bağlantı: Aracın ısıtma giriş ve çıkışına hortumlarla basit bağlantı.\n- Kontrol Paneli: Ön paneldeki ekran, su sıcaklığını, çalışma süresini ve program ayarlarını ayarlamanıza olanak tanır. 4 çalışma programı vardır. Detaylı kullanım bilgileri kullanım kılavuzunda bulunabilir.\n- Isıtma ve Temizleme: Tanktaki su ayarlanan sıcaklığa ulaştığında, makine temizliğe başlanabileceğini sinyal verir.\n\nUygulamalar:\n\n- Her türlü kara taşıtının ısıtıcı çekirdeklerinin temizlenmesi.\n- Binek araçlar, hafif ticari araçlar, kamyonlar, otobüsler, römorklar ve tarım makinelerinin temizlenmesi.\n- Hafif ticari araçlarda soğutma radyatörlerinin temizlenmesi.\n- Hafif ticari araçlarda blok içlerinin temizlenmesi.\n- Araçlarda yağ soğutucu rekuperatörlerinin temizlenmesi.\n- Araçlarda LPG ve CNG regülatörlerinin temizlenmesi.\n\nKullanım Talimatları:\n\n1. Makinenin su tankına 250 ml Automec Radyatör Temizleme Çözeltisi dökün ve tankı suyla doldurun.\n2. Makineyi takın ve anahtarı açın. Makine tanktaki suyu otomatik olarak 80°C'ye ısıtacaktır.\n3. Radyatörü makinenin giriş ve çıkışına bağlayın. Ekran 80°C gösterdiğinde, temizliği başlatmak için en sağdaki siyah anahtarı çevirin.\n4. Zamanlayıcı 45 dakikaya ayarlanmıştır ve süre dolduğunda ses ve ışıkla sizi uyaracaktır. (Temizlik sırasında su seviyesi düşerse, makineyi durdurun ve daha fazla su ekleyin.)\n5. Radyatörde tıkanıklığa neden olan tüm kalıntılar filtrede toplanır. Her kullanımdan sonra filtreyi çıkarın ve temizleyin.\n\nUyarılar ve Notlar:\n\n1. Makine ısıtma moduna geçmezse:\n   - Su seviyesini kontrol edin.\n   - Tanktaki su seviyesi sensörünü temizleyin.\n\n2. Isıtma lambası yanıyorsa ama ısıtma olmuyorsa:\n   - Isıtıcı eleman arızalı olabilir. Makinenin arka alt kapağını çıkarın ve ısıtıcı elemanın mavi ve kahverengi tellerini polariteye bakılmaksızın yedek terminallere bağlayın.\n\n3. Makine çalışıyorsa ama pompa çalışmıyorsa:\n   - Sağ arka taraftaki pompayı çevirmek için düz tornavida kullanın.\n\n4. Pompa çalışıyorsa ama su pompalanmıyorsa:\n   - Makinenin sol yan kapağını çıkarın ve pompadaki sarı hava boşaltma vidasından havalandırın.\n\n5. Makinenin elektronik kartı veya düğmeleriyle ilgili bir sorun varsa:\n   - Ön ekranın arkasındaki manuel kontrol düğmelerini kullanarak ısıtma veya pompayı aktifleştirin.\n\n6. Makineyi manuel modda çalıştırmak için:\n   - Makineyi manuel modda başlatmak için sağ alttaki \"pompa kapalı\" düğmesini basılı tutun. Açmak için \"pompa açık\" düğmesini, kapatmak için \"pompa kapalı\" düğmesini kullanın.\n   - Isıtıcı elemanı açmak için sağ düğmeyi, kapatmak için sol düğmeyi kullanın. Tankın suyla dolu olduğundan emin olun.\n\n7. ÖNEMLİ NOT:\n   - Radyatör temizliği sırasında asit bazlı sıvılar kullanmayın çünkü bunlar pompa ve bağlantı bileşenlerine zarar verebilir. Bu tür kullanımdan kaynaklanan hasarlı parçalar garanti kapsamında değildir.",
+        "fhd1000": "Tek operatör tarafından kullanım için tasarlanmış, tüm araçlarla uyumlu ve kapsamlı kapak seti ile donatılmış çok yönlü fren sıvısı havalandırma ve hidrolik sistem bakım cihazı.",
+        "ktm1000": "Automec KTM1000 Fren Tamburu ve Fren Disk Torna Makinesi, 150-380 mm çapındaki diskleri ve binek araçlar, hafif ticari araçlar ve minibüslerin tamburlarını tornalamak için tasarlanmıştır."
+      }
+    }
+  },
+  "documents": {
+    "ad3030": "AD3030 DPF Temizleme Makinesi Özellikleri",
+    "fdt4000": "FDT4000 Kullanım Kılavuzu",
+    "fdt4000_ro": "FDT4000 Kullanım Kılavuzu (Rumence)"
+  },
+  "about": {
+    "title": "2023'ten beri premium otomotiv ekipman çözümleri sağlayıcısı",
+    "ourStory": "Hikayemiz",
+    "story": {
+      "part1": "Şirketimiz 2023 yılında Budapeşte, Macaristan'da AUTOMEC Automotive Service Equipment'in AB şubesi olarak kuruldu. Ayrıca PAX Endüstriyel Temizlik Ekipmanları ve Caldini Aerosol ürünlerinin genel distribütörüyüz.",
+      "part2": "Vizyonumuz, markalarımızı uzun vadede global olarak kalıcı bir şekilde kurmaktır. Misyonumuz, ürünlerimizi en yüksek kalitede ve en iyi güvenilir hizmetle müşterilerimize sunmak ve markamızı tüm Avrupa ülkelerinde güçlü ve rekabetçi bir konumda tutacak sürdürülebilir ve kalifiye ortaklıklar sürdürmektir.",
+      "part3": "Macaristan'daki merkezimizde stok bulunabilirliğimizle müşterilerimize hizmet vermekten gurur duyuyoruz, hem perakende hem de toptan satış sunuyoruz.",
+      "sincerely": "Saygılarımızla"
+    },
+    "values": {
+      "title": "Değerlerimiz",
+      "technicalExcellence": {
+        "title": "Teknik Mükemmellik",
+        "description": "Yılların mühendislik uzmanlığıyla desteklenen en son teknoloji otomotiv ekipmanları ve çözümleri sunuyoruz."
+      },
+      "customerPartnership": {
+        "title": "Müşteri Ortaklığı",
+        "description": "Müşterilerimizle uzun vadeli ilişkiler kuruyor, sürekli destek ve danışmanlık sağlıyoruz."
+      },
+      "qualityAssurance": {
+        "title": "Kalite Güvencesi",
+        "description": "Tüm ürünlerimiz uluslararası standartlara uygun olarak sıkı testlerden ve sertifikasyonlardan geçer."
+      },
+      "innovationFocus": {
+        "title": "Yenilikçilik Odaklı",
+        "description": "Müşterilerimize en son teknolojik gelişmeleri getirmek için sürekli AR-GE'ye yatırım yapıyoruz."
+      }
+    },
+    "mission": {
+      "title": "Misyonumuz",
+      "description": "Ürünlerimizi en yüksek kalitede ve en iyi güvenilir hizmetle müşterilerimize sunmak ve markamızı tüm Avrupa ülkelerinde güçlü ve rekabetçi bir konumda tutacak sürdürülebilir ve kalifiye ortaklıklar sürdürmek."
+    }
+  },
+  "brands": {
+    "automec": {
+      "name": "Automec",
+      "description": "Profesyonel Garaj ve Servis Ekipmanları"
+    },
+    "pax": {
+      "name": "Pax",
+      "description": "Araç Yıkama ve Endüstriyel Temizlik Ekipmanları"
+    },
+    "caldini": {
+      "name": "Caldini",
+      "description": "Profesyonel Aerosol Ürünleri"
+    }
+  },
+  "contact": {
+    "title": "Uzman tavsiyesi ve destek için ekibimizle iletişime geçin",
+    "directContact": "Doğrudan İletişim",
+    "chatWhatsapp": "WhatsApp'ta Sohbet",
+    "sendEmail": "E-posta Gönder",
+    "contactDetails": "İletişim Detayları",
+    "address": "AUTOMEC Ipari Berendezések Kft. Gyömrői út 115. Start Center Business Park/101 1103 Budapest, Macaristan",
+    "officeLocation": "Ofis Konumu"
+  }
+} 

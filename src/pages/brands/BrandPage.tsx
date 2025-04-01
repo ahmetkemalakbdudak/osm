@@ -14,6 +14,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 import { brands } from '../../data/brands';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // Utility function to create URL-friendly slug
 const createSlug = (name: string): string => {
@@ -24,6 +25,7 @@ function BrandPage() {
   const { brandName } = useParams<{ brandName: string }>();
   const navigate = useNavigate();
   const theme = useTheme();
+  const { t } = useTranslation();
   
   const brand = brandName ? brands[brandName] : null;
   const [productImages, setProductImages] = useState<Record<string, string>>({});
@@ -98,7 +100,7 @@ function BrandPage() {
           variant="text"
           sx={{ mb: 4 }}
         >
-          Back to Home
+          {t('common.backToHome')}
         </Button>
 
         <Paper sx={{ p: 4, mb: 6, bgcolor: 'background.paper' }}>
@@ -129,13 +131,13 @@ function BrandPage() {
         
         <Box sx={{ mb: 4 }}>
           <Typography variant="h2" gutterBottom>
-            Our Products
+            {t('products.ourProducts')}
           </Typography>
         </Box>
         
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
           {brand.products.map((product) => (
-            <Grid item xs={12} md={6} key={product.id}>
+            <Grid item xs={12} sm={6} md={4} key={product.id}>
               <Card 
                 sx={{ 
                   height: '100%',
@@ -163,11 +165,11 @@ function BrandPage() {
                       height: '100%',
                       objectFit: 'contain',
                       bgcolor: 'background.paper',
-                      p: 2,
+                      p: 1,
                     }}
                   />
                 </Box>
-                <CardContent>
+                <CardContent sx={{ p: 1.5 }}>
                   <Typography variant="h6" gutterBottom>
                     {product.name}
                   </Typography>

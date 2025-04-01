@@ -79,19 +79,19 @@ const languages: Language[] = [
 
 const menuItems: MenuItems = {
   brands: [
-    { label: 'Automec', path: '/brands/automec' },
-    { label: 'Pax', path: '/brands/pax' },
-    { label: 'Caldini', path: '/brands/caldini' },
+    { label: 'brands.automec.name', path: '/brands/automec' },
+    { label: 'brands.pax.name', path: '/brands/pax' },
+    { label: 'brands.caldini.name', path: '/brands/caldini' },
   ],
   products: [
-    { label: 'Car Service & Garage Equipment', path: '/brands/automec' },
-    { label: 'Car Wash and Industrial Cleaning Equipment', path: '/brands/pax' },
-    { label: 'Aerosol Products', path: '/brands/caldini' },
+    { label: 'brands.automec.description', path: '/brands/automec' },
+    { label: 'brands.pax.description', path: '/brands/pax' },
+    { label: 'brands.caldini.description', path: '/brands/caldini' },
   ],
   documents: [
-    { label: 'AD3030 DPF Cleaning Machine Specs', path: '/docs/AD3030 DPF Cleaning Machine Technical Specifications2 (1).pdf', icon: DescriptionIcon },
-    { label: 'FDT4000 User Guide', path: '/docs/FDT4000 USER GUIDE.pdf', icon: DescriptionIcon },
-    { label: 'FDT4000 Manual (Romanian)', path: '/docs/ROMANIAN De Utilizare Al Fdt4000.pdf', icon: DescriptionIcon },
+    { label: 'documents.ad3030', path: '/docs/AD3030 DPF Cleaning Machine Technical Specifications2 (1).pdf', icon: DescriptionIcon },
+    { label: 'documents.fdt4000', path: '/docs/FDT4000 USER GUIDE.pdf', icon: DescriptionIcon },
+    { label: 'documents.fdt4000_ro', path: '/docs/ROMANIAN De Utilizare Al Fdt4000.pdf', icon: DescriptionIcon },
   ],
 };
 
@@ -99,7 +99,7 @@ function Header() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   const [languageAnchor, setLanguageAnchor] = useState<null | HTMLElement>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -125,9 +125,9 @@ function Header() {
     setLanguageAnchor(null);
   };
 
-  const handleLanguageSelect = (languageCode: string) => {
+  const handleLanguageChange = (languageCode: string) => {
     i18n.changeLanguage(languageCode);
-    handleLanguageClose();
+    setLanguageAnchor(null);
   };
 
   const handleNavigate = (path: string) => {
@@ -190,7 +190,7 @@ function Header() {
                       fontSize: '1rem',
                     }}
                   >
-                    {menu}
+                    {t(`menu.${menu}`)}
                   </Button>
                   <Menu
                     anchorEl={menuAnchors[menu]}
@@ -208,7 +208,7 @@ function Header() {
                         }}
                       >
                         {item.icon && <item.icon fontSize="small" />}
-                        {item.label}
+                        {t(item.label)}
                       </MenuItem>
                     ))}
                   </Menu>
@@ -222,7 +222,7 @@ function Header() {
                   fontSize: '1rem',
                 }}
               >
-                About Us
+                {t('common.aboutUs')}
               </Button>
               <Button
                 color="inherit"
@@ -232,7 +232,7 @@ function Header() {
                   fontSize: '1rem',
                 }}
               >
-                Contact
+                {t('common.contactUs')}
               </Button>
             </Stack>
           )}
@@ -328,7 +328,7 @@ function Header() {
             {languages.map((lang) => (
               <MenuItem
                 key={lang.code}
-                onClick={() => handleLanguageSelect(lang.code)}
+                onClick={() => handleLanguageChange(lang.code)}
                 selected={i18n.language === lang.code}
                 sx={{
                   minWidth: 140,
@@ -373,7 +373,7 @@ function Header() {
                         color: 'text.secondary',
                       }}
                     >
-                      {menu}
+                      {t(`menu.${menu}`)}
                     </Typography>
                     {items.map((item) => (
                       <ListItemButton
@@ -382,16 +382,16 @@ function Header() {
                         sx={{ pl: 4 }}
                       >
                         {item.icon && <item.icon fontSize="small" sx={{ mr: 1 }} />}
-                        <ListItemText primary={item.label} />
+                        <ListItemText primary={t(item.label)} />
                       </ListItemButton>
                     ))}
                   </Box>
                 ))}
                 <ListItemButton onClick={() => handleNavigate('/about')}>
-                  <ListItemText primary="About Us" />
+                  <ListItemText primary={t('common.aboutUs')} />
                 </ListItemButton>
                 <ListItemButton onClick={() => handleNavigate('/contact')}>
-                  <ListItemText primary="Contact" />
+                  <ListItemText primary={t('common.contactUs')} />
                 </ListItemButton>
 
                 <Box mt={2}>
@@ -404,7 +404,7 @@ function Header() {
                       color: 'text.secondary',
                     }}
                   >
-                    Follow Us
+                    {t('common.followUs')}
                   </Typography>
                   <Stack direction="row" spacing={2} sx={{ px: 2, py: 1 }}>
                     {socialMedia.map((social) => (
