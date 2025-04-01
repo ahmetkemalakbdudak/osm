@@ -64,14 +64,6 @@ function Home() {
                 Main distributor of Automec Professional Service & Garage Equipment in EU region as well as distributor of PAX Industrial Cleaning Machines and Caldini Aeresol.
               </Typography>
               <Button
-                variant="contained"
-                size="large"
-                onClick={() => navigate('/brands/caldini')}
-                sx={{ mr: 2 }}
-              >
-                Explore Products
-              </Button>
-              <Button
                 variant="outlined"
                 size="large"
                 onClick={() => navigate('/contact')}
@@ -204,48 +196,6 @@ function Home() {
           </Grid>
         </Box>
       </Container>
-
-      {/* Products Section */}
-      <Box sx={{ bgcolor: 'background.paper', py: 8 }}>
-        <Container maxWidth="lg">
-          <Typography
-            variant="h2"
-            sx={{ mb: 2, fontSize: { xs: '2rem', md: '3rem' } }}
-            align="center"
-          >
-            Explore Our Premium Products
-          </Typography>
-          <Typography
-            variant="h5"
-            color="text.secondary"
-            sx={{ mb: 4, maxWidth: 800, mx: 'auto' }}
-            align="center"
-          >
-            Discover our extensive catalog of high-quality automotive equipment designed to meet your business needs.
-          </Typography>
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            spacing={2}
-            justifyContent="center"
-          >
-            <Button
-              variant="contained"
-              size="large"
-              endIcon={<ArrowForwardIcon />}
-              onClick={() => navigate('/brands/caldini')}
-            >
-              View Products
-            </Button>
-            <Button
-              variant="outlined"
-              size="large"
-              onClick={() => navigate('/contact')}
-            >
-              Contact Sales
-            </Button>
-          </Stack>
-        </Container>
-      </Box>
     </Box>
   );
 }
