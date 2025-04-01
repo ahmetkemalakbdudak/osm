@@ -540,6 +540,7 @@ export const brands: Record<string, Brand> = {
       {
         id: 9,
         name: 'FHD1000',
+        subtitle: 'Brake Fluid Change and Hydraulic Air Bleed Machine',
         description: 'A versatile brake fluid bleeding and hydraulic system maintenance device designed for single-operator use, compatible with all vehicles and featuring a comprehensive cover set.',
         image: automecLogo,
         specifications: {
