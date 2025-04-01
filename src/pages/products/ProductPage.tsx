@@ -5,7 +5,6 @@ import {
   Button,
   Grid,
   Paper,
-  Chip,
   Table,
   TableBody,
   TableCell,
@@ -14,7 +13,6 @@ import {
   useTheme,
   ImageList,
   ImageListItem,
-  useMediaQuery,
   IconButton,
   Tabs,
   Tab,
@@ -48,10 +46,6 @@ function ProductPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   
-  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
-  const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
-  const columns = isMdUp ? 3 : isSmUp ? 2 : 1;
-
   const { product, brand } = productName ? findProductAndBrand(productName) : { product: null, brand: null };
 
   const handleNextImage = () => {
