@@ -120,12 +120,18 @@ function ProductPage() {
     <Container maxWidth="lg">
       <Box py={4}>
         <Button
-          startIcon={<ArrowBackIcon />}
+          sx={{ 
+            minWidth: 'auto',
+            p: 1,
+            mb: 4,
+            borderRadius: '50%',
+            '&:hover': {
+              backgroundColor: 'rgba(0, 0, 0, 0.04)'
+            }
+          }}
           onClick={() => navigate(`/brands/${brand.id}`)}
-          variant="text"
-          sx={{ mb: 4 }}
         >
-          {t('products.backToBrand', { brand: brand.name })}
+          <ArrowBackIcon />
         </Button>
 
         <Grid container spacing={6}>
