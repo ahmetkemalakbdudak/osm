@@ -120,10 +120,10 @@ function BrandPage() {
             </Grid>
             <Grid item xs={12} md={8}>
               <Typography variant="h1" gutterBottom>
-                {brand.name}
+                {t(`brands.${brand.id}.name`)}
               </Typography>
               <Typography variant="h5" color="text.secondary" paragraph>
-                {brand.description}
+                {t(`brands.${brand.id}.description`)}
               </Typography>
             </Grid>
           </Grid>
