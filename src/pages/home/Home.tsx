@@ -1,6 +1,6 @@
 import { Container, Typography, Box, Button, Grid, Stack } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { ArrowForward as ArrowForwardIcon, CheckCircle as CheckCircleIcon } from '@mui/icons-material';
+import { CheckCircle as CheckCircleIcon } from '@mui/icons-material';
 
 // Import brand logos
 import caldiniLogo from '../../assets/caldini.png';
