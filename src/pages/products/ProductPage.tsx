@@ -22,6 +22,7 @@ import { ArrowBack as ArrowBackIcon, NavigateNext as NavigateNextIcon, NavigateB
 import { brands } from '../../data/brands';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import FormattedDescription from '../../components/FormattedDescription';
 
 // Utility function to create URL-friendly slug
 const createSlug = (name: string): string => {
@@ -273,11 +274,12 @@ function ProductPage() {
             <Typography variant="h1" gutterBottom>
               {product.name}
             </Typography>
-            <Typography variant="body1" color="text.secondary" paragraph sx={{ mb: 4 }}>
-              {t(`products.descriptions.${brand.id}.${product.name.toLowerCase().replace(/\s+/g, '')}`, {
+            <FormattedDescription 
+              text={t(`products.descriptions.${brand.id}.${product.name.toLowerCase().replace(/\s+/g, '')}`, {
                 defaultValue: product.description
               })}
-            </Typography>
+              sx={{ mb: 4 }}
+            />
             
             <Paper sx={{ p: 4 }}>
               <Typography variant="h6" gutterBottom>
