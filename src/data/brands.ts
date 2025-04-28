@@ -258,12 +258,17 @@ export const brands: Record<string, Brand> = {
         category: 'carWash',
         image: paxLogo,
         specifications: {
-          'Power': '2.2 kW',
-          'Suction Power': '1200W',
-          'Tank Capacity': '80 L',
-          'Weight': '95 kg',
-          'Dimensions': '900x700x1300 mm',
-          'Material': 'Stainless steel construction'
+          'Product Code': 'PX-60',
+          'Power': '2800 W Duble Fan Motor',
+          'Vacuum': '245 mbar / 24,5 kPa x 2',
+          'Air Flow': '61 Lt/Sn',
+          'Motor': '1400 W x 2',
+          'Function': 'Wet - Dry',
+          'Voltage': '220 - 240 V',
+          'Tank Capacity (Dirty Water)': '60 Lt.',
+          'Tank Capacity (Clean Water)': '15 Lt.',
+          'Dimensions': '56x70x106 cm',
+          'Cable Length': '10 mt.'
         }
       },
       {
