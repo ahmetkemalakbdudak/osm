@@ -310,13 +310,18 @@ export const brands: Record<string, Brand> = {
         category: 'carWash',
         image: paxLogo,
         specifications: {
-          'Power': '2.2 kW',
-          'Heat Output': '75,000 kcal/h',
-          'Air Flow': '2000 m³/h',
-          'Weight': '90 kg',
-          'Dimensions': '900x700x1200 mm',
-          'Material': 'Stainless steel construction',
-          'Energy Savings': 'Up to 30%'
+          'Motor': '0,37 kW',
+          'Heat Temperature': '0 - 90°',
+          'Cable Length': '5 mt.',
+          'Dimensions': '42 x 42 x 62 cm',
+          'Weight': '22 Kg.'
+        },
+        modelTable: {
+          headers: ['Product Code', 'Heating Power', 'Voltage'],
+          rows: [
+            ['SH-220-E', '1500 W x 4', '220 V'],
+            ['SH-380-E', '6000 W x 4', '380 V Trifaz']
+          ]
         }
       },
       {
