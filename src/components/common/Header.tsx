@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
   AppBar,
   Toolbar,
@@ -18,12 +18,15 @@ import {
   Stack,
   SvgIconTypeMap,
   Link,
+  Collapse,
+  ListItemIcon,
 } from '@mui/material';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import {
   Menu as MenuIcon,
   Close as CloseIcon,
   KeyboardArrowDown as KeyboardArrowDownIcon,
+  KeyboardArrowUp as KeyboardArrowUpIcon,
   Description as DescriptionIcon,
   Facebook as FacebookIcon,
   Instagram as InstagramIcon,
@@ -32,6 +35,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import automecLogo from '../../assets/automec-logo-transparent.png';
+import { ProductCategory } from '../../data/brands';
 
 interface Language {
   code: string;
@@ -46,8 +50,14 @@ interface MenuItem {
   icon?: OverridableComponent<SvgIconTypeMap>;
 }
 
+interface CategoryMenuItem extends MenuItem {
+  category: ProductCategory;
+}
+
 interface MenuItems {
-  [key: string]: MenuItem[];
+  brands: MenuItem[];
+  products: CategoryMenuItem[];
+  documents: MenuItem[];
 }
 
 const languages: Language[] = [
@@ -84,9 +94,9 @@ const menuItems: MenuItems = {
     { label: 'brands.caldini.name', path: '/brands/caldini' },
   ],
   products: [
-    { label: 'brands.automec.description', path: '/brands/automec' },
-    { label: 'brands.pax.description', path: '/brands/pax' },
-    { label: 'brands.caldini.description', path: '/brands/caldini' },
+    { label: 'categories.garage', path: '/products/category/garage', category: 'garage' },
+    { label: 'categories.carWash', path: '/products/category/carWash', category: 'carWash' },
+    { label: 'categories.aerosol', path: '/products/category/aerosol', category: 'aerosol' },
   ],
   documents: [
     { label: 'documents.ad3030', path: '/docs/AD3030 DPF Cleaning Machine Technical Specifications2 (1).pdf', icon: DescriptionIcon },
@@ -160,6 +170,11 @@ function Header() {
     { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/automec_eu/' },
   ];
 
+  const handleMobileMenuOpen = (event: React.MouseEvent<HTMLDivElement>, menu: string) => {
+    setMobileMenuOpen(true);
+    handleMenuClick(event, menu);
+  };
+
   return (
     <AppBar position="sticky" color="default" elevation={0} sx={{ borderBottom: 1, borderColor: 'divider' }}>
       <Container maxWidth="lg">
@@ -198,12 +213,12 @@ function Header() {
                     onClose={() => handleMenuClose(menu)}
                     sx={{ mt: 1 }}
                   >
-                    {items.map((item) => (
+                    {items.map((item: MenuItem) => (
                       <MenuItem
                         key={item.path}
                         onClick={() => handleNavigate(item.path)}
                         sx={{ 
-                          minWidth: menu === 'products' ? 360 : 180,
+                          minWidth: 280,
                           gap: 1,
                         }}
                       >
@@ -363,76 +378,49 @@ function Header() {
               </Box>
               <List sx={{ px: 2 }}>
                 {Object.entries(menuItems).map(([menu, items]) => (
-                  <Box key={menu}>
-                    <Typography
-                      variant="overline"
-                      sx={{
-                        px: 2,
-                        py: 1,
-                        display: 'block',
-                        color: 'text.secondary',
-                      }}
+                  <React.Fragment key={menu}>
+                    <ListItemButton
+                      onClick={(event: React.MouseEvent<HTMLDivElement>) => handleMobileMenuOpen(event, menu)}
+                      sx={{ pl: 2, justifyContent: 'space-between' }}
                     >
-                      {t(`menu.${menu}`)}
-                    </Typography>
-                    {items.map((item) => (
-                      <ListItemButton
-                        key={item.path}
-                        onClick={() => handleNavigate(item.path)}
-                        sx={{ pl: 4 }}
-                      >
-                        {item.icon && <item.icon fontSize="small" sx={{ mr: 1 }} />}
-                        <ListItemText primary={t(item.label)} />
-                      </ListItemButton>
-                    ))}
-                  </Box>
+                      <ListItemText primary={t(`menu.${menu}`)} />
+                      {menuAnchors[menu] ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                    </ListItemButton>
+                    <Collapse in={Boolean(menuAnchors[menu])} timeout="auto" unmountOnExit>
+                      <List component="div" disablePadding>
+                        {items.map((item: MenuItem) => (
+                          <ListItemButton
+                            key={item.path}
+                            sx={{ pl: 4 }}
+                            onClick={() => {
+                              handleNavigate(item.path);
+                              setMobileMenuOpen(false);
+                            }}
+                          >
+                            {item.icon && <ListItemIcon><item.icon fontSize="small" /></ListItemIcon>}
+                            <ListItemText primary={t(item.label)} />
+                          </ListItemButton>
+                        ))}
+                      </List>
+                    </Collapse>
+                  </React.Fragment>
                 ))}
-                <ListItemButton onClick={() => handleNavigate('/about')}>
+
+                <ListItemButton onClick={() => { handleNavigate('/about'); setMobileMenuOpen(false); }} sx={{ pl: 2 }}>
                   <ListItemText primary={t('common.aboutUs')} />
                 </ListItemButton>
-                <ListItemButton onClick={() => handleNavigate('/contact')}>
+                <ListItemButton onClick={() => { handleNavigate('/contact'); setMobileMenuOpen(false); }} sx={{ pl: 2 }}>
                   <ListItemText primary={t('common.contactUs')} />
                 </ListItemButton>
 
-                <Box mt={2}>
-                  <Typography
-                    variant="overline"
-                    sx={{
-                      px: 2,
-                      py: 1,
-                      display: 'block',
-                      color: 'text.secondary',
-                    }}
-                  >
-                    {t('common.followUs')}
-                  </Typography>
-                  <Stack direction="row" spacing={2} sx={{ px: 2, py: 1 }}>
-                    {socialMedia.map((social) => (
-                      <Link
-                        key={social.name}
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        sx={{
-                          color: 'text.secondary',
-                          '&:hover': {
-                            color: 'primary.main',
-                          },
-                        }}
-                      >
-                        <social.icon />
-                      </Link>
-                    ))}
-                  </Stack>
-                </Box>
-                
               </List>
             </Box>
           </Drawer>
+
         </Toolbar>
       </Container>
     </AppBar>
   );
-}
+};
 
-export default Header; 
+export default Header;

@@ -6,7 +6,7 @@
     "ourBrands": "Markalarımız",
     "followUs": "Bizi Takip Edin",
     "allRightsReserved": "Tüm hakları saklıdır",
-    "readMore": "Devamını Oku"
+    "readMore": "Daha Fazla Oku"
   },
   "menu": {
     "brands": "Markalar",
@@ -61,6 +61,11 @@
         "ktm1000": "Automec KTM1000 Fren Tamburu ve Fren Disk Torna Makinesi, Osm Automotive Ltd. Co. desteğiyle, 150-380 mm çapındaki diskleri ve binek araçlar, hafif ticari araçlar ve minibüslerin tamburlarını tornalamak için tasarlanmıştır.\n\nDisk ve tambur torna, zamanla oluşan deformasyonları gidermek, fren sistemindeki titreşim sorunlarını çözmek veya yeni değiştirilen diskler ve balatalardaki kirlilik veya titreşim sorunlarını çözmek için kullanılan bir yöntemdir. Bu şekilde, yeni bir tambur veya disk üzerinde yeni üretilmiş bir tanesiyle karşılaştırılabilir bir yüzey elde edebilirsiniz. Bu şekilde, yeni bir disk gibi pürüzsüz bir yüzey elde edebilirsiniz. Bu, araç sahibinin maliyetlerini düşürmeye ve yüksek kaliteli ve güvenli hizmet sunarak müşteri memnuniyetini artırmaya yardımcı olur. Kullanıcılar, disklerin üretici standartları tarafından belirtilen minimum kalınlığın altına düşürülmemesine dikkat etmelidir.\n\nMakine, 25 mm kalınlığında olan aynı mil üzerinde hem disklerin hem de tamburların taşlanmasına olanak sağlar. Disk torna ataşmanı tek bir vida ile kolayca takılıp sökülebilir. Tambur torna işlemleri yaparken, disk torna aleti çıkarılır ve tambur torna aleti mile daha yakın konumlandırılır. Torna işlemleri hem otomatik hem de manuel olarak gerçekleştirilebilir. Ayrıntılar kullanım kılavuzunda bulunabilir.\n\nBir disk veya tambur doğru aparatlarla mile düzgün bir şekilde monte edildiğinde, sarsıntı veya titreşim olmayacaktır. Yine de, olası sürtünme ve titreşimi en aza indirmek için, disklerin dış çevresi için titreşim ve gürültü azaltıcı plastik O-ringler ve torna aleti altına destek braketi sağlanmaktadır.\n\nVerimli ve kolay kullanım için tasarlanmış makinemiz, 2 yıl garanti ile gelir. Makine ile birlikte detaylı bir kullanım kılavuzu bulunmaktadır.\n\nGenel Bilgiler:\n\n- Torna işlemleri için gerekli tüm ekipmanlar makine ile birlikte verilmektedir.\n- Hem tamburun hem de diskin mile montajı için gereken tüm ekipman ve ataşmanlar makine ile birlikte verilmektedir.\n- Makinede bir adet mil (25mm) bulunmaktadır.\n- Makinede biri disk, diğeri tambur için olmak üzere iki ayrı torna aleti vardır.\n- Binek araçlar, hafif ticari araçlar ve minibüsler için uygundur.\n- Pratik ve kullanımı kolaydır.\n- Disklerin her iki tarafı da aynı anda tornalanır.\n- Servis ve yedek parçalar mevcuttur."
       }
     }
+  },
+  "categories": {
+    "garage": "Profesyonel Garaj ve Servis Ekipmanları",
+    "carWash": "Araç Yıkama ve Endüstriyel Temizlik Ekipmanları",
+    "aerosol": "Profesyonel Aerosol Ürünleri"
   },
   "documents": {
     "ad3030": "AD3030 DPF Temizleme Makinesi Özellikleri",

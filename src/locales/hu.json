@@ -6,7 +6,7 @@
     "ourBrands": "Márkáink",
     "followUs": "Kövessen minket",
     "allRightsReserved": "Minden jog fenntartva",
-    "readMore": "Tovább"
+    "readMore": "Tovább olvasom"
   },
   "menu": {
     "brands": "Márkák",
@@ -23,7 +23,7 @@
     "notFound": "A termék nem található",
     "returnHome": "Vissza a főoldalra",
     "video": "Videó",
-    "modelSpecifications": "Modell adatok",
+    "modelSpecifications": "Modell specifikációk",
     "descriptions": {
       "caldini": {
         "brakeCleaner": "Kiválóan speciális tisztítószer intenzív tisztító hatással olajos és zsíros géprészekre, tárcsafékekre és fékalkatrészekre, mint például fékcső, fékbetét és kuplungbetét. Ideális tisztítószer az ipar és kereskedelem számára, javításokhoz és szereléshez.\n\n- Optimális tisztító hatás rövid idő alatt\n- Maradékmentes működés\n- Még a megkeményedett kenőanyagokat is eltávolítja\n- Nem korrozív és nem károsítja a gumit vagy műanyagot",
@@ -41,7 +41,7 @@
         "coldWaterHighPressureWasher": "Professzionális hidegvíz nagy nyomású mosógépek állítható nyomásszabályozással",
         "steamWashers": "A Pax kézi gőztisztítók kézi használatra készültek. Úgy gyártják őket, hogy könnyen és gyorsan végezzenek fertőtlenítési és tisztítási folyamatokat olyan helyeken, ahol víz nem használható, kizárólag gőznyomással.\n\nNagyon rövid idő alatt hatékony eredményt biztosítanak a nehezen elérhető és tisztítható helyeken 170 °C forró gőz előállításával. Ezek olyan gépek, amelyek rendkívül sikeres tisztítást végezhetnek olyan helyeken, ahol elektromos alkatrészek találhatók a járművek belső terében és motor tisztítási munkák során stb.\n\nTöbbszörös használatra készültek egy- és kétpisztolyos kivitelben.",
         "foamLiquidSprayerSeries": "Professzionális hab és folyadék permetező rendszerek különböző tartály kapacitásokkal",
-        "carSeatAndCarpetCleaningMachine": "Professzionális autó ülés és szőnyeg tisztító gép erős szívó és hab tisztító képességekkel",
+        "carSeatAndCarpetCleaningMachine": "A Pax autóülés- és szőnyegtisztító gép speciálisan kialakított rozsdamentes acél testével alkalmas nedves és száraz padlók, illetve felületek tisztítására. A 2800 wattos szívóerejének köszönhetően professzionálisan és könnyedén tisztítja a kanapékat, szőnyegeket, ágyakat stb., anélkül, hogy a felhasználót kifárasztaná.\n\nEz a magas szintű professzionális gép számos területen – például autókozmetikákban, szállodákban, kórházakban, takarítócégeknél – folyamatosan használt és kedvelt eszköz.",
         "hardFloorAndCarpetCleaningMachine": "Sokoldalú tisztító gép kemény padlókhoz és szőnyegekhez professzionális tisztító képességekkel",
         "industrialWetDryVacuumCleaner": "A Pax Nedves-Száraz Ipari Típusú Porszívók úgy készülnek, hogy speciálisan tervezett rozsdamentes testükkel könnyen felszívják a nedves és száraz padlókon előforduló szilárd és vízes szennyeződést.\n\nEzek a nagyon professzionális porszívók 2 motoros és 3 motoros változatokban készülnek különböző kapacitásokban. Csak egy motor teljesítménye 1200 Watt. Hatékony tisztítást biztosít minden típusú felületen, mint például szőnyeg - fotel - függöny - gumi - márvány - parketta - kerámia - üveg stb.",
         "hotAirGeneratorEco": "Energiatakarékos meleglevegő generátor fejlett hőmérséklet szabályozó rendszerrel",
@@ -62,9 +62,14 @@
       }
     }
   },
+  "categories": {
+    "garage": "Professzionális Garázs és Szerviz Berendezések",
+    "carWash": "Autómosó és Ipari Tisztító Berendezések",
+    "aerosol": "Professzionális Aeroszol Termékek"
+  },
   "documents": {
-    "ad3030": "AD3030 DPF Tisztító Gépek Specifikációk",
-    "fdt4000": "FDT4000 Felhasználói Kézirat",
+    "ad3030": "AD3030SX DPF Tisztítógép Műszaki Adatok",
+    "fdt4000": "FDT4000 Felhasználói Útmutató",
     "fdt4000_ro": "FDT4000 Felhasználói Kézirat (Román)"
   },
   "about": {

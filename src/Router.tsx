@@ -7,6 +7,7 @@ import MainLayout from './layouts/MainLayout';
 const Home = lazy(() => import('./pages/home/Home'));
 const BrandPage = lazy(() => import('./pages/brands/BrandPage'));
 const ProductPage = lazy(() => import('./pages/products/ProductPage'));
+const ProductCategoryPage = lazy(() => import('./pages/products/ProductCategoryPage'));
 const Contact = lazy(() => import('./pages/contact/Contact'));
 const About = lazy(() => import('./pages/about/About'));
 
@@ -25,6 +26,7 @@ function Router() {
           <Route path="/" element={<Home />} />
           <Route path="/brands/:brandName" element={<BrandPage />} />
           <Route path="/products/:productName" element={<ProductPage />} />
+          <Route path="/products/category/:categoryName" element={<ProductCategoryPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
         </Routes>

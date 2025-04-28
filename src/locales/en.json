@@ -62,6 +62,11 @@
       }
     }
   },
+  "categories": {
+    "garage": "Professional Garage & Service Equipments",
+    "carWash": "Car Washing and Industrial Cleaning Equipments",
+    "aerosol": "Professional Aerosol Products"
+  },
   "documents": {
     "ad3030": "AD3030SX DPF Cleaning Machine Specs",
     "fdt4000": "FDT4000 User Guide",
