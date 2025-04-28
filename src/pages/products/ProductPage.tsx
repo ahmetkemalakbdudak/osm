@@ -275,9 +275,7 @@ function ProductPage() {
               {product.name}
             </Typography>
             <FormattedDescription 
-              text={t(`products.descriptions.${brand.id}.${product.localeKey || product.name.toLowerCase().replace(/\s+/g, '')}`, {
-                defaultValue: product.description
-              })}
+              text={t(`products.descriptions.${brand.id}.${product.localeKey || product.name.toLowerCase().replace(/\s+/g, '')}`)}
               sx={{ mb: 4 }}
             />
             
