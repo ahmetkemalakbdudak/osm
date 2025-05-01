@@ -88,9 +88,23 @@ function ProductPage() {
 
           // Sort images alphabetically
           images.sort((a, b) => {
-            const aPath = a.split('/').pop() || '';
-            const bPath = b.split('/').pop() || '';
-            return aPath.localeCompare(bPath);
+            // Extract just the filename without path
+            const aFilename = a.split('/').pop() || '';
+            const bFilename = b.split('/').pop() || '';
+            
+            // Extract numeric portion for numeric sorting (like 01, 02, etc.)
+            const aMatch = aFilename.match(/[-_](\d+)/);
+            const bMatch = bFilename.match(/[-_](\d+)/);
+            
+            // If both have numeric identifiers, sort by number
+            if (aMatch && bMatch) {
+              const aNum = parseInt(aMatch[1], 10);
+              const bNum = parseInt(bMatch[1], 10);
+              return aNum - bNum;
+            }
+            
+            // Otherwise, use basic locale compare
+            return aFilename.localeCompare(bFilename);
           });
 
           setProductImages(images);
