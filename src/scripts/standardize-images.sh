@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Process both Automec and Pax images
-for brand in "Automec" "Pax"; do
+for brand in  "Pax"; do
   # Navigate to the brand's images directory
   cd "$(dirname "$0")/../assets/images/$brand" || continue
 
