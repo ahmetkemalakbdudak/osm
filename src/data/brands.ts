@@ -166,7 +166,7 @@ export const brands: Record<string, Brand> = {
         localeKey: 'hotColdWaterHighPressureWasher',
         category: 'carWash',
         image: paxLogo,
-        videoLinks: ['https://youtube.com/shorts/X3vIdyyl4ms?si=IlJ4zwSSbm-B4fv3'],
+        videoLinks: ['https://www.youtube.com/embed/X3vIdyyl4ms'],
         specifications: {
           'Models': 'H-150, H-200, H-250, H-300',
           'Pump Pressure': '150-300 bar (AR)',
@@ -194,7 +194,7 @@ export const brands: Record<string, Brand> = {
         localeKey: 'coldWaterHighPressureWasher',
         category: 'carWash',
         image: paxLogo,
-        videoLinks: ['https://youtube.com/shorts/1IY-2VqU6xw?si=VG0yORe8HkaSRg5W'],
+        videoLinks: ['https://www.youtube.com/embed/1IY-2VqU6xw'],
         specifications: {
           'Models': 'C-150, C-200, C-250, C-300',
           'Pump Pressure': '150-300 bar (AR)',
@@ -239,7 +239,7 @@ export const brands: Record<string, Brand> = {
         localeKey: 'foamLiquidSprayerSeries',
         category: 'carWash',
         image: paxLogo,
-        videoLinks: ['https://youtube.com/shorts/mSuj5HraQ6A?si=NWHDSqsQ749MAyD2'],
+        videoLinks: ['https://www.youtube.com/embed/mSuj5HraQ6A'],
         specifications: {
           'Models': 'K-65, K-100',
           'Pressure': '5 bar',
@@ -351,7 +351,7 @@ export const brands: Record<string, Brand> = {
         localeKey: 'airOperatedWasteOilExtractor',
         category: 'garage',
         image: paxLogo,
-        videoLinks: ['https://youtube.com/shorts/LrbEGOIFH_w?si=JEhUNGLl6LVl5pQv'],
+        videoLinks: ['https://www.youtube.com/embed/LrbEGOIFH_w'],
         specifications: {},
         modelTable: {
           headers: ['Product Code', 'Operating Type', 'Operating Pressure', 'Operating Temperature', 'Discharging Pressure', 'Capacity', 'Hose Length', 'Dimensions', 'Weight'],
