@@ -86,14 +86,16 @@ function ProductPage() {
             }
           });
 
-          // Sort images by their numeric suffix
+          // Sort images alphabetically
           images.sort((a, b) => {
-            const aNum = parseInt(a.match(/\d+(?=\.[^.]+$)/)?.[0] || '0');
-            const bNum = parseInt(b.match(/\d+(?=\.[^.]+$)/)?.[0] || '0');
-            return aNum - bNum;
+            const aPath = a.split('/').pop() || '';
+            const bPath = b.split('/').pop() || '';
+            return aPath.localeCompare(bPath);
           });
 
           setProductImages(images);
+          // Reset image index to show first image by default
+          setCurrentImageIndex(0);
         } catch (error) {
           console.error('Error loading product images:', error);
           setProductImages(product.image ? [product.image] : []);

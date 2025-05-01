@@ -166,6 +166,7 @@ export const brands: Record<string, Brand> = {
         localeKey: 'hotColdWaterHighPressureWasher',
         category: 'carWash',
         image: paxLogo,
+        videoLinks: ['https://youtube.com/shorts/X3vIdyyl4ms?si=IlJ4zwSSbm-B4fv3'],
         specifications: {
           'Models': 'H-150, H-200, H-250, H-300',
           'Pump Pressure': '150-300 bar (AR)',
@@ -193,6 +194,7 @@ export const brands: Record<string, Brand> = {
         localeKey: 'coldWaterHighPressureWasher',
         category: 'carWash',
         image: paxLogo,
+        videoLinks: ['https://youtube.com/shorts/1IY-2VqU6xw?si=VG0yORe8HkaSRg5W'],
         specifications: {
           'Models': 'C-150, C-200, C-250, C-300',
           'Pump Pressure': '150-300 bar (AR)',
@@ -237,17 +239,20 @@ export const brands: Record<string, Brand> = {
         localeKey: 'foamLiquidSprayerSeries',
         category: 'carWash',
         image: paxLogo,
+        videoLinks: ['https://youtube.com/shorts/mSuj5HraQ6A?si=NWHDSqsQ749MAyD2'],
         specifications: {
-          'Models': 'F-65, F-100',
-          'Pressure': '6-8 bar',
+          'Models': 'K-65, K-100',
+          'Pressure': '5 bar',
           'Material': 'Stainless steel tank',
-          'Construction': 'Professional grade'
+          'Construction': 'Professional grade',
+          'Function': 'Foam - Liquid',
+          'Hose Thickness': '8 mm'
         },
         modelTable: {
-          headers: ['Model', 'Tank Capacity (L)', 'Power (kW)', 'Weight (kg)', 'Dimensions (mm)'],
+          headers: ['Product Code', 'Pressure (Bar)', 'Capacity', 'Function', 'Weight', 'Dimensions', 'Hose Length', 'Hose Thickness'],
           rows: [
-            ['F-65', '65', '1.5', '85', '800x600x1200'],
-            ['F-100', '100', '2.2', '120', '900x700x1300']
+            ['K-65', '5 Bar', '65 Lt.', 'Foam - Liquid', '20 Kg.', '50 x 50 x 95 cm', '8 mt.', '8 mm.'],
+            ['K-100', '5 Bar', '65 Lt.', 'Foam - Liquid', '20 Kg.', '50 x 50 x 110 cm', '8 mt.', '8 mm.']
           ]
         }
       },
@@ -346,6 +351,7 @@ export const brands: Record<string, Brand> = {
         localeKey: 'airOperatedWasteOilExtractor',
         category: 'garage',
         image: paxLogo,
+        videoLinks: ['https://youtube.com/shorts/LrbEGOIFH_w?si=JEhUNGLl6LVl5pQv'],
         specifications: {},
         modelTable: {
           headers: ['Product Code', 'Operating Type', 'Operating Pressure', 'Operating Temperature', 'Discharging Pressure', 'Capacity', 'Hose Length', 'Dimensions', 'Weight'],

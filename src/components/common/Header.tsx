@@ -389,18 +389,18 @@ function Header() {
                     <Collapse in={Boolean(menuAnchors[menu])} timeout="auto" unmountOnExit>
                       <List component="div" disablePadding>
                         {items.map((item: MenuItem) => (
-                          <ListItemButton
-                            key={item.path}
-                            sx={{ pl: 4 }}
+                      <ListItemButton
+                        key={item.path}
+                        sx={{ pl: 4 }}
                             onClick={() => {
                               handleNavigate(item.path);
                               setMobileMenuOpen(false);
                             }}
-                          >
+                      >
                             {item.icon && <ListItemIcon><item.icon fontSize="small" /></ListItemIcon>}
-                            <ListItemText primary={t(item.label)} />
-                          </ListItemButton>
-                        ))}
+                        <ListItemText primary={t(item.label)} />
+                      </ListItemButton>
+                    ))}
                       </List>
                     </Collapse>
                   </React.Fragment>
@@ -412,7 +412,7 @@ function Header() {
                 <ListItemButton onClick={() => { handleNavigate('/contact'); setMobileMenuOpen(false); }} sx={{ pl: 2 }}>
                   <ListItemText primary={t('common.contactUs')} />
                 </ListItemButton>
-
+                
               </List>
             </Box>
           </Drawer>
@@ -423,4 +423,4 @@ function Header() {
   );
 };
 
-export default Header;
+export default Header; 

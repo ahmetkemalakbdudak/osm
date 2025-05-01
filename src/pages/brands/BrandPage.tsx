@@ -37,6 +37,7 @@ function BrandPage() {
           // Import all images from the brand's folder
           const imageModules = import.meta.glob('/src/assets/images/**/*.{jpg,jpeg,png}', { eager: true });
           const images: Record<string, string> = {};
+          const productImageMap: Record<string, string[]> = {};
 
           // Group images by product name
           Object.entries(imageModules).forEach(([path, module]: [string, any]) => {
@@ -46,24 +47,34 @@ function BrandPage() {
             // Only process images from this brand's folder
             if (lowerPath.includes(`/${lowerBrandName}/`)) {
               brand.products.forEach(product => {
+                const lowerProductName = product.name.toLowerCase();
                 // Split product name into parts
                 const productNameParts = product.name.split(' ');
                 const baseProductName = productNameParts[0].toLowerCase();
                 const seriesType = productNameParts.slice(1).join(' ').toLowerCase();
                 
-                // Check if the path includes both the base product name and series/type
-                if (lowerPath.includes(baseProductName) && lowerPath.includes(seriesType)) {
-                  // Get the number from the filename
-                  const match = path.match(/\d+(?=\.[^.]+$)/);
-                  const num = match ? parseInt(match[0]) : Infinity;
-                  
-                  // Only keep the first image (01) for each product
-                  if (num === 1 || !images[product.name]) {
-                    images[product.name] = module.default;
-                    console.log(`Found image for ${product.name}:`, path);
+                // Check if the path includes the product name or both base name and series/type
+                if (lowerPath.includes(lowerProductName) || 
+                   (lowerPath.includes(baseProductName) && lowerPath.includes(seriesType))) {
+                  if (!productImageMap[product.name]) {
+                    productImageMap[product.name] = [];
                   }
+                  productImageMap[product.name].push(module.default);
                 }
               });
+            }
+          });
+
+          // Sort each product's images alphabetically and use the first one
+          Object.entries(productImageMap).forEach(([productName, productImages]) => {
+            if (productImages.length > 0) {
+              productImages.sort((a, b) => {
+                const aPath = a.split('/').pop() || '';
+                const bPath = b.split('/').pop() || '';
+                return aPath.localeCompare(bPath);
+              });
+              images[productName] = productImages[0];
+              console.log(`Using first alphabetical image for ${productName}:`, productImages[0]);
             }
           });
 
