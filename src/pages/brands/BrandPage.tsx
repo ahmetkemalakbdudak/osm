@@ -59,6 +59,8 @@ function BrandPage() {
                   if (!productImageMap[product.name]) {
                     productImageMap[product.name] = [];
                   }
+                  // Store the full path to help with debugging
+                  console.log(`Found image for ${product.name}: ${path}`);
                   productImageMap[product.name].push(module.default);
                 }
               });
@@ -69,14 +71,23 @@ function BrandPage() {
           Object.entries(productImageMap).forEach(([productName, productImages]) => {
             if (productImages.length > 0) {
               // More robust sorting to handle filenames with unusual characters
-              productImages.sort((a, b) => {
+              productImages.sort((a: string, b: string) => {
+                // Skip sorting for data URIs (base64 encoded images)
+                const isADataUri = a.startsWith('data:');
+                const isBDataUri = b.startsWith('data:');
+                
+                // If either is a data URI, prioritize non-data URIs
+                if (isADataUri && !isBDataUri) return 1;
+                if (!isADataUri && isBDataUri) return -1;
+                if (isADataUri && isBDataUri) return 0;
+                
                 // Extract just the filename without path
                 const aFilename = a.split('/').pop() || '';
                 const bFilename = b.split('/').pop() || '';
                 
-                // Extract numeric portion for numeric sorting (like 01, 02, etc.)
-                const aMatch = aFilename.match(/[-_](\d+)/);
-                const bMatch = bFilename.match(/[-_](\d+)/);
+                // Extract numeric portion from filenames (different patterns)
+                const aMatch = aFilename.match(/[-_]0*(\d+)/) || aFilename.match(/(\d+)/);
+                const bMatch = bFilename.match(/[-_]0*(\d+)/) || bFilename.match(/(\d+)/);
                 
                 // If both have numeric identifiers, sort by number
                 if (aMatch && bMatch) {
@@ -89,8 +100,13 @@ function BrandPage() {
                 return aFilename.localeCompare(bFilename);
               });
               
+              // If product name is Foam Liquid Sprayer, log the sorted images for debugging
+              if (productName.includes('Foam Liquid Sprayer')) {
+                console.log(`Sorted images for ${productName}:`, productImages);
+              }
+              
               images[productName] = productImages[0];
-              console.log(`Using first alphabetical image for ${productName}:`, productImages[0]);
+              console.log(`Using first image for ${productName}:`, productImages[0]);
             }
           });
 

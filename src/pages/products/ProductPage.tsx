@@ -87,14 +87,23 @@ function ProductPage() {
           });
 
           // Sort images alphabetically
-          images.sort((a, b) => {
+          images.sort((a: string, b: string) => {
+            // Skip sorting for data URIs (base64 encoded images)
+            const isADataUri = a.startsWith('data:');
+            const isBDataUri = b.startsWith('data:');
+            
+            // If either is a data URI, prioritize non-data URIs
+            if (isADataUri && !isBDataUri) return 1;
+            if (!isADataUri && isBDataUri) return -1;
+            if (isADataUri && isBDataUri) return 0;
+            
             // Extract just the filename without path
             const aFilename = a.split('/').pop() || '';
             const bFilename = b.split('/').pop() || '';
             
-            // Extract numeric portion for numeric sorting (like 01, 02, etc.)
-            const aMatch = aFilename.match(/[-_](\d+)/);
-            const bMatch = bFilename.match(/[-_](\d+)/);
+            // Extract numeric portion from filenames (different patterns)
+            const aMatch = aFilename.match(/[-_]0*(\d+)/) || aFilename.match(/(\d+)/);
+            const bMatch = bFilename.match(/[-_]0*(\d+)/) || bFilename.match(/(\d+)/);
             
             // If both have numeric identifiers, sort by number
             if (aMatch && bMatch) {
