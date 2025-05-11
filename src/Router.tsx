@@ -10,6 +10,7 @@ const ProductPage = lazy(() => import('./pages/products/ProductPage'));
 const ProductCategoryPage = lazy(() => import('./pages/products/ProductCategoryPage'));
 const Contact = lazy(() => import('./pages/contact/Contact'));
 const About = lazy(() => import('./pages/about/About'));
+const PartnersDistributors = lazy(() => import('./pages/PartnersDistributors'));
 
 // Loading component
 const LoadingFallback = () => (
@@ -29,6 +30,7 @@ function Router() {
           <Route path="/products/category/:categoryName" element={<ProductCategoryPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/partners-distributors" element={<PartnersDistributors />} />
         </Routes>
       </Suspense>
     </MainLayout>

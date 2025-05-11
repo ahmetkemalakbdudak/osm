@@ -215,7 +215,7 @@ export const brands: Record<string, Brand> = {
       },
       {
         id: 103,
-        name: 'Manual Steam Washers',
+        name: 'Steam Washer',
         localeKey: 'steamWashers',
         category: 'carWash',
         image: paxLogo,

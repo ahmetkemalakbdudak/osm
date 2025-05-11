@@ -200,9 +200,10 @@ function Header() {
                     color="inherit"
                     endIcon={<KeyboardArrowDownIcon />}
                     onClick={(e) => handleMenuClick(e, menu)}
-                    sx={{ 
+                    sx={{
                       textTransform: 'capitalize',
                       fontSize: '1rem',
+                      padding: '6px 16px',
                     }}
                   >
                     {t(`menu.${menu}`)}
@@ -232,9 +233,10 @@ function Header() {
               <Button
                 color="inherit"
                 onClick={() => handleNavigate('/about')}
-                sx={{ 
+                sx={{
                   textTransform: 'capitalize',
                   fontSize: '1rem',
+                  padding: '6px 16px',
                 }}
               >
                 {t('common.aboutUs')}
@@ -242,12 +244,24 @@ function Header() {
               <Button
                 color="inherit"
                 onClick={() => handleNavigate('/contact')}
-                sx={{ 
+                sx={{
                   textTransform: 'capitalize',
                   fontSize: '1rem',
+                  padding: '6px 16px',
                 }}
               >
                 {t('common.contactUs')}
+              </Button>
+              <Button
+                color="inherit"
+                onClick={() => handleNavigate('/partners-distributors')}
+                sx={{
+                  textTransform: 'capitalize',
+                  fontSize: '1rem',
+                  padding: '6px 16px',
+                }}
+              >
+                {t('header.partners_distributors')}
               </Button>
             </Stack>
           )}
@@ -409,10 +423,12 @@ function Header() {
                 <ListItemButton onClick={() => { handleNavigate('/about'); setMobileMenuOpen(false); }} sx={{ pl: 2 }}>
                   <ListItemText primary={t('common.aboutUs')} />
                 </ListItemButton>
-                <ListItemButton onClick={() => { handleNavigate('/contact'); setMobileMenuOpen(false); }} sx={{ pl: 2 }}>
+                <ListItemButton onClick={() => { handleNavigate('/contact'); setMobileMenuOpen(false); }} sx={{ pl: 4 }}>
                   <ListItemText primary={t('common.contactUs')} />
                 </ListItemButton>
-                
+                <ListItemButton onClick={() => handleNavigate('/partners-distributors')} sx={{ pl: 4 }}>
+                  <ListItemText primary={t('header.partners_distributors')} />
+                </ListItemButton>
               </List>
             </Box>
           </Drawer>

@@ -39,7 +39,7 @@
       "pax": {
         "hotColdWaterHighPressureWasher": "Pax Yüksek Basınçlı Yıkama Makineleri, İtalyan pompa teknolojisi kullanılarak, düşük su tüketimi ve kullanım kolaylığı ile maksimum performans elde etmek üzere tasarlanmış makinelerdir.\n\nKullanım alanına göre soğuk ve sıcak su olarak farklı model ve basınçlarda üretilen makinelerimiz, sadece araç yıkama ve araç detaylama işlerinde değil, endüstriyel alanlar, otoyollar, havayolları, denizcilik, restoranlar, hastaneler, hayvancılık çiftlikleri ve tarım gibi birçok farklı alanda kullanıma uygundur.",
         "coldWaterHighPressureWasher": "Pax Yüksek Basınçlı Yıkama Makineleri, İtalyan pompa teknolojisi kullanılarak, düşük su tüketimi ve kullanım kolaylığı ile maksimum performans elde etmek üzere tasarlanmış makinelerdir.\n\nKullanım alanına göre soğuk ve sıcak su olarak farklı model ve basınçlarda üretilen makinelerimiz, sadece araç yıkama ve araç detaylama işlerinde değil, endüstriyel alanlar, otoyollar, havayolları, denizcilik, restoranlar, hastaneler, hayvancılık çiftlikleri ve tarım gibi birçok farklı alanda kullanıma uygundur.",
-        "steamWashers": "Pax Manuel Buharlı Yıkayıcılar manuel kullanım için üretilmiştir. Sadece buhar basıncı kullanarak suyun kullanılamadığı yerlerde kolayca ve hızlı bir şekilde dezenfeksiyon ve temizlik işlemlerini gerçekleştirmek üzere üretilmiştir.\n\n170 °C sıcak buhar üreterek ulaşılması ve temizlenmesi zor yerlerde çok kısa sürede etkili sonuçlar verecektir. Araç iç mekanlarında ve motor temizleme işlerinde elektrikli bileşenlerin bulunduğu yerlerde son derece başarılı temizlik yapabilen makinelerdir.\n\nTek ve çift tabanca ile çoklu kullanım için üretilmiştir.",
+        "steamWashers": "Pax Buharlı Yıkayıcılar manuel kullanım için üretilmiştir. Sadece buhar basıncı kullanarak suyun kullanılamadığı yerlerde kolayca ve hızlı bir şekilde dezenfeksiyon ve temizlik işlemlerini gerçekleştirmek üzere üretilmiştir.\n\n170 °C sıcak buhar üreterek ulaşılması ve temizlenmesi zor yerlerde çok kısa sürede etkili sonuçlar verecektir. Araç iç mekanlarında ve motor temizleme işlerinde elektrikli bileşenlerin bulunduğu yerlerde son derece başarılı temizlik yapabilen makinelerdir.\n\nTek ve çift tabanca ile çoklu kullanım için üretilmiştir.",
         "foamLiquidSprayerSeries": "Pax Köpük ve Sıvı Püskürtme Tankları, fırça ve sünger kullanımına gerek kalmadan kimyasalı köpük ve sıvı olarak püskürterek araçların, makinelerin vb. temizliğinde kullanılacak ekipmanlardır.\n\nMaksimum 5 bar hava ile çalışabilen köpük püskürtme tankları, üstün performansları ile Profesyonel kullanım kolaylığı getirmektedir.",
         "carSeatAndCarpetCleaningMachine": "Pax Koltuk ve Halı Yıkama Makinesi, özel tasarlanmış paslanmaz çelik gövdesiyle ıslak ve kuru zeminlerde kullanıma uygundur. 2800 Watt vakum gücü ile koltuk, halı, yatak vb. yerleri kullanıcıyı yormadan profesyonel ve kolay bir şekilde temizleyebilir.\n\nBu çok profesyonel makine, oto detaylı temizleyiciler, oteller, hastaneler, temizlik şirketleri gibi birçok alanda sürekli kullanılan ve tercih edilen bir makinedir.",
         "hardFloorAndCarpetCleaningMachine": "Pax Halı Yıkama Makinesi, halı yıkama, zemin temizleme ve cilalama gibi birçok işlevi yerine getirebilen profesyonel bir makinedir.\n\nÖzellikle halı temizleme şirketleri tarafından tercih edilen ürünümüz, özel fırçaları sayesinde halıların hızlı ve etkili bir şekilde temizlenmesini sağlar. Ergonomik tasarlanmış kulpu ile yormadan kolay kullanıma uygundur.",
@@ -147,5 +147,14 @@
         "solutions": "Kapsamlı çözümler"
       }
     }
-  }
+  },
+  "contact_form.phone_placeholder": "Telefon (İsteğe Bağlı)",
+  "contact_form.message_label": "Mesajınız",
+  "contact_form.message_placeholder": "Mesajınızı buraya yazın",
+  "contact_form.submit_button": "Mesajı Gönder",
+  "contact_form.submission_success": "Mesaj başarıyla gönderildi!",
+  "contact_form.submission_error": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+  "partners_distributors.title": "Partnerler ve Distribütörler",
+  "partners_distributors.find_representative": "Bir Temsilci ve Partner Bulun",
+  "header.partners_distributors": "Partnerler ve Distribütörler"
 } 

@@ -39,7 +39,7 @@
       "pax": {
         "hotColdWaterHighPressureWasher": "Pax High Pressure Washing Machines are machines designed to achieve maximum performance with low water consumption and ease of use, using Italian pump technology.\n\nOur machines, which are produced in different models and pressures as cold and hot water according to the usage area, are suitable for use not only in car washes and car detailing, but also in many different areas such as industrial areas, highways, airlines, shipping, restaurants, hospitals, livestock farms and agriculture.",
         "coldWaterHighPressureWasher": "Pax High Pressure Washing Machines are machines designed to achieve maximum performance with low water consumption and ease of use, using Italian pump technology.\n\nOur machines, which are produced in different models and pressures as cold and hot water according to the usage area, are suitable for use not only in car washes and car detailing, but also in many different areas such as industrial areas, highways, airlines, shipping, restaurants, hospitals, livestock farms and agriculture.",
-        "steamWashers": "Pax Manual Steam Washers, are manufactured for manual use. They are manufactured to easily and quickly perform disinfection and cleaning processes of places where water cannot be used, using only steam pressure.\n\nThey will provide effective results in a very short time in places that are difficult to reach and clean by producing 170 °C hot steam. They are machines that can perform extremely successful cleaning in places where electrical components are located in vehicle interiors and engine cleaning jobs etc.\n\nIt is manufactured for multiple use with single and double guns.",
+        "steamWashers": "Pax Steam Washers, are manufactured for manual use. They are manufactured to easily and quickly perform disinfection and cleaning processes of places where water cannot be used, using only steam pressure.\n\nThey will provide effective results in a very short time in places that are difficult to reach and clean by producing 170 °C hot steam. They are machines that can perform extremely successful cleaning in places where electrical components are located in vehicle interiors and engine cleaning jobs etc.\n\nIt is manufactured for multiple use with single and double guns.",
         "foamLiquidSprayerSeries": "Pax Foam and Liquid Spray Tanks are equipment to be used in cleaning vehicles, machinery etc. by spraying the chemical as foam and liquid, without the need for brushes and sponges.\n\nFoam spray tanks, which can operate with maximum 5 bar air, bring Professional ease of use with their superior performance.",
         "carSeatAndCarpetCleaningMachine": "Pax Car Seat and Carpet Cleaning Machine, with its specially designed stainless-steel body, is suitable for use on both wet and dry floors and surfaces. It has a 2800-Watt vacuum power that can clean places like sofa, carpet, bed etc. professionally and easily without tiring the user.\n\nThis highly professional machine is a machine that is constantly used and preferred in many areas such as auto detailed cleaners, hotels, hospitals, cleaning companies.",
         "hardFloorAndCarpetCleaningMachine": "Pax Carpet Washing Machine is a professional machine that can perform many tasks such as carpet washing, floor cleaning and polishing.\n\nOur product, which is especially preferred by carpet cleaning companies, enables fast and effective cleaning of carpets thanks to its special brushes. It is suitable for easy use without tiring with its ergonomically designed handle.",
@@ -147,5 +147,14 @@
         "solutions": "Comprehensive solutions"
       }
     }
-  }
-} 
+  },
+  "contact_form.phone_placeholder": "Phone (Optional)",
+  "contact_form.message_label": "Message",
+  "contact_form.message_placeholder": "Your Message",
+  "contact_form.submit_button": "Send Message",
+  "contact_form.submission_success": "Message sent successfully!",
+  "contact_form.submission_error": "Failed to send message. Please try again.",
+  "partners_distributors.title": "Partners & Distributors",
+  "partners_distributors.find_representative": "Find a Representative & Partner",
+  "header.partners_distributors": "Partners & Distributors"
+}
