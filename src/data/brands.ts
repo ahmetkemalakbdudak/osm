@@ -1,6 +1,7 @@
 import caldiniLogo from '../assets/caldini.png';
 import paxLogo from '../assets/pax.png';
 import automecLogo from '../assets/automec-logo-transparent.png';
+import carmecLogo from '../assets/carmec-logo.png';
 
 // Define product categories
 export type ProductCategory = 'aerosol' | 'carWash' | 'garage';
@@ -614,5 +615,67 @@ export const brands: Record<string, Brand> = {
         }
       }
     ]
+  },
+  carmec: {
+    id: 'carmec',
+    name: 'Carmec',
+    description: 'Professional Car Service & Garage Equipment',
+    logo: carmecLogo,
+    products: [
+      {
+        id: 301,
+        name: 'BDL3000',
+        subtitle: 'Heavy Duty Brake Disc Lathe for Trucks and Commercial Vehicles',
+        localeKey: 'bdl3000',
+        category: 'garage',
+        image: carmecLogo,
+        specifications: {
+          'Max. Disc Turning Diameter': '500 mm',
+          'Min. Brake Disc Diameter': '120 mm',
+          'Max. Brake Disc Thickness': '70 mm',
+          'Maximum Working Width': '140 mm',
+          'Disc Rotation Speed': '50 RPM',
+          'Variable Feed Speed': '0÷28 mm/min',
+          'Motor Power': '2 Hp (1.5 kW)',
+          'Voltage': '400V - 50 Hz - 3 phases',
+          'Dimensions (LxWxH)': '110 x 110 x 115 cm',
+          'Weight': '235 kg',
+          'Features': 'Motorized and electronically adjustable intermittent feeding, electronic controlled soft-start motor, adjustable and balancing trolley',
+          'Equipment Included': 'Pair of disc cutting tools, flange adapter for 10 hole hub connection (Euro axle), set of service spanners, operating and maintenance manual',
+          'Compatibility': 'Trucks, buses and light commercial vehicles',
+          'Special Features': '360° positioning capability, no caliper dismantling required, dual-side precision turning in single operation',
+          'Axle Types': 'Traditional axles and axles with hub reduction gear'
+        }
+      },
+      {
+        id: 302,
+        name: 'BL650VS',
+        subtitle: 'Multi-Speed Brake Disc & Drum Lathe',
+        localeKey: 'bl650vs',
+        category: 'garage',
+        image: carmecLogo,
+        specifications: {
+          'Min - Max Disc Diameter': '102 - 635 mm (4" - 25")',
+          'Max Disc Thickness': '100 mm (4")',
+          'Min - Max Drum Diameter': '150 - 650 mm (6" - 26")',
+          'Max Drum Depth': '200 mm (8")',
+          'Infinitely Variable Spindle Speed': '0 ÷ 350 RPM',
+          'Infinitely Variable Disc/Drum Feed': '0 ÷ 72 mm/min (0 ÷ 2.85"/min)',
+          'Spindle Motor Power': '1.5 kW - 2 HP',
+          'Drum Feed DC Motor': '185 W',
+          'Disc Feed DC Motor': '185 W',
+          'Voltage': '215/240 V ±15%',
+          'Phases': '1 Ph',
+          'Frequency': '50/60 Hz',
+          'Net Weight': '250 kg (550 Lbs.)',
+          'Machine Dimensions (LxWxH)': '1250x1100x1650 mm (49" x 43" x 65")',
+          'Shipping Dimensions (LxWxH)': '1150x1050x1750 mm (45" x 41" x 67")',
+          'Shipping Weight': '350 kg (770 Lbs.)',
+          'Key Features': 'Separate DC gear-motors on drum and disc feed, electronically controlled variable spindle speed and cross feed speed, mounted tool board, quick changeover from disc to drum, automatic shut-off',
+          'Standard Equipment': 'Low voltage electric controls (24V), heavy duty work bench, removable chip tray, tool storage boards, safety plexiglass guard, LED work light, adjustable twin cutter head for discs, drum boring bar, arbor sets, silencers',
+          'Construction': '180 kg rigid cast iron body, heavy-duty work bench eliminates vibrations'
+        }
+      }
+    ]
   }
-}; 
+};
