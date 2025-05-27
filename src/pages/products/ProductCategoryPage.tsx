@@ -51,69 +51,73 @@ function ProductCategoryPage() {
   useEffect(() => {
     const loadImages = async () => {
       try {
-        console.log('Attempting to load images for category:', category); // Added log
-        // Adjusted glob pattern to search one level deeper within brand folders
-        const imageModules = import.meta.glob('/src/assets/images/*/*/*.{jpg,jpeg,png}', { eager: true });
-        console.log('Image modules found (deeper search):', Object.keys(imageModules).length); // Added log
-        const images: Record<string, string> = {};
+        console.log('Attempting to load images for category:', category);
+        const imageModules = import.meta.glob('/src/assets/images/**/*.{jpg,jpeg,png}', { eager: true });
+        console.log('Image modules found (category page):', Object.keys(imageModules).length);
+        const loadedImages: Record<string, string> = {};
 
-        filteredProducts.forEach(product => {
+        for (const product of filteredProducts) {
           const brand = findBrandForProduct(product.id);
           if (!brand) {
-            console.warn(`[Image Load] Brand not found for product ID: ${product.id}, Name: ${product.name}`); // Added log
-            return;
+            console.warn(`[Image Load - Category] Brand not found for product ID: ${product.id}, Name: ${product.name}`);
+            continue;
           }
 
+          const productSpecificImages: string[] = [];
           const lowerBrandName = brand.name.toLowerCase();
-          // Use localeKey first, then try product name directly (as folder name), finally slugified name
-          // Ensure potentialFolderNames only contains strings
-          const potentialFolderNames = [
-              product.localeKey, // Check localeKey first if it exists
-              product.name,      // Check raw product name (like "Brake Cleaner")
-              createSlug(product.name) // Check slugified name
-          ].filter((name): name is string => typeof name === 'string') // Keep only strings
-           .map(name => name.toLowerCase()); // Convert to lowercase
-
-          console.log(`[Image Load] Processing Product: ${product.name} (ID: ${product.id}), Brand: ${brand.name}`); // Added log
-          console.log(`[Image Load]   Potential folder identifiers (lowercase):`, potentialFolderNames); // Added log
-
-          let foundImagePath: string | null = null;
-
-          // Iterate through potential folder names to find a match
-          for (const folderIdentifier of potentialFolderNames) {
-             // Iterate through all loaded image modules
-             for (const path in imageModules) {
-                const lowerPath = path.toLowerCase();
-                // Construct the expected pattern: /brand/folderIdentifier/filename.*
-                // We need to be careful here, the folderIdentifier might contain characters needing escape if used in regex
-                // Simple string inclusion should be safer and sufficient
-                const expectedPathSegment = `/${lowerBrandName}/${folderIdentifier}/`;
-
-                if (lowerPath.includes(expectedPathSegment)) {
-                  console.log(`[Image Load]   MATCH FOUND for folder '${folderIdentifier}': Path=${path}`); // Added log
-                  foundImagePath = path; // Take the first match found for this product
-                  break; // Stop searching paths for this folderIdentifier
-                }
-             }
-             if (foundImagePath) break; // Stop searching folderIdentifiers if a match was found
-          }
+          const lowerProductName = product.name.toLowerCase();
+          
+          // For products with series/type suffix
+          const productNameParts = product.name.split(' ');
+          const baseProductName = productNameParts[0].toLowerCase();
+          // Ensure seriesType is a string, even if there are no parts after the first
+          const seriesType = productNameParts.length > 1 ? productNameParts.slice(1).join(' ').toLowerCase() : '';
 
 
-          if (foundImagePath) {
-            const module = imageModules[foundImagePath] as any;
-            if (module && module.default) {
-              images[product.name] = module.default;
-              console.log(`[Image Load]   SUCCESS: Using image for ${product.name}: ${foundImagePath}`); // Added log
-            } else {
-               console.error(`[Image Load]   ERROR: Module or default export missing for ${foundImagePath}`); // Added log
+          Object.entries(imageModules).forEach(([path, module]: [string, any]) => {
+            const lowerPath = path.toLowerCase();
+            // Check if the image belongs to this product under this brand
+            // Ensure seriesType is checked only if it's not an empty string
+            if (lowerPath.includes(`/${lowerBrandName}/`) &&
+                (lowerPath.includes(`/${lowerProductName}/`) || // Match /brand/product-name/
+                 (product.localeKey && lowerPath.includes(`/${product.localeKey.toLowerCase()}/`)) || // Match /brand/localeKey/
+                 (lowerPath.includes(`/${createSlug(product.name)}/`)) || // Match /brand/slugified-product-name/
+                 (seriesType && lowerPath.includes(baseProductName) && lowerPath.includes(seriesType)) // Match base name and series/type
+                )
+               ) {
+              if (module.default) {
+                productSpecificImages.push(module.default);
+              }
             }
+          });
+          
+          if (productSpecificImages.length > 0) {
+            // Sort images (logic copied from ProductPage)
+            productSpecificImages.sort((a: string, b: string) => {
+              const isADataUri = a.startsWith('data:');
+              const isBDataUri = b.startsWith('data:');
+              if (isADataUri && !isBDataUri) return 1;
+              if (!isADataUri && isBDataUri) return -1;
+              if (isADataUri && isBDataUri) return 0;
+              const aFilename = a.split('/').pop() || '';
+              const bFilename = b.split('/').pop() || '';
+              const aMatch = aFilename.match(/[-_]0*(\d+)/) || aFilename.match(/(\d+)/);
+              const bMatch = bFilename.match(/[-_]0*(\d+)/) || bFilename.match(/(\d+)/);
+              if (aMatch && bMatch) {
+                const aNum = parseInt(aMatch[1], 10);
+                const bNum = parseInt(bMatch[1], 10);
+                return aNum - bNum;
+              }
+              return aFilename.localeCompare(bFilename);
+            });
+            loadedImages[product.name] = productSpecificImages[0]; // Use the first sorted image
+            console.log(`[Image Load - Category] SUCCESS: Using image for ${product.name}: ${productSpecificImages[0]}`);
           } else {
-            console.warn(`[Image Load]   WARNING: No image found for ${product.name} using brand '${lowerBrandName}' and potential folders [${potentialFolderNames.join(', ')}]. Will use fallback: ${product.image}`); // Added log
+            console.warn(`[Image Load - Category] WARNING: No specific image found for ${product.name} using brand '${lowerBrandName}'. Will use fallback: ${product.image}`);
+            // Fallback to product.image is handled by CardMedia component directly
           }
-          // If no images found, CardMedia will use product.image later
-        });
-
-        setProductImages(images);
+        }
+        setProductImages(loadedImages);
       } catch (error) {
         console.error('Error loading product category images:', error);
       }
