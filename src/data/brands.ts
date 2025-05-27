@@ -345,22 +345,6 @@ export const brands: Record<string, Brand> = {
           'Width': '35 cm',
           'Mounting': 'Can be mounted to walls'
         }
-      },
-      {
-        id: 111,
-        name: 'Air-Operated Waste-Oil Extractor',
-        localeKey: 'airOperatedWasteOilExtractor',
-        category: 'garage',
-        image: paxLogo,
-        videoLinks: ['https://www.youtube.com/embed/LrbEGOIFH_w'],
-        specifications: {},
-        modelTable: {
-          headers: ['Product Code', 'Operating Type', 'Operating Pressure', 'Operating Temperature', 'Discharging Pressure', 'Capacity', 'Hose Length', 'Dimensions', 'Weight'],
-          rows: [
-            ['KY-01', 'Air', '6 - 8 Bar', '60 - 80 °C', '0,5 Bar', '100 + 9 Lt.', '1,5 Mt.', '50x55x120 Cm', '28 Kg.'],
-            ['KY-02', 'Air', '6 - 8 Bar', '60 - 80 °C', '0,5 Bar', '100 + 9 Lt.', '1,5 Mt.', '50x55x120 Cm', '31 Kg.']
-          ]
-        }
       }
     ]
   },
@@ -613,22 +597,14 @@ export const brands: Record<string, Brand> = {
           'Shaft Thickness': '25 mm',
           'Warranty': '2 years'
         }
-      }
-    ]
-  },
-  carmec: {
-    id: 'carmec',
-    name: 'Carmec',
-    description: 'Professional Car Service & Garage Equipment',
-    logo: carmecLogo,
-    products: [
+      },
       {
         id: 301,
         name: 'BDL3000',
         subtitle: 'Heavy Duty Brake Disc Lathe for Trucks and Commercial Vehicles',
         localeKey: 'bdl3000',
         category: 'garage',
-        image: carmecLogo,
+        image: automecLogo,
         specifications: {
           'Max. Disc Turning Diameter': '500 mm',
           'Min. Brake Disc Diameter': '120 mm',
@@ -653,14 +629,14 @@ export const brands: Record<string, Brand> = {
         subtitle: 'Multi-Speed Brake Disc & Drum Lathe',
         localeKey: 'bl650vs',
         category: 'garage',
-        image: carmecLogo,
+        image: automecLogo,
         specifications: {
-          'Min - Max Disc Diameter': '102 - 635 mm (4" - 25")',
-          'Max Disc Thickness': '100 mm (4")',
-          'Min - Max Drum Diameter': '150 - 650 mm (6" - 26")',
-          'Max Drum Depth': '200 mm (8")',
+          'Min - Max Disc Diameter': '102 - 635 mm (4\" - 25\")',
+          'Max Disc Thickness': '100 mm (4\")',
+          'Min - Max Drum Diameter': '150 - 650 mm (6\" - 26\")',
+          'Max Drum Depth': '200 mm (8\")',
           'Infinitely Variable Spindle Speed': '0 ÷ 350 RPM',
-          'Infinitely Variable Disc/Drum Feed': '0 ÷ 72 mm/min (0 ÷ 2.85"/min)',
+          'Infinitely Variable Disc/Drum Feed': '0 ÷ 72 mm/min (0 ÷ 2.85\"/min)',
           'Spindle Motor Power': '1.5 kW - 2 HP',
           'Drum Feed DC Motor': '185 W',
           'Disc Feed DC Motor': '185 W',
@@ -668,12 +644,28 @@ export const brands: Record<string, Brand> = {
           'Phases': '1 Ph',
           'Frequency': '50/60 Hz',
           'Net Weight': '250 kg (550 Lbs.)',
-          'Machine Dimensions (LxWxH)': '1250x1100x1650 mm (49" x 43" x 65")',
-          'Shipping Dimensions (LxWxH)': '1150x1050x1750 mm (45" x 41" x 67")',
+          'Machine Dimensions (LxWxH)': '1250x1100x1650 mm (49\" x 43\" x 65\")',
+          'Shipping Dimensions (LxWxH)': '1150x1050x1750 mm (45\" x 41\" x 67\")',
           'Shipping Weight': '350 kg (770 Lbs.)',
           'Key Features': 'Separate DC gear-motors on drum and disc feed, electronically controlled variable spindle speed and cross feed speed, mounted tool board, quick changeover from disc to drum, automatic shut-off',
           'Standard Equipment': 'Low voltage electric controls (24V), heavy duty work bench, removable chip tray, tool storage boards, safety plexiglass guard, LED work light, adjustable twin cutter head for discs, drum boring bar, arbor sets, silencers',
           'Construction': '180 kg rigid cast iron body, heavy-duty work bench eliminates vibrations'
+        }
+      },
+      {
+        id: 111,
+        name: 'Air-Operated Waste-Oil Extractor',
+        localeKey: 'airOperatedWasteOilExtractor',
+        category: 'garage',
+        image: automecLogo,
+        videoLinks: ['https://www.youtube.com/embed/LrbEGOIFH_w'],
+        specifications: {},
+        modelTable: {
+          headers: ['Product Code', 'Operating Type', 'Operating Pressure', 'Operating Temperature', 'Discharging Pressure', 'Capacity', 'Hose Length', 'Dimensions', 'Weight'],
+          rows: [
+            ['KY-01', 'Air', '6 - 8 Bar', '60 - 80 °C', '0,5 Bar', '100 + 9 Lt.', '1,5 Mt.', '50x55x120 Cm', '28 Kg.'],
+            ['KY-02', 'Air', '6 - 8 Bar', '60 - 80 °C', '0,5 Bar', '100 + 9 Lt.', '1,5 Mt.', '50x55x120 Cm', '31 Kg.']
+          ]
         }
       }
     ]
