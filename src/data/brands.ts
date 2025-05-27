@@ -599,7 +599,7 @@ export const brands: Record<string, Brand> = {
       },
       {
         id: 301,
-        name: 'CARMEC BDL3000',
+        name: 'BDL3000 CARMEC',
         subtitle: 'Heavy Duty Brake Disc Lathe for Trucks and Commercial Vehicles',
         localeKey: 'bdl3000',
         category: 'garage',
@@ -624,7 +624,7 @@ export const brands: Record<string, Brand> = {
       },
       {
         id: 302,
-        name: 'CARMEC BL650VS',
+        name: 'BL650VS CARMEC',
         subtitle: 'Multi-Speed Brake Disc & Drum Lathe',
         localeKey: 'bl650vs',
         category: 'garage',
