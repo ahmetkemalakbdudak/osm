@@ -604,6 +604,7 @@ export const brands: Record<string, Brand> = {
         localeKey: 'bdl3000',
         category: 'garage',
         image: automecLogo,
+        videoLinks: ['https://www.youtube.com/embed/zEt6Bbqqdqw', 'https://www.youtube.com/embed/BHwRquu5Olc'],
         specifications: {
           'Max. Disc Turning Diameter': '500 mm',
           'Min. Brake Disc Diameter': '120 mm',
@@ -629,6 +630,7 @@ export const brands: Record<string, Brand> = {
         localeKey: 'bl650vs',
         category: 'garage',
         image: automecLogo,
+        videoLinks: ['https://www.youtube.com/embed/FvO4bvyHcQ8'],
         specifications: {
           'Min - Max Disc Diameter': '102 - 635 mm (4\" - 25\")',
           'Max Disc Thickness': '100 mm (4\")',
