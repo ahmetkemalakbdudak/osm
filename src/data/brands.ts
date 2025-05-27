@@ -1,7 +1,6 @@
 import caldiniLogo from '../assets/caldini.png';
 import paxLogo from '../assets/pax.png';
 import automecLogo from '../assets/automec-logo-transparent.png';
-import carmecLogo from '../assets/carmec-logo.png';
 
 // Define product categories
 export type ProductCategory = 'aerosol' | 'carWash' | 'garage';
@@ -600,7 +599,7 @@ export const brands: Record<string, Brand> = {
       },
       {
         id: 301,
-        name: 'BDL3000',
+        name: 'CARMEC BDL3000',
         subtitle: 'Heavy Duty Brake Disc Lathe for Trucks and Commercial Vehicles',
         localeKey: 'bdl3000',
         category: 'garage',
@@ -625,7 +624,7 @@ export const brands: Record<string, Brand> = {
       },
       {
         id: 302,
-        name: 'BL650VS',
+        name: 'CARMEC BL650VS',
         subtitle: 'Multi-Speed Brake Disc & Drum Lathe',
         localeKey: 'bl650vs',
         category: 'garage',
