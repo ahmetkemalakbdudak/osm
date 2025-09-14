@@ -92,11 +92,14 @@ const menuItems: MenuItems = {
     { label: 'brands.automec.name', path: '/brands/automec' },
     { label: 'brands.pax.name', path: '/brands/pax' },
     { label: 'brands.caldini.name', path: '/brands/caldini' },
+    { label: 'brands.gulersan.name', path: '/brands/gulersan' },
   ],
   products: [
     { label: 'categories.garage', path: '/products/category/garage', category: 'garage' },
     { label: 'categories.carWash', path: '/products/category/carWash', category: 'carWash' },
     { label: 'categories.aerosol', path: '/products/category/aerosol', category: 'aerosol' },
+    { label: 'categories.lubricationEquipment', path: '/products/category/lubricationEquipment', category: 'lubricationEquipment' },
+    { label: 'categories.handTools', path: '/products/category/handTools', category: 'handTools' },
   ],
   documents: [
     { label: 'documents.ad3030', path: '/docs/AD3030 DPF Cleaning Machine Technical Specifications2 (1).pdf', icon: DescriptionIcon },
