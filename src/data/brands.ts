@@ -1,9 +1,10 @@
 import caldiniLogo from '../assets/caldini.png';
 import paxLogo from '../assets/pax.png';
 import automecLogo from '../assets/automec-logo-transparent.png';
+import gulersanLogo from '../assets/gulersan.png';
 
 // Define product categories
-export type ProductCategory = 'aerosol' | 'carWash' | 'garage';
+export type ProductCategory = 'aerosol' | 'carWash' | 'garage' | 'lubricationEquipment' | 'handTools';
 
 export interface Product {
   id: number;
@@ -667,6 +668,406 @@ export const brands: Record<string, Brand> = {
             ['KY-01', 'Air', '6 - 8 Bar', '60 - 80 °C', '0,5 Bar', '100 + 9 Lt.', '1,5 Mt.', '50x55x120 Cm', '28 Kg.'],
             ['KY-02', 'Air', '6 - 8 Bar', '60 - 80 °C', '0,5 Bar', '100 + 9 Lt.', '1,5 Mt.', '50x55x120 Cm', '31 Kg.']
           ]
+        }
+      }
+    ]
+  },
+  gulersan: {
+    id: 'gulersan',
+    name: 'Gulersan',
+    description: 'Professional Lubrication Equipment and Hand Tools',
+    logo: gulersanLogo,
+    products: [
+      {
+        id: 401,
+        name: '9200 Pneumatic Washing Tank',
+        subtitle: '80 Lt Air Operated Part Washing Machine',
+        localeKey: 'pneumaticWashingTank9200',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': '9200',
+          'Working Type': 'Air',
+          'Discharge Pressure': '0,5 Bar',
+          'Tank Capacity': '80 Lt',
+          'Pan Capacity': '45 Lt',
+          'Hose Length': '1,5 Mt',
+          'Hose Dimension': '3/4″',
+          'Box Dimensions': '58x61x103 Cm',
+          'Weight': '40 Kg',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 402,
+        name: 'AYT2 Waste Oil Pan',
+        subtitle: '50 Lt Mobile Waste Oil Collection Pan',
+        localeKey: 'ayt2WasteOilPan',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'AYT2',
+          'Sump Capacity': '50 Lt',
+          'Pan Dimensions': '70x45x15 Cm',
+          'Warranty Period': '24 Month'
+        }
+      },
+      {
+        id: 403,
+        name: 'AYT1 Waste Oil Pan',
+        subtitle: '100 Lt Mobile Waste Oil Collection Pan',
+        localeKey: 'ayt1WasteOilPan',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'AYT1',
+          'Sump Capacity': '100 Lt',
+          'Pan Dimensions': '100x65x15 Cm',
+          'Warranty Period': '24 Month'
+        }
+      },
+      {
+        id: 404,
+        name: '6650 Waste Oil Changer Extractor With Pantograph',
+        subtitle: '80 Lt Telescopic Waste Oil Suction Machine - 20 Lt Pan',
+        localeKey: 'wasteOilChanger6650_20',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': '6650.20',
+          'Working Type': 'Air',
+          'Working Temperature': '60 – 80 C°',
+          'Working Pressure': '6 – 8 Bar',
+          'Discharge Pressure': '0,5 Bar',
+          'Tank Capacity': '80 Lt',
+          'Hose Length': '2 Mt',
+          'Hose Dimension': '10×16 Mm',
+          'Glass Capacity': '7 Lt',
+          'Oil Pan Capacity': '20 Lt',
+          'Box Dimensions': '57x67x127 Cm',
+          'Weight': '45,40 Kg',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 405,
+        name: '6650 Waste Oil Changer Extractor With Pantograph',
+        subtitle: '80 Lt Telescopic Waste Oil Suction Machine - 40 Lt Pan',
+        localeKey: 'wasteOilChanger6650_40',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': '6650.40',
+          'Working Type': 'Air',
+          'Working Temperature': '60 – 80 C°',
+          'Working Pressure': '6 – 8 Bar',
+          'Discharge Pressure': '0,5 Bar',
+          'Tank Capacity': '80 Lt',
+          'Hose Length': '2 Mt',
+          'Hose Dimension': '10×16 Mm',
+          'Pan Capacity': '40 Lt',
+          'Box Dimensions': '57x67x138 Cm',
+          'Weight': '47,80 Kg',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 406,
+        name: '6640 Waste Oil Changer Extractor With Pantograph',
+        subtitle: '80 Lt Telescopic Waste Oil Suction Machine - 20 Lt Pan',
+        localeKey: 'wasteOilChanger6640_20',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': '6640.20',
+          'Working Type': 'Air',
+          'Working Temperature': '60 – 80 C°',
+          'Working Pressure': '6 – 8 Bar',
+          'Discharge Pressure': '0,5 Bar',
+          'Tank Capacity': '80 Lt',
+          'Hose Length': '2 Mt',
+          'Hose Dimension': '10×16 Mm',
+          'Pan Capacity': '20 Lt',
+          'Box Dimensions': '57x67x127 Cm',
+          'Weight': '41,9 Kg',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 407,
+        name: '6640 Waste Oil Changer Extractor With Pantograph',
+        subtitle: '80 Lt Telescopic Waste Oil Suction Machine - 40 Lt Pan',
+        localeKey: 'wasteOilChanger6640_40',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': '6640.40',
+          'Working Type': 'Air',
+          'Working Temperature': '60 – 80 C°',
+          'Working Pressure': '6 – 8 Bar',
+          'Discharge Pressure': '0,5 Bar',
+          'Tank Capacity': '80 Lt',
+          'Hose Length': '2 Mt',
+          'Hose Dimension': '10×16 Mm',
+          'Pan Capacity': '40 Lt',
+          'Box Dimensions': '57x67x138 Cm',
+          'Weight': '44,3 Kg',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 408,
+        name: '4295 Air Operated Waste Oil Drainers With Pantograph',
+        subtitle: '80 Lt Telescopic Oil Drain Bucket - 20 Lt Pan',
+        localeKey: 'wasteOilDrainers4295_20',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': '4295.20',
+          'Working Type': 'Air',
+          'Discharge Pressure': '0,5 Bar',
+          'Tank Capacity': '80 Lt',
+          'Pan Capacity': '20 Lt',
+          'Hose Length': '1,5 Mt',
+          'Hose Dimension': '3/4″',
+          'Box Dimensions': '57x67x127 Cm',
+          'Weight': '40,40 Kg',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 409,
+        name: '4295 Air Operated Waste Oil Drainers With Pantograph',
+        subtitle: '80 Lt Telescopic Oil Drain Bucket - 40 Lt Pan',
+        localeKey: 'wasteOilDrainers4295_40',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': '4295.40',
+          'Working Type': 'Air',
+          'Discharge Pressure': '0,5 Bar',
+          'Tank Capacity': '80 Lt',
+          'Pan Capacity': '40 Lt',
+          'Hose Length': '1,5 Mt',
+          'Hose Dimension': '3/4″',
+          'Box Dimensions': '57x67x138 Cm',
+          'Weight': '44,20 Kg',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 410,
+        name: 'TYS4400 Oil Storage With Pump',
+        subtitle: 'Complete Oil Storage System with Air Operated Pump',
+        localeKey: 'tys4400OilStorage',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'TYS4400',
+          'System Type': 'Complete Oil Storage System',
+          'Tank Capacity': '208 Lt',
+          'Air Operated Oil Pump': '4400',
+          'Digital Oil Gun': '4106',
+          'Drip Tray': '7110',
+          'Oil Hose Reel': '4500N.1038',
+          'Warranty Period': '24 Month'
+        }
+      },
+      {
+        id: 411,
+        name: 'SVS4500 Portable Oil Drum System With Reel',
+        subtitle: 'Portable Oil Drum System with Customizable Components',
+        localeKey: 'svs4500OilDrumSystem',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'SVS4500',
+          'System Type': 'Portable Oil Drum System',
+          'Air Operated Oil Pump': '4400',
+          'Digital Oil Gun': '4106',
+          'Barrel Trolley': '2420',
+          'Oil Hose Reel': '4500N.1038',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 412,
+        name: 'SVS4400 Portable Oil Drum System Without Reel',
+        subtitle: 'Portable Oil Drum System with Flexible Hose Options',
+        localeKey: 'svs4400OilDrumSystem',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'SVS4400',
+          'System Type': 'Portable Oil Drum System',
+          'Air Operated Oil Pump': '4400',
+          'Digital Oil Gun': '4106',
+          'Barrel Trolley': '2410',
+          'Hose Length': '5 Mt',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 413,
+        name: 'DVS4500 Air Operated Stationary Drum System',
+        subtitle: 'Stationary Oil Drum System with Customizable Components',
+        localeKey: 'dvs4500StationaryDrumSystem',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'DVS4500',
+          'System Type': 'Stationary Oil Drum System',
+          'Air Operated Oil Pump': '4400',
+          'Digital Oil Gun': '4106',
+          'Oil Hose Reel': '4500N.1038',
+          'Hose Length': '2,5 Mt',
+          'Drip Tray': '7110',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 414,
+        name: 'IBC4500 IBC Oil System With Reel',
+        subtitle: 'High Capacity IBC Oil System with Customizable Components',
+        localeKey: 'ibc4500OilSystem',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'IBC4500',
+          'System Type': 'IBC Oil System',
+          'Air Operated Oil Pump': '3045',
+          'Digital Oil Gun': '4106',
+          'Oil Hose Reel': '4500N.1038',
+          'Drip Tray': '7160',
+          'Hose': '1 Mt x 2 (Pump and IBC Connection)',
+          'Warranty Period': '24 Month',
+          'Box Dimensions': '20x70x113 Cm'
+        }
+      },
+      {
+        id: 415,
+        name: 'IBC3045 IBC Oil System Without Reel',
+        subtitle: 'High Capacity IBC Oil System Without Reel',
+        localeKey: 'ibc3045OilSystem',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'IBC3045',
+          'System Type': 'IBC Oil System',
+          'Air Operated Oil Pump': '3045',
+          'Digital Oil Gun': '4106',
+          'Hose': '5 Mt (Pump Outlet)',
+          'Drip Tray': '7150',
+          'IBC Connection Hose': '1 Mt',
+          'Warranty Period': '24 Month',
+          'Box Dimensions': '20x70x80 Cm'
+        }
+      },
+      {
+        id: 416,
+        name: '4200 Air Operated Oil Pump 80 Lt',
+        subtitle: 'Mobile Air Operated Oil Pump with 3:1 Pressure Ratio',
+        localeKey: 'airOperatedOilPump4200',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': '4200',
+          'Working Type': 'Air',
+          'Working Pressure': '6 – 8 Bar',
+          'Pressure Ratio': '3:1',
+          'Output': '15 Lt/Min',
+          'Capacity': '80 Lt',
+          'Hose Length': '3 Mt',
+          'Hose Dimension': 'R1-3/8″',
+          'Box Dimensions': '48x49x113 Cm',
+          'Weight': '28,30 Kg',
+          'Warranty Period': '36 Month',
+          'Delivery Content': '4105 Manual Oil Gun'
+        }
+      },
+      {
+        id: 417,
+        name: 'DVS2500 Grease Stationary Drum System',
+        subtitle: 'Stationary Grease Drum System with Customizable Components',
+        localeKey: 'dvs2500GreaseStationaryDrumSystem',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'DVS2500',
+          'System Type': 'Stationary Grease Drum System',
+          'Air Operated Grease Pump': '2400',
+          'Grease Gun': '2305',
+          'Grease Z Swivel': '2405',
+          'Barrel Lid': '2085',
+          'Follower Plate Weight': '2620',
+          'Grease Hose Reel': '2500N.1014',
+          'Follower Plate': '2621.185',
+          'Hose': '2,5 Mt',
+          'Drip Tray': '7110',
+          'Warranty Period': '24 Month'
+        }
+      },
+      {
+        id: 418,
+        name: 'SVS2500 Portable Grease Drum System With Reel',
+        subtitle: 'Portable Grease Drum System with Customizable Components',
+        localeKey: 'svs2500PortableGreaseDrumSystem',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'SVS2500',
+          'System Type': 'Portable Grease Drum System',
+          'Air Operated Grease Pump': '2400',
+          'Grease Gun': '2305',
+          'Grease Z Swivel': '2405',
+          'Barrel Lid': '2085',
+          'Follower Plate Weight': '2620',
+          'Follower Plate': '2621.185',
+          'Barrel Trolley': '2420',
+          'Grease Hose Reel': '2500N.1014',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 419,
+        name: 'SVS2400 Portable Grease Drum System Without Reel',
+        subtitle: 'Portable Grease Drum System Without Reel',
+        localeKey: 'svs2400PortableGreaseDrumSystem',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': 'SVS2400',
+          'System Type': 'Portable Grease Drum System',
+          'Air Operated Grease Pump': '2400',
+          'Grease Gun': '2305',
+          'Grease Z Swivel': '2405',
+          'Barrel Lid': '2085',
+          'Follower Plate Weight': '2620',
+          'Follower Plate': '2621.185',
+          'Barrel Trolley': '2410',
+          'Hose': '5 Mt',
+          'Warranty Period': '36 Month'
+        }
+      },
+      {
+        id: 420,
+        name: '2330 Air Operated Grease Pump 30 Kg',
+        subtitle: 'Mobile Air Operated Grease Pump with 70:1 Pressure Ratio',
+        localeKey: 'airOperatedGreasePump2330',
+        category: 'lubricationEquipment',
+        image: gulersanLogo,
+        specifications: {
+          'Model': '2330',
+          'Working Type': 'Air',
+          'Working Pressure': '6 – 8 Bar',
+          'Pressure Ratio': '70:1',
+          'Output': '1100 Gr/Min',
+          'Capacity': '30 Kg',
+          'Hose Length': '3 Mt',
+          'Hose Dimension': 'R2 1/4″',
+          'Box Dimensions': '48x50x104 Cm',
+          'Weight': '23,50 Kg',
+          'Warranty Period': '36 Month'
         }
       }
     ]
