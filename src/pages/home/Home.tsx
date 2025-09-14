@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import caldiniLogo from '../../assets/caldini.png';
 import paxLogo from '../../assets/pax.png';
 import automecLogo from '../../assets/automec-logo-transparent.png';
+import gulersanLogo from '../../assets/gulersan.png';
 import heroBackground from '../../assets/hero-background-optimized.jpg';
 
 const features = [
@@ -34,6 +35,12 @@ const brands = [
     name: 'Caldini',
     logo: caldiniLogo,
     description: 'Professional Aerosol Products',
+  },
+  {
+    id: 'gulersan',
+    name: 'Gulersan',
+    logo: gulersanLogo,
+    description: 'Lubrication Equipment',
   },
 ];
 
