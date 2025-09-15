@@ -77,7 +77,7 @@
     "garage": "Profesyonel Garaj ve Servis Ekipmanları",
     "carWash": "Araç Yıkama ve Endüstriyel Temizlik Ekipmanları",
     "aerosol": "Profesyonel Aerosol Ürünleri",
-    "lubricationEquipment": "Yağlama Ekipmanları",
+    "lubricationEquipment": "Yağlama Ekipmanları ve Sistemleri",
     "handTools": "El Aletleri"
   },
   "documents": {
@@ -151,21 +151,21 @@
   },
   "home": {
     "hero": {
-      "title": "AB bölgesinde Automec Profesyonel Servis ve Garaj Ekipmanları'nın ana distribütörü ve PAX Endüstriyel Temizleme Makineleri ve Caldini Aerosol distribütörü.",
+      "title": "",
       "contactUs": "Bize Ulaşın"
     },
     "brands": {
-      "title": "Markalarımız",
-      "subtitle": "Otomotiv ekipman markalarımızın premium seçimini keşfedin"
+      "title": "Kategorilerimiz",
+      "subtitle": "Otomotiv ekipman kategorilerinin seçkin seçeneklerini keşfedin"
     },
     "whyChooseUs": {
-      "title": "Neden Partnerlerimizi Seçmelisiniz?",
-      "subtitle": "Özenle seçilmiş partnerlerimiz, işletmenizin ihtiyaçlarını karşılamak için en yüksek kalitede ürün ve hizmetler sunmaktadır.",
+      "title": "Neden Biz?",
+      "subtitle": "",
       "features": {
-        "qualityControl": "Sıkı kalite kontrolü",
-        "pricing": "Rekabetçi fiyatlandırma",
-        "customerService": "Üstün müşteri hizmeti",
-        "solutions": "Kapsamlı çözümler"
+        "qualityControl": "Sıkı Kalite Kontrolü",
+        "pricing": "Rekabetçi Fiyatlandırma",
+        "customerService": "Hızlı Müşteri Hizmetleri",
+        "solutions": "İhtiyaca Özel Çözümler"
       }
     }
   },

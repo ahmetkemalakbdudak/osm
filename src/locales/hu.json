@@ -101,8 +101,8 @@
     "garage": "Professzionális Garázs és Szerviz Berendezések",
     "carWash": "Autómosó és Ipari Tisztító Berendezések",
     "aerosol": "Professzionális Aeroszol Termékek",
-    "lubricationEquipment": "Kenési Berendezések",
-    "handTools": "Kézi Szerszámok"
+    "lubricationEquipment": "Kenőberendezések és Rendszerek",
+    "handTools": "Kéziszerszámok"
   },
   "documents": {
     "ad3030": "AD3030SX DPF Tisztítógép Műszaki Adatok",
@@ -175,21 +175,21 @@
   },
   "home": {
     "hero": {
-      "title": "Az Automec Professzionális Szerviz és Garázs Berendezések fő forgalmazója az EU régióban, valamint a PAX Ipari Tisztító Gépek és Caldini Aeroszol forgalmazója.",
-      "contactUs": "Lépjen Kapcsolatba Velünk"
+      "title": "",
+      "contactUs": "Lépjen kapcsolatba velünk"
     },
     "brands": {
-      "title": "Márkáink",
-      "subtitle": "Fedezze fel autószerelő berendezéseink prémium választékát"
+      "title": "Kategóriáink",
+      "subtitle": "Fedezze fel prémium autóipari berendezés kategóriáinkat"
     },
     "whyChooseUs": {
-      "title": "Miért Válassza Partnerünket?",
-      "subtitle": "Gondosan kiválasztott partnereink a legmagasabb minőségű termékeket és szolgáltatásokat nyújtják az üzleti igényeinek kielégítéséhez.",
+      "title": "Miért minket?",
+      "subtitle": "",
       "features": {
-        "qualityControl": "Szigorú minőségellenőrzés",
-        "pricing": "Versenyképes árazás",
-        "customerService": "Kivételes ügyfélszolgálat",
-        "solutions": "Átfogó megoldások"
+        "qualityControl": "Szigorú minőség-ellenőrzés",
+        "pricing": "Versenyképes árak",
+        "customerService": "Gyors ügyfélszolgálat",
+        "solutions": "Személyre szabott megoldások"
       }
     }
   },

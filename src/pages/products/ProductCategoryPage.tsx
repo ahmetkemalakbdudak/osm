@@ -132,7 +132,7 @@ function ProductCategoryPage() {
     // Removed findBrandForProduct from dependencies as it's stable and defined outside useEffect scope
   }, [filteredProducts, category]);
 
-  if (!category || !['aerosol', 'carWash', 'garage'].includes(category)) {
+  if (!category || !['aerosol', 'carWash', 'garage', 'lubricationEquipment', 'handTools'].includes(category)) {
     return (
       <Container>
         <Box py={8} textAlign="center">

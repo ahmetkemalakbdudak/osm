@@ -67,9 +67,9 @@
   },
   "categories": {
     "garage": "Professionelle Werkstatt- & Serviceausrüstungen",
-    "carWash": "Autowaschanlagen & Industriereinigungsgeräte",
+    "carWash": "Fahrzeugwäsche & Industrielle Reinigungsgeräte",
     "aerosol": "Professionelle Aerosolprodukte",
-    "lubricationEquipment": "Schmiereinrichtungen",
+    "lubricationEquipment": "Schmiergeräte und -systeme",
     "handTools": "Handwerkzeuge"
   },
   "documents": {
@@ -143,21 +143,21 @@
   },
   "home": {
     "hero": {
-      "title": "Hauptdistributor von Automec Professional Service & Garage Equipment in der EU-Region sowie Distributor von PAX Industriereinigungsmaschinen und Caldini Aerosol.",
-      "contactUs": "Kontaktieren Sie uns"
+      "title": "",
+      "contactUs": "Kontakt"
     },
     "brands": {
-      "title": "Unsere Marken",
-      "subtitle": "Entdecken Sie unsere Premium-Auswahl an Automobilausrüstungsmarken"
+      "title": "Unsere Kategorien",
+      "subtitle": "Entdecken Sie unsere Premium-Auswahl an Automobilausrüstungskategorien"
     },
     "whyChooseUs": {
-      "title": "Warum Unsere Partner Wählen?",
-      "subtitle": "Unsere sorgfältig ausgewählten Partner bieten Produkte und Dienstleistungen von höchster Qualität, um Ihre Geschäftsanforderungen zu erfüllen.",
+      "title": "Warum wir?",
+      "subtitle": "",
       "features": {
         "qualityControl": "Strenge Qualitätskontrolle",
         "pricing": "Wettbewerbsfähige Preise",
-        "customerService": "Außergewöhnlicher Kundenservice",
-        "solutions": "Umfassende Lösungen"
+        "customerService": "Reaktionsschneller Kundenservice",
+        "solutions": "Individuelle Lösungen"
       }
     }
   },
