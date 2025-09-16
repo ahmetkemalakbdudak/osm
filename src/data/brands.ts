@@ -727,29 +727,6 @@ export const brands: Record<string, Brand> = {
         }
       },
       {
-        id: 404,
-        name: '6650 Waste Oil Changer Extractor With Pantograph',
-        subtitle: '80 Lt Telescopic Waste Oil Suction Machine - 20 Lt Pan',
-        localeKey: 'wasteOilChanger6650_20',
-        category: 'lubricationEquipment',
-        image: gulersanLogo,
-        specifications: {
-          'Model': '6650.20',
-          'Working Type': 'Air',
-          'Working Temperature': '60 – 80 C°',
-          'Working Pressure': '6 – 8 Bar',
-          'Discharge Pressure': '0,5 Bar',
-          'Tank Capacity': '80 Lt',
-          'Hose Length': '2 Mt',
-          'Hose Dimension': '10×16 Mm',
-          'Glass Capacity': '7 Lt',
-          'Oil Pan Capacity': '20 Lt',
-          'Box Dimensions': '57x67x127 Cm',
-          'Weight': '45,40 Kg',
-          'Warranty Period': '36 Month'
-        }
-      },
-      {
         id: 405,
         name: '6650 Waste Oil Changer Extractor With Pantograph',
         subtitle: '80 Lt Telescopic Waste Oil Suction Machine - 40 Lt Pan',
@@ -772,28 +749,6 @@ export const brands: Record<string, Brand> = {
         }
       },
       {
-        id: 406,
-        name: '6640 Waste Oil Changer Extractor With Pantograph',
-        subtitle: '80 Lt Telescopic Waste Oil Suction Machine - 20 Lt Pan',
-        localeKey: 'wasteOilChanger6640_20',
-        category: 'lubricationEquipment',
-        image: gulersanLogo,
-        specifications: {
-          'Model': '6640.20',
-          'Working Type': 'Air',
-          'Working Temperature': '60 – 80 C°',
-          'Working Pressure': '6 – 8 Bar',
-          'Discharge Pressure': '0,5 Bar',
-          'Tank Capacity': '80 Lt',
-          'Hose Length': '2 Mt',
-          'Hose Dimension': '10×16 Mm',
-          'Pan Capacity': '20 Lt',
-          'Box Dimensions': '57x67x127 Cm',
-          'Weight': '41,9 Kg',
-          'Warranty Period': '36 Month'
-        }
-      },
-      {
         id: 407,
         name: '6640 Waste Oil Changer Extractor With Pantograph',
         subtitle: '80 Lt Telescopic Waste Oil Suction Machine - 40 Lt Pan',
@@ -812,26 +767,6 @@ export const brands: Record<string, Brand> = {
           'Pan Capacity': '40 Lt',
           'Box Dimensions': '57x67x138 Cm',
           'Weight': '44,3 Kg',
-          'Warranty Period': '36 Month'
-        }
-      },
-      {
-        id: 408,
-        name: '4295 Air Operated Waste Oil Drainers With Pantograph',
-        subtitle: '80 Lt Telescopic Oil Drain Bucket - 20 Lt Pan',
-        localeKey: 'wasteOilDrainers4295_20',
-        category: 'lubricationEquipment',
-        image: gulersanLogo,
-        specifications: {
-          'Model': '4295.20',
-          'Working Type': 'Air',
-          'Discharge Pressure': '0,5 Bar',
-          'Tank Capacity': '80 Lt',
-          'Pan Capacity': '20 Lt',
-          'Hose Length': '1,5 Mt',
-          'Hose Dimension': '3/4″',
-          'Box Dimensions': '57x67x127 Cm',
-          'Weight': '40,40 Kg',
           'Warranty Period': '36 Month'
         }
       },
